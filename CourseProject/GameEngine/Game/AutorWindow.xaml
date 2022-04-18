@@ -1,0 +1,20 @@
+﻿<Window x:Name="AutorsWindow" x:Class="Game.AutorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game"
+        mc:Ignorable="d"
+        Title="AutorWindow" Height="550" Width="600">
+    <Grid>
+        <Image HorizontalAlignment="Center" Height="584" VerticalAlignment="Center" Width="600" Source="ImageForMainMenu/menuBackground.png" Stretch="Fill"/>
+        <Label Content="Немного об авторе данного курсового проекта" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="Sitka Small"/>
+        <Label Content="Сущинская Вероника Анатольевна" HorizontalAlignment="Center" Margin="0,426,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="Sitka Small"/>
+        <Label Content="Студентка группы ИТИ-22" HorizontalAlignment="Center" Margin="0,384,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="Sitka Small"/>
+        <Label Content="Тема:" HorizontalAlignment="Center" Margin="0,95,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="Sitka Small" Height="34" Width="82"/>
+        <Label Content="&quot;Игра в жанре &quot;Платформер&quot;" HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="Sitka Small"/>
+        <Label Content="на языке программирования C#" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="Sitka Small"/>
+        <Label Content="с использованием графики OpenGL&quot;" HorizontalAlignment="Center" Margin="0,243,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="Sitka Small"/>
+        <Label Content="Подготовила:" HorizontalAlignment="Center" Margin="0,312,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="Sitka Small"/>
+    </Grid>
+</Window>

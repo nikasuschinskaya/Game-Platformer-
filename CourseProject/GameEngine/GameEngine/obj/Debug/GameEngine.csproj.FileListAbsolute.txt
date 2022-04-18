@@ -1,0 +1,102 @@
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.dll
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.pdb
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.dll
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.pdb
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.xml
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.AssemblyReference.cache
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CoreCompileInputs.cache
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CopyComplete
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.dll
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.pdb
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\bin\Debug\Shaders\fragmentShader.glsl
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\bin\Debug\Shaders\vertexShader.glsl
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\bin\Debug\kisspng-pixel-art-tile-based-video-game-2d-platform-png-5b12975c20f6a6.090112361527945052135 (1).bmp
+D:\4 semester\COURSE PROJECT\CourseProject\GameEngine\GameEngine\bin\Debug\kisspng-pixel-art-tile-based-video-game-2d-platform-png-5b12975c20f6a6.090112361527945052135.png
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\bin\Debug\kisspng-pixel-art-tile-based-video-game-2d-platform-png-5b12975c20f6a6.090112361527945052135 (1).bmp
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\bin\Debug\kisspng-pixel-art-tile-based-video-game-2d-platform-png-5b12975c20f6a6.090112361527945052135.png
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\bin\Debug\Shaders\fragmentShader.glsl
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\bin\Debug\Shaders\vertexShader.glsl
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.dll
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.pdb
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.dll
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.pdb
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.xml
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csprojAssemblyReference.cache
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CoreCompileInputs.cache
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CopyComplete
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.dll
+I:\СУЩИНСКАЯ\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.pdb
+E:\CourseProject\GameEngine\GameEngine\bin\Debug\kisspng-pixel-art-tile-based-video-game-2d-platform-png-5b12975c20f6a6.090112361527945052135 (1).bmp
+E:\CourseProject\GameEngine\GameEngine\bin\Debug\kisspng-pixel-art-tile-based-video-game-2d-platform-png-5b12975c20f6a6.090112361527945052135.png
+E:\CourseProject\GameEngine\GameEngine\bin\Debug\Shaders\fragmentShader.glsl
+E:\CourseProject\GameEngine\GameEngine\bin\Debug\Shaders\vertexShader.glsl
+E:\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.dll
+E:\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.pdb
+E:\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.dll
+E:\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.pdb
+E:\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.xml
+E:\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.AssemblyReference.cache
+E:\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CoreCompileInputs.cache
+E:\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CopyComplete
+E:\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.dll
+E:\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.pdb
+E:\CourseProject\GameEngine\GameEngine\bin\Debug\platform.png
+D:\4 semester\CourseProject\GameEngine\GameEngine\bin\Debug\Shaders\fragmentShader.glsl
+D:\4 semester\CourseProject\GameEngine\GameEngine\bin\Debug\Shaders\vertexShader.glsl
+D:\4 semester\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.dll
+D:\4 semester\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.pdb
+D:\4 semester\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.dll
+D:\4 semester\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.pdb
+D:\4 semester\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.xml
+D:\4 semester\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.AssemblyReference.cache
+D:\4 semester\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CoreCompileInputs.cache
+D:\4 semester\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CopyComplete
+D:\4 semester\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.dll
+D:\4 semester\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.pdb
+D:\4 semester\CourseProject\GameEngine\GameEngine\bin\Debug\Sprites\platform.png
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Shaders\fragmentShader.glsl
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Shaders\vertexShader.glsl
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.dll
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.pdb
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.dll
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.pdb
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.xml
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.AssemblyReference.cache
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CoreCompileInputs.cache
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CopyComplete
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.dll
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.pdb
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Sprites\tiles.png
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.xml
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Sprites\TiledLevel.tmx
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Sprites\TiledLevel1.tmx
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Shaders\fragmentShader.glsl
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Shaders\vertexShader.glsl
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Sprites\TiledLevel.tmx
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Sprites\TiledLevel1.tmx
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Sprites\tiles.png
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.xml
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.dll
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.pdb
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.dll
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.pdb
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.xml
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.AssemblyReference.cache
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CoreCompileInputs.cache
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CopyComplete
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.dll
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.pdb
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Sprites\TiledLevel.tmx
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Sprites\TiledLevel1.tmx
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Sprites\tiles.png
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.xml
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.dll
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.pdb
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.dll
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.pdb
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\OpenTK.xml
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.AssemblyReference.cache
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CoreCompileInputs.cache
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CopyComplete
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.dll
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.pdb

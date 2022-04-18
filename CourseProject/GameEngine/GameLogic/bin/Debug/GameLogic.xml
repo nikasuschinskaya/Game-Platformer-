@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameLogic</name>
+    </assembly>
+    <members>
+        <member name="T:GameLogic.BlockType">
+            <summary>
+            Тип блока.
+            </summary>
+        </member>
+        <member name="F:GameLogic.BlockType.Solid">
+            <summary>
+            Твердый(непроходимый) объект.
+            </summary>
+        </member>
+        <member name="F:GameLogic.BlockType.Empty">
+            <summary>
+            Пустота.
+            </summary>
+        </member>
+        <member name="F:GameLogic.BlockType.Platform">
+            <summary>
+            Объект-платформа.
+            </summary>
+        </member>
+        <member name="F:GameLogic.BlockType.Ladder">
+            <summary>
+            Объект-лестница.
+            </summary>
+        </member>
+        <member name="F:GameLogic.BlockType.LadderPlatform">
+            <summary>
+            Объект-лестница с платформой.
+            </summary>
+        </member>
+        <member name="F:GameLogic.BlockType.SpikeUp">
+            <summary>
+            Объект-шипы вверх.
+            </summary>
+        </member>
+        <member name="F:GameLogic.BlockType.SpikeDown">
+            <summary>
+            Объект-шипы вниз.
+            </summary>
+        </member>
+        <member name="F:GameLogic.BlockType.SpikeLeft">
+            <summary>
+            Объект-шипы влево.
+            </summary>
+        </member>
+        <member name="F:GameLogic.BlockType.SpikeRight">
+            <summary>
+            Объект-шипы вправо.
+            </summary>
+        </member>
+        <member name="F:GameLogic.BlockType.Key">
+            <summary>
+            Объект-ключ (переход на новый уровень)
+            </summary>
+        </member>
+        <member name="F:GameLogic.BlockType.Door">
+            <summary>
+            Объект-дверь (игрок побеждает)
+            </summary>
+        </member>
+        <member name="P:GameLogic.Enemy.BasicType">
+            <summary>
+            Тип врага до декарирования.
+            </summary>
+        </member>
+        <member name="T:GameLogic.Player">
+            <summary>
+            Главный герой.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Player.position">
+            <summary>
+            Позиция.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Player.speed">
+            <summary>
+            Скорость.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Player.LivesCount">
+            <summary>
+            Количество жизней.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Player.Key">
+            <summary>
+            Количество ключей.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Player.ColRec">
+            <summary>
+            Вызываем прямоугольник.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Player.DrawRec">
+            <summary>
+            Отрисовка прямоугольников.
+            </summary>
+        </member>
+        <member name="M:GameLogic.Player.#ctor(OpenTK.Vector2,OpenTK.Vector2)">
+            <summary>
+            Инициализация начальных характеристик для игрока.
+            </summary>
+            <param name="startPos">Начальная позиция игрока.</param>
+            <param name="gravity">Гравитация.</param>
+        </member>
+        <member name="M:GameLogic.Player.Update(GameLogic.Level@)">
+            <summary>
+            Метод обновления уровня.
+            </summary>
+            <param name="level">Уровень.</param>
+        </member>
+        <member name="M:GameLogic.Player.HandleInput">
+            <summary>
+            Метод, отвечающий за управление персонажем.
+            </summary>
+        </member>
+        <member name="M:GameLogic.Player.ResolveCollision(GameLogic.Level@)">
+            <summary>
+            Метод, обрабатывающий коллизии с игровыми объектами.
+            </summary>
+            <param name="level">Уровень.</param>
+        </member>
+        <member name="M:GameLogic.Player.Draw">
+            <summary>
+            Отрисовка персонажа.
+            </summary>
+        </member>
+        <member name="M:GameLogic.Player.ToString">
+            <summary>
+            Метод, преобразующий объект класса в строку.
+            </summary>
+            <returns>Строка.</returns>
+        </member>
+        <member name="T:GameLogic.Block">
+            <summary>
+            Работа с блоками.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Block.Type">
+            <summary>
+            Тип блока.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Block.X">
+            <summary>
+            Позиция X.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Block.Y">
+            <summary>
+            Позиция Y.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Block.IsSolid">
+            <summary>
+            Является ли объект непроходимым.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Block.IsPlatform">
+            <summary>
+            Является ли объект платформой.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Block.IsLadder">
+            <summary>
+            Является ли объект лестницой.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Block.IsSpike">
+            <summary>
+            Является ли объект шипом.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Block.IsKey">
+            <summary>
+            Является ли объект ключом.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Block.IsDoor">
+            <summary>
+            Является ли объект дверью.
+            </summary>
+        </member>
+        <member name="M:GameLogic.Block.#ctor(GameLogic.BlockType,System.Int32,System.Int32)">
+            <summary>
+            Конструктор блоков.
+            </summary>
+            <param name="type">Тип блока.</param>
+            <param name="x">Координата x.</param>
+            <param name="y">Координата y.</param>
+        </member>
+        <member name="M:GameLogic.Block.GetBlockType">
+            <summary>
+            Метод получения типа блока.
+            </summary>
+        </member>
+        <member name="T:GameLogic.Level">
+            <summary>
+            Работа с уровнями.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Level.playerStartPos">
+            <summary>
+            Начальная позиция игрока.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Level.Item(System.Int32,System.Int32)">
+            <summary>
+            Работа с блоками.
+            </summary>
+            <param name="x">Координата x.</param>
+            <param name="y">Координата y.</param>
+            <returns>Блок.</returns>
+        </member>
+        <member name="P:GameLogic.Level.FileName">
+            <summary>
+            Имя файла.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Level.Width">
+            <summary>
+            Ширина блока.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Level.Height">
+            <summary>
+            Высота блока.
+            </summary>
+        </member>
+        <member name="M:GameLogic.Level.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Конструктор по работе с уровнями.
+            </summary>
+            <param name="width">Ширина.</param>
+            <param name="height">Высота.</param>
+        </member>
+        <member name="M:GameLogic.Level.#ctor(System.String)">
+            <summary>
+            Конструктор по работе с уровнями.
+            </summary>
+            <param name="filePath">Путь к файлу.</param>
+        </member>
+    </members>
+</doc>

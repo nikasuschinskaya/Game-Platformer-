@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameEngine</name>
+    </assembly>
+    <members>
+        <member name="T:GameEngine.Input">
+            <summary>
+            Работа с событиями клавиатуры.
+            </summary>
+        </member>
+        <member name="M:GameEngine.Input.Initialize(OpenTK.GameWindow)">
+            <summary>
+            Инициализация.
+            </summary>
+            <param name="game">Игровое окно.</param>
+        </member>
+        <member name="M:GameEngine.Input.Update">
+            <summary>
+            Метод обновления.
+            </summary>
+        </member>
+        <member name="M:GameEngine.Input.KeyPress(OpenTK.Input.Key)">
+            <summary>
+            Метод, возвращающий зажатую клавишу.
+            </summary>
+            <param name="key">Нажатая клавиша.</param>
+            <returns>Нажатая клавиша.</returns>
+        </member>
+        <member name="M:GameEngine.Input.KeyRelease(OpenTK.Input.Key)">
+            <summary>
+            Метод, возвращающий последнее нажатие клавиши.
+            </summary>
+            <param name="key">Нажатая клавиша.</param>
+            <returns>Нажатая клавиша.</returns>
+        </member>
+        <member name="M:GameEngine.Input.KeyDown(OpenTK.Input.Key)">
+            <summary>
+            Метод, возвращающий нажатую клавишу.
+            </summary>
+            <param name="key">Нажатая клавиша.</param>
+            <returns>Нажатая клавиша.</returns>
+        </member>
+        <member name="T:GameEngine.ContentPipe">
+            <summary>
+            Загрузка текстуры.
+            </summary>
+        </member>
+        <member name="M:GameEngine.ContentPipe.LoadTexture(System.String)">
+            <summary>
+            Создание текстуры.
+            </summary>
+            <param name="path"> Путь к изображению. </param>
+            <returns> Класс с параметрами текстуры. </returns>
+        </member>
+        <member name="T:GameEngine.Spritebatch">
+            <summary>
+            Работа с текстурой, отрисовка.
+            </summary>
+        </member>
+        <member name="M:GameEngine.Spritebatch.Draw(GameEngine.Texture2D,System.Drawing.RectangleF)">
+            <summary>
+            Отрисовка текстуры.
+            </summary>
+            <param name="texture">Текстура.</param>
+            <param name="rectangle">Прямоугольник.</param>
+        </member>
+        <member name="M:GameEngine.Spritebatch.Draw(GameEngine.Texture2D,OpenTK.Vector2,OpenTK.Vector2,System.Drawing.Color,OpenTK.Vector2,System.Nullable{System.Drawing.RectangleF})">
+            <summary>
+            Отрисовка текстуры.
+            </summary>
+            <param name="texture"> Текстура. </param>
+            <param name="position"> Позиция. </param>
+            <param name="scale"> Масштаб. </param>
+            <param name="color"> Цвет. </param>
+            <param name="origin"> Начало. </param>
+            <param name="sourceRec">Источник.</param>
+        </member>
+        <member name="M:GameEngine.Spritebatch.Begin(System.Int32,System.Int32)">
+            <summary>
+            Begin метод.
+            </summary>
+            <param name="screenWidth"></param>
+            <param name="screenHeight"></param>
+        </member>
+        <member name="T:GameEngine.Texture2D">
+            <summary>
+            Свойства текстуры.
+            </summary>
+        </member>
+        <member name="P:GameEngine.Texture2D.ID">
+            <summary>
+            Номер текстуры.
+            </summary>
+        </member>
+        <member name="P:GameEngine.Texture2D.Width">
+            <summary>
+            Ширина.
+            </summary>
+        </member>
+        <member name="P:GameEngine.Texture2D.Height">
+            <summary>
+            Высота.
+            </summary>
+        </member>
+        <member name="M:GameEngine.Texture2D.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Инициализатор текстуры.
+            </summary>
+            <param name="id"> Номер текстуры. </param>
+            <param name="width"> Ширина. </param>
+            <param name="height"> Высота. </param>
+        </member>
+        <member name="T:GameEngine.TweenType">
+            <summary>
+            Перечисление TweenType.
+            </summary>
+        </member>
+        <member name="F:GameEngine.TweenType.Instant">
+            <summary>
+            Мгновенный тип.
+            </summary>
+        </member>
+        <member name="F:GameEngine.TweenType.Linear">
+            <summary>
+            Линейный тип.
+            </summary>
+        </member>
+        <member name="F:GameEngine.TweenType.QuadraticInOut">
+            <summary>
+            Квадратичный тип.
+            </summary>
+        </member>
+        <member name="F:GameEngine.TweenType.CubicInOut">
+            <summary>
+            Кубический тип.
+            </summary>
+        </member>
+        <member name="F:GameEngine.TweenType.QuarticOut">
+            <summary>
+            Суперкубический тип.
+            </summary>
+        </member>
+        <member name="T:GameEngine.View">
+            <summary>
+            Работа с камерой.
+            </summary>
+        </member>
+        <member name="F:GameEngine.View.position">
+            <summary>
+            Позиция.
+            </summary>
+        </member>
+        <member name="F:GameEngine.View.rotation">
+            <summary>
+            Вращение (в радианах, по часовой стрелке).
+            </summary>
+        </member>
+        <member name="F:GameEngine.View.zoom">
+            <summary>
+            Масштаб
+            1 - no zoom
+            2 - 2x zoom
+            </summary>
+        </member>
+        <member name="P:GameEngine.View.Position">
+            <summary>
+            Свойство позиции.
+            </summary>
+        </member>
+        <member name="P:GameEngine.View.PositionGoto">
+            <summary>
+            Свойство позиции перехода.
+            </summary>
+        </member>
+        <member name="M:GameEngine.View.ToWorld(OpenTK.Vector2)">
+            <summary>
+            Метод движения по игровому миру.
+            </summary>
+            <param name="input">Входной параметр.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GameEngine.View.#ctor(OpenTK.Vector2,System.Double,System.Double)">
+            <summary>
+            Конструктор камеры.
+            </summary>
+            <param name="startPosition">Начальная позиция.</param>
+            <param name="startRotation">Начальное значение поворота.</param>
+            <param name="startZoom">Начальное увеличение.</param>
+        </member>
+        <member name="M:GameEngine.View.Update">
+            <summary>
+            Метод обновления.
+            </summary>
+        </member>
+        <member name="M:GameEngine.View.SetPosition(OpenTK.Vector2)">
+            <summary>
+            Набор позиций.
+            </summary>
+            <param name="newPosition">Новая позиция.</param>
+        </member>
+        <member name="M:GameEngine.View.SetPosition(OpenTK.Vector2,GameEngine.TweenType,System.Int32)">
+            <summary>
+            Набор позиций.
+            </summary>
+            <param name="newPosition">Новая позиция.</param>
+            <param name="type">Тип.</param>
+            <param name="numSteps">Номер шага.</param>
+        </member>
+        <member name="M:GameEngine.View.GetLinear(System.Single)">
+            <summary>
+            Получение линейной функции.
+            </summary>
+            <param name="t">Переменная.</param>
+            <returns>t</returns>
+        </member>
+        <member name="M:GameEngine.View.GetQuadraticInOut(System.Single)">
+            <summary>
+            Получение квадратичной функции.
+            </summary>
+            <param name="t">Переменная.</param>
+            <returns>Квадратичная функция.</returns>
+        </member>
+        <member name="M:GameEngine.View.GetCubicInOut(System.Single)">
+            <summary>
+            Получение кубической функции.
+            </summary>
+            <param name="t">Переменная.</param>
+            <returns>Кубическая функция.</returns>
+        </member>
+        <member name="M:GameEngine.View.GetQuarticOut(System.Single)">
+            <summary>
+            Получение суперкубической функции.
+            </summary>
+            <param name="t">Переменная.</param>
+            <returns>Суперкубическая функция.</returns>
+        </member>
+        <member name="M:GameEngine.View.ApplyTransform">
+            <summary>
+            Применение изменений.
+            </summary>
+        </member>
+    </members>
+</doc>

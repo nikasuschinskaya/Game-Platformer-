@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Game</name>
+    </assembly>
+    <members>
+        <member name="T:Game.App">
+            <summary>
+            Логика взаимодействия для App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Game.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Game.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Game.AutorWindow">
+            <summary>
+            Логика взаимодействия для AutorWindow.xaml
+            </summary>
+            <summary>
+            AutorWindow
+            </summary>
+        </member>
+        <member name="M:Game.AutorWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Game.HelpWindow">
+            <summary>
+            Логика взаимодействия для HelpWindow.xaml
+            </summary>
+            <summary>
+            HelpWindow
+            </summary>
+        </member>
+        <member name="M:Game.HelpWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Game.Platformer">
+            <summary>
+            Работа с игровым окном.
+            </summary>
+        </member>
+        <member name="M:Game.Platformer.#ctor">
+            <summary>
+            Конструктор с параметрами окна.
+            </summary>
+        </member>
+        <member name="M:Game.Platformer.OnLoad(System.EventArgs)">
+            <summary>
+            Инициализация ресурсов.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Game.Platformer.LoadNewLvl">
+            <summary>
+            Загрузка нового уровня
+            </summary>
+        </member>
+        <member name="M:Game.Platformer.OnResize(System.EventArgs)">
+            <summary>
+            Проверка изменений расширений экрана.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Game.Platformer.OnUpdateFrame(OpenTK.FrameEventArgs)">
+            <summary>
+            Учет обновлений кадров.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Game.Platformer.OnRenderFrame(OpenTK.FrameEventArgs)">
+            <summary>
+            Отрисовка кадра.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Game.Platformer.OnUnload(System.EventArgs)">
+            <summary>
+            Удаление загруженных ресурсов.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:Game.MainWindow">
+            <summary>
+            Логика взаимодействия для MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:Game.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Game.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:Game.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:Game.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+    </members>
+</doc>

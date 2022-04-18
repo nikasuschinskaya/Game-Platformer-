@@ -1,0 +1,24 @@
+﻿<Window x:Class="Game.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game"
+        mc:Ignorable="d"
+        Title="HelpWindow" Height="550" Width="600">
+    <Grid>
+        <Image HorizontalAlignment="Center" Height="584" VerticalAlignment="Center" Width="600" Source="ImageForMainMenu/menuBackground.png" Stretch="Fill"/>
+        <Label Content="Управление" HorizontalAlignment="Center" Margin="0,23,0,0" VerticalAlignment="Top" FontSize="29" FontFamily="Sitka Small"/>
+        <Label Content="Движение&#xA;вправо" HorizontalAlignment="Left" Height="62" Margin="428,205,0,0" VerticalAlignment="Top" Width="143" FontFamily="Sitka Small" FontSize="20"/>
+        <Label Content="Движение&#xA;влево" HorizontalAlignment="Left" Height="62" Margin="37,205,0,0" VerticalAlignment="Top" Width="143" FontFamily="Sitka Small" FontSize="20"/>
+        <Label Content="Ползти вверх" HorizontalAlignment="Left" Height="34" Margin="222,97,0,0" VerticalAlignment="Top" Width="161" FontFamily="Sitka Small" FontSize="20"/>
+        <Label Content="Ползти вниз" HorizontalAlignment="Center" Height="34" Margin="0,280,0,0" VerticalAlignment="Top" Width="144" FontFamily="Sitka Small" FontSize="20"/>
+        <Label Content="Прыжок" HorizontalAlignment="Center" Height="34" Margin="0,432,0,0" VerticalAlignment="Top" Width="104" FontFamily="Sitka Small" FontSize="20"/>
+        <Image HorizontalAlignment="Left" Height="56" Margin="267,136,0,0" VerticalAlignment="Top" Width="62" Source="ImageForMainMenu/keyUp.png"/>
+        <Image HorizontalAlignment="Left" Height="56" Margin="267,205,0,0" VerticalAlignment="Top" Width="62" Source="/ImageForMainMenu/keyDown.png" Stretch="Uniform"/>
+        <Image HorizontalAlignment="Left" Height="56" Margin="341,205,0,0" VerticalAlignment="Top" Width="62" Source="/ImageForMainMenu/keyRight.png" Stretch="Uniform"/>
+        <Image HorizontalAlignment="Left" Height="56" Margin="195,205,0,0" VerticalAlignment="Top" Width="62" Source="/ImageForMainMenu/keyLeft.png"/>
+        <Image HorizontalAlignment="Center" Height="48" Margin="0,372,0,0" VerticalAlignment="Top" Width="182"  Source="/ImageForMainMenu/keySpace.png" Stretch="Fill"/>
+        <Label Content="SPACE" HorizontalAlignment="Center" Height="28" Margin="0,382,0,0" VerticalAlignment="Top" Width="66" FontFamily="Sitka Small" FontSize="18" Foreground="White"/>
+    </Grid>
+</Window>

@@ -1,0 +1,76 @@
+D:\4 semester\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.dll
+D:\4 semester\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.pdb
+D:\4 semester\CourseProject\GameEngine\GameLogic\bin\Debug\OpenTK.dll
+D:\4 semester\CourseProject\GameEngine\GameLogic\bin\Debug\OpenTK.pdb
+D:\4 semester\CourseProject\GameEngine\GameLogic\bin\Debug\OpenTK.xml
+D:\4 semester\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.csproj.AssemblyReference.cache
+D:\4 semester\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.csproj.CoreCompileInputs.cache
+D:\4 semester\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.csproj.CopyComplete
+D:\4 semester\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.dll
+D:\4 semester\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.pdb
+D:\4 semester\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\platform.png
+D:\4 semester\CourseProject\GameEngine\GameLogic\bin\Debug\Shaders\fragmentShader.glsl
+D:\4 semester\CourseProject\GameEngine\GameLogic\bin\Debug\Shaders\vertexShader.glsl
+D:\4 semester\CourseProject\GameEngine\GameLogic\bin\Debug\GameEngine.dll
+D:\4 semester\CourseProject\GameEngine\GameLogic\bin\Debug\GameEngine.pdb
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Shaders\fragmentShader.glsl
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Shaders\vertexShader.glsl
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.dll
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.pdb
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameEngine.dll
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\OpenTK.dll
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameEngine.pdb
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\OpenTK.pdb
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\OpenTK.xml
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.csproj.AssemblyReference.cache
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.csproj.CoreCompileInputs.cache
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.csproj.CopyComplete
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.dll
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.pdb
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\tiles.png
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameEngine.xml
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.xml
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\TiledLevel.tmx
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\TiledLevel1.tmx
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\player.png
+C:\Users\NIKA\source\repos\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\playerClimb.png
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Shaders\fragmentShader.glsl
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Shaders\vertexShader.glsl
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\TiledLevel.tmx
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\TiledLevel1.tmx
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\tiles.png
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\player.png
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\playerClimb.png
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.xml
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.dll
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.pdb
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameEngine.dll
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\OpenTK.dll
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameEngine.pdb
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameEngine.xml
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\OpenTK.pdb
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\OpenTK.xml
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.csproj.AssemblyReference.cache
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.csproj.CoreCompileInputs.cache
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.csproj.CopyComplete
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.dll
+C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.pdb
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\TiledLevel.tmx
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\TiledLevel1.tmx
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\tiles.png
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.xml
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.dll
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.pdb
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameEngine.dll
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\OpenTK.dll
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameEngine.pdb
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameEngine.xml
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\OpenTK.pdb
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\OpenTK.xml
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.csproj.AssemblyReference.cache
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.csproj.CoreCompileInputs.cache
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.csproj.CopyComplete
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.dll
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.pdb
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\player.png
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\playerClimb.png
