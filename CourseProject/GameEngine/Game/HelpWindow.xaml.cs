@@ -19,6 +19,9 @@ namespace Game
     /// </summary>
     public partial class HelpWindow : Window
     {
+        /// <summary>
+        /// Окно для получения информации об управлении персонажем.
+        /// </summary>
         public HelpWindow()
         {
             InitializeComponent();

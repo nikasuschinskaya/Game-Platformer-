@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameEngine
+namespace GameLogic
 {
-    public class GameComponent
+    interface IMovableObject
     {
+        void Move();
     }
 }

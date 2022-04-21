@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace GameLogic
 {
-    public abstract class Platform
+    public class MotionlessEnemy : EnemyDecorator
     {
+        public MotionlessEnemy(Enemy enemy) : base(enemy)
+        {
+        }
     }
 }

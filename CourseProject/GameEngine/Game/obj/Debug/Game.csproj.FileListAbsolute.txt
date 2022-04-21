@@ -227,3 +227,6 @@ C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\TileSet.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\TileSetFULL.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\FullTilesSet.png
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\obj\Debug\RestartWindow.g.cs
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\obj\Debug\RestartWindow.baml
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\hedgehog_body.png

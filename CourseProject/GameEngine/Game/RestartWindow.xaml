@@ -1,0 +1,15 @@
+﻿<Window x:Name="RestWindow" x:Class="Game.RestartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game"
+        mc:Ignorable="d"
+        Title="RestartWindow" Height="337" Width="450">
+    <Grid>
+        <Image HorizontalAlignment="Center" Height="584" VerticalAlignment="Center" Width="450" Source="ImageForMainMenu/menuBackground.png" Stretch="Fill"/>
+        <Button x:Name="StartButton" Content="Начать заново" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Height="51" Width="262" FontSize="16" Background="#FF83B9C0" FontFamily="Sitka Small" Cursor="Hand" Click="StartButton_Click" BorderBrush="{x:Null}"/>
+        <Button x:Name="ExitButton" Content="Выйти" HorizontalAlignment="Center" Margin="0,216,0,0" VerticalAlignment="Top" Height="51" Width="262" FontSize="16" Background="#FF83B9C0" FontFamily="Sitka Small" BorderBrush="{x:Null}" Cursor="Hand" Click="ExitButton_Click"/>
+        <Label Content="--2𝒟 𝒫𝓁𝒶𝓉𝒻𝑜𝓇𝓂𝑒𝓇--" HorizontalAlignment="Center" Margin="0,47,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Sitka Small"/>
+    </Grid>
+</Window>

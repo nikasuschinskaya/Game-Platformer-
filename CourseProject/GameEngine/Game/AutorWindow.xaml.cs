@@ -19,6 +19,9 @@ namespace Game
     /// </summary>
     public partial class AutorWindow : Window
     {
+        /// <summary>
+        /// Окно для получения информации об авторе игры.
+        /// </summary>
         public AutorWindow()
         {
             InitializeComponent();

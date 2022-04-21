@@ -13,8 +13,9 @@ namespace GameLogic
     /// <summary>
     /// Главный герой.
     /// </summary>
-    public class Player
+    public class Player : GameObject
     {
+
         /// <summary>
         /// Позиция.
         /// </summary>
@@ -33,15 +34,6 @@ namespace GameLogic
         private bool climbing, facingRight, onLadder, grounded;
 
         /// <summary>
-        /// Количество жизней.
-        /// </summary>
-        public int LivesCount
-        { 
-            get; 
-            set; 
-        }
-
-        /// <summary>
         /// Количество ключей.
         /// </summary>
         public int Key
@@ -50,9 +42,8 @@ namespace GameLogic
             set;
         }
 
-
         /// <summary>
-        /// Вызываем прямоугольник.
+        /// Создание прямоугольника.
         /// </summary>
         public RectangleF ColRec
         {
@@ -63,7 +54,7 @@ namespace GameLogic
         }
 
         /// <summary>
-        /// Отрисовка прямоугольников.
+        /// Отрисовка прямоугольника.
         /// </summary>
         public RectangleF DrawRec
         {
@@ -72,17 +63,21 @@ namespace GameLogic
                 return new RectangleF(ColRec.X - 5, ColRec.Y, ColRec.Width + 10, ColRec.Height);
             }
         }
+
         /// <summary>
         /// Инициализация начальных характеристик для игрока.
         /// </summary>
         /// <param name="startPos">Начальная позиция игрока.</param>
         /// <param name="gravity">Гравитация.</param>
-        public Player(Vector2 startPos, Vector2 gravity)
+        /// <param name="key">Количество ключей игрока</param>
+        public Player(Vector2 startPos, Vector2 gravity, int key) : base()
         {
             this.gravity = gravity;
             this.position = startPos;
             this.speed = Vector2.Zero;
             this.LivesCount = 10;
+            this.Health = 100;
+            this.Key = key;
             this.climbing = false;
             this.facingRight = true;
             this.onLadder = false;
@@ -90,8 +85,7 @@ namespace GameLogic
             this.size = new Vector2(20, 40);
             this.sprite = ContentPipe.LoadTexture("player.png");
             this.spriteClimb = ContentPipe.LoadTexture("playerClimb.png");
-            //this.speed.X = 1.2f;
-            //this.speed.Y = -15.0f;
+          
         }
 
         /// <summary>
@@ -285,13 +279,11 @@ namespace GameLogic
                     }
                     if(level[x, y].IsSpike && this.ColRec.IntersectsWith(blockRec))
                     {
-
                         LivesCount -= 1;
                     }
                     if(level[x, y].IsKey && this.ColRec.IntersectsWith(blockRec))
                     {
                         Key += 1;
-                        
                     }
                 }
             }
@@ -330,7 +322,7 @@ namespace GameLogic
         /// <returns>Строка.</returns>
         public override string ToString()
         {
-            return $"Количество жизней: {LivesCount.ToString()}";
+            return $"Количество жизней: {LivesCount.ToString()}, {(Key-1).ToString()}";
         }
     }
 }

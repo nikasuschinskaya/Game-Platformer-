@@ -74,3 +74,4 @@ C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.pdb
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\player.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\playerClimb.png
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\hedgehog_body.png

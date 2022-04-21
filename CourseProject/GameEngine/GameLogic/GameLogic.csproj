@@ -54,10 +54,12 @@
     <Compile Include="Components\Block.cs" />
     <Compile Include="Components\Level.cs" />
     <Compile Include="Decorator\EnemyDecorator.cs" />
-    <Compile Include="Factory\LowerPlatform.cs" />
-    <Compile Include="Factory\Platform.cs" />
-    <Compile Include="Factory\PlatformFactory.cs" />
-    <Compile Include="Factory\UpperPlatform.cs" />
+    <Compile Include="Decorator\HorizontalEnemy.cs" />
+    <Compile Include="Decorator\MotionlessEnemy.cs" />
+    <Compile Include="Decorator\ShootEnemy.cs" />
+    <Compile Include="Decorator\VerticalEnemy.cs" />
+    <Compile Include="Factory\LevelFactory.cs" />
+    <Compile Include="Interfaces\IMovableObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +81,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Content\playerClimb.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\hedgehog_body.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

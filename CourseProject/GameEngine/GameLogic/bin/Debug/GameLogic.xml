@@ -64,9 +64,14 @@
             Объект-дверь (игрок побеждает)
             </summary>
         </member>
-        <member name="P:GameLogic.Enemy.BasicType">
+        <member name="P:GameLogic.Enemy.ColRec">
             <summary>
-            Тип врага до декарирования.
+            Создание прямоугольника.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Enemy.DrawRec">
+            <summary>
+            Отрисовка прямоугольника.
             </summary>
         </member>
         <member name="T:GameLogic.Player">
@@ -84,11 +89,6 @@
             Скорость.
             </summary>
         </member>
-        <member name="P:GameLogic.Player.LivesCount">
-            <summary>
-            Количество жизней.
-            </summary>
-        </member>
         <member name="P:GameLogic.Player.Key">
             <summary>
             Количество ключей.
@@ -96,20 +96,21 @@
         </member>
         <member name="P:GameLogic.Player.ColRec">
             <summary>
-            Вызываем прямоугольник.
+            Создание прямоугольника.
             </summary>
         </member>
         <member name="P:GameLogic.Player.DrawRec">
             <summary>
-            Отрисовка прямоугольников.
+            Отрисовка прямоугольника.
             </summary>
         </member>
-        <member name="M:GameLogic.Player.#ctor(OpenTK.Vector2,OpenTK.Vector2)">
+        <member name="M:GameLogic.Player.#ctor(OpenTK.Vector2,OpenTK.Vector2,System.Int32)">
             <summary>
             Инициализация начальных характеристик для игрока.
             </summary>
             <param name="startPos">Начальная позиция игрока.</param>
             <param name="gravity">Гравитация.</param>
+            <param name="key">Количество ключей игрока</param>
         </member>
         <member name="M:GameLogic.Player.Update(GameLogic.Level@)">
             <summary>
@@ -207,6 +208,16 @@
             Работа с уровнями.
             </summary>
         </member>
+        <member name="F:GameLogic.Level.grid">
+            <summary>
+            Координаты блоков.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Level.filename">
+            <summary>
+            Имя файла.
+            </summary>
+        </member>
         <member name="F:GameLogic.Level.playerStartPos">
             <summary>
             Начальная позиция игрока.
@@ -242,11 +253,18 @@
             <param name="width">Ширина.</param>
             <param name="height">Высота.</param>
         </member>
-        <member name="M:GameLogic.Level.#ctor(System.String)">
+        <member name="T:GameLogic.LevelFactory">
             <summary>
-            Конструктор по работе с уровнями.
+            Фабрика уровней.
             </summary>
-            <param name="filePath">Путь к файлу.</param>
+        </member>
+        <member name="M:GameLogic.LevelFactory.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            Фабрика по созданию уровней.
+            </summary>
+            <param name="width">Ширина блока.</param>
+            <param name="height">Высота блока.</param>
+            <param name="filePath">Имя файла.</param>
         </member>
     </members>
 </doc>

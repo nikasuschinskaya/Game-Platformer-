@@ -15,18 +15,20 @@ namespace GameLogic
     /// </summary>
     public class Level
     {
-        private Block[,] grid;
-        private string filename;
+        /// <summary>
+        /// Координаты блоков.
+        /// </summary>
+        public Block[,] grid;
+
+        /// <summary>
+        /// Имя файла.
+        /// </summary>
+        public string filename;
 
         /// <summary>
         /// Начальная позиция игрока.
         /// </summary>
         public Point playerStartPos;
-
-        ///// <summary>
-        ///// Выход.
-        ///// </summary>
-        //public Point exit;
 
         /// <summary>
         /// Работа с блоками.
@@ -114,106 +116,99 @@ namespace GameLogic
             }
         }
 
-        /// <summary>
-        /// Конструктор по работе с уровнями.
-        /// </summary>
-        /// <param name="filePath">Путь к файлу.</param>
-        public Level(string filePath)
-        {
-            try
-            {
-                using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
-                {
-                    XmlDocument doc = new XmlDocument();
-                    doc.Load(stream);
+        //public Level(string filePath)
+        //{
+            //    try
+            //    {
+            //        using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+            //        {
+            //            XmlDocument doc = new XmlDocument();
+            //            doc.Load(stream);
 
-                    int width = int.Parse(doc.DocumentElement.GetAttribute("width"));
-                    int height = int.Parse(doc.DocumentElement.GetAttribute("height"));
+            //            int width = int.Parse(doc.DocumentElement.GetAttribute("width"));
+            //            int height = int.Parse(doc.DocumentElement.GetAttribute("height"));
 
-                    grid = new Block[width, height];
-                    this.filename = filePath;
+            //            grid = new Block[width, height];
+            //            this.filename = filePath;
 
-                    playerStartPos = new Point(1, 1);
+            //            playerStartPos = new Point(1, 1);
 
-                    XmlNode tileLayer = doc.DocumentElement.SelectSingleNode("layer[@name='Tile Layer 1']");
-                    XmlNodeList tiles = tileLayer.SelectSingleNode("data").SelectNodes("tile");
+            //            XmlNode tileLayer = doc.DocumentElement.SelectSingleNode("layer[@name='Tile Layer 1']");
+            //            XmlNodeList tiles = tileLayer.SelectSingleNode("data").SelectNodes("tile");
 
-                    int x = 0, y = 0;
-                    for(int i = 0; i < tiles.Count; i++)
-                    {
-                        int gid = int.Parse(tiles[i].Attributes["gid"].Value);
+            //            int x = 0, y = 0;
+            //            for (int i = 0; i < tiles.Count; i++)
+            //            {
+            //                int gid = int.Parse(tiles[i].Attributes["gid"].Value);
 
-                        switch (gid)
-                        {
-                            case 2:
-                                grid[x, y] = new Block(BlockType.Solid, x, y);
-                                break;
-                            case 3:
-                                grid[x, y] = new Block(BlockType.Ladder, x, y);
-                                break;
-                            case 4:
-                                grid[x, y] = new Block(BlockType.LadderPlatform, x, y);
-                                break;
-                            case 5:
-                                grid[x, y] = new Block(BlockType.Platform, x, y);
-                                break;
-                            case 6:
-                                grid[x, y] = new Block(BlockType.SpikeUp, x, y);
-                                break;
-                            case 7:
-                                grid[x, y] = new Block(BlockType.SpikeRight, x, y);
-                                break;
-                            case 8:
-                                grid[x, y] = new Block(BlockType.SpikeDown, x, y);
-                                break;
-                            case 9:
-                                grid[x, y] = new Block(BlockType.SpikeLeft, x, y);
-                                break;
-                            case 10:
-                                grid[x, y] = new Block(BlockType.Key, x, y);
-                                break;
-                            case 11:
-                                grid[x, y] = new Block(BlockType.Door, x, y);
-                                break;
-                            default: 
-                                grid[x, y] = new Block(BlockType.Empty, x, y);
-                                break;
-                        }
+            //                switch (gid)
+            //                {
+            //                    case 2:
+            //                        grid[x, y] = new Block(BlockType.Solid, x, y);
+            //                        break;
+            //                    case 3:
+            //                        grid[x, y] = new Block(BlockType.Ladder, x, y);
+            //                        break;
+            //                    case 4:
+            //                        grid[x, y] = new Block(BlockType.LadderPlatform, x, y);
+            //                        break;
+            //                    case 5:
+            //                        grid[x, y] = new Block(BlockType.Platform, x, y);
+            //                        break;
+            //                    case 6:
+            //                        grid[x, y] = new Block(BlockType.SpikeUp, x, y);
+            //                        break;
+            //                    case 7:
+            //                        grid[x, y] = new Block(BlockType.SpikeRight, x, y);
+            //                        break;
+            //                    case 8:
+            //                        grid[x, y] = new Block(BlockType.SpikeDown, x, y);
+            //                        break;
+            //                    case 9:
+            //                        grid[x, y] = new Block(BlockType.SpikeLeft, x, y);
+            //                        break;
+            //                    case 10:
+            //                        grid[x, y] = new Block(BlockType.Key, x, y);
+            //                        break;
+            //                    case 11:
+            //                        grid[x, y] = new Block(BlockType.Door, x, y);
+            //                        break;
+            //                    default:
+            //                        grid[x, y] = new Block(BlockType.Empty, x, y);
+            //                        break;
+            //                }
 
-                        x++;
-                        if(x >= width)
-                        {
-                            x = 0;
-                            y++;
-                        }
-                    }
+            //                x++;
+            //                if(x >= width)
+            //                {
+            //                    x = 0;
+            //                    y++;
+            //                }
+            //            }
 
-                    XmlNode objectGroup = doc.DocumentElement.SelectSingleNode("objectgroup[@name='Object Layer 1']");
-                    XmlNodeList objects = objectGroup.SelectNodes("object");
+            //            XmlNode objectGroup = doc.DocumentElement.SelectSingleNode("objectgroup[@name='Object Layer 1']");
+            //            XmlNodeList objects = objectGroup.SelectNodes("object");
 
-                    for(int i = 0; i < objects.Count; i++)
-                    {
-                        int xPos = int.Parse(objects[i].Attributes["x"].Value);
-                        int yPos = int.Parse(objects[i].Attributes["y"].Value);
+            //            for(int i = 0; i < objects.Count; i++)
+            //            {
+            //                int xPos = int.Parse(objects[i].Attributes["x"].Value);
+            //                int yPos = int.Parse(objects[i].Attributes["y"].Value);
 
-                        switch (objects[i].Attributes["name"].Value)
-                        {
-                            case "playerStartPos":
-                                this.playerStartPos = new Point((int)(xPos / 128), (int)(yPos / 128));
-                                break;
-                            //case "exit":
-                            //    this.exit = new Point((int)(xPos), (int)(yPos));
-                            //    break;                                
-                        }
+            //                switch (objects[i].Attributes["name"].Value)
+            //                {
+            //                    case "playerStartPos":
+            //                        this.playerStartPos = new Point((int)(xPos / 128), (int)(yPos / 128));
+            //                        break;                                
+            //                }
 
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                System.Windows.MessageBox.Show($"Что-то плохое случилось с загрузкой файла \n Ошибка: {0}",
-                    e.Message);
-            }
-        }
+            //            }
+            //        }
+            //    }
+            //    catch(Exception e)
+            //    {
+            //        System.Windows.MessageBox.Show($"Что-то плохое случилось с загрузкой файла \n Ошибка: {0}",
+            //            e.Message);
+            //    }
+        //}
     }
 }

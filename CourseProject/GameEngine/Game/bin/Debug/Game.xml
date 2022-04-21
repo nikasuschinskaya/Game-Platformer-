@@ -4,6 +4,24 @@
         <name>Game</name>
     </assembly>
     <members>
+        <member name="T:Game.RestartWindow">
+            <summary>
+            Логика взаимодействия для RestartWindow.xaml
+            </summary>
+            <summary>
+            RestartWindow
+            </summary>
+        </member>
+        <member name="M:Game.RestartWindow.#ctor">
+            <summary>
+            Окно для повторного прохождения игры.
+            </summary>
+        </member>
+        <member name="M:Game.RestartWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:Game.App">
             <summary>
             Логика взаимодействия для App.xaml
@@ -30,6 +48,11 @@
             AutorWindow
             </summary>
         </member>
+        <member name="M:Game.AutorWindow.#ctor">
+            <summary>
+            Окно для получения информации об авторе игры.
+            </summary>
+        </member>
         <member name="M:Game.AutorWindow.InitializeComponent">
             <summary>
             InitializeComponent
@@ -41,6 +64,11 @@
             </summary>
             <summary>
             HelpWindow
+            </summary>
+        </member>
+        <member name="M:Game.HelpWindow.#ctor">
+            <summary>
+            Окно для получения информации об управлении персонажем.
             </summary>
         </member>
         <member name="M:Game.HelpWindow.InitializeComponent">
@@ -66,7 +94,7 @@
         </member>
         <member name="M:Game.Platformer.LoadNewLvl">
             <summary>
-            Загрузка нового уровня
+            Загрузка нового уровня.
             </summary>
         </member>
         <member name="M:Game.Platformer.OnResize(System.EventArgs)">
@@ -99,6 +127,11 @@
             </summary>
             <summary>
             MainWindow
+            </summary>
+        </member>
+        <member name="M:Game.MainWindow.#ctor">
+            <summary>
+            Окно главного меню.
             </summary>
         </member>
         <member name="M:Game.MainWindow.InitializeComponent">

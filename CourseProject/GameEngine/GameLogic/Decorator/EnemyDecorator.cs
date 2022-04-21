@@ -8,21 +8,21 @@ using GameEngine;
 
 namespace GameLogic
 {
-    abstract class EnemyDecorator : Enemy
+    public abstract class EnemyDecorator : Enemy
     {
         protected Enemy enemy;
+
         private Vector2 startPos;
 
-        protected EnemyDecorator(Enemy enemy) : base(enemy.startPos)
+        protected EnemyDecorator(Enemy enemy) : base(enemy.position)
         {
-            enemy.startPos = startPos;
+            enemy.position = startPos;
             if (enemy == null)
             {
                 throw new ArgumentNullException();
             }
 
             this.enemy = enemy;
-            //Health = ememy.Health;
         }
 
 

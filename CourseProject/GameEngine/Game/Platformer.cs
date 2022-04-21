@@ -26,6 +26,7 @@ namespace Game
         View view;
         Level level;
         Player player;
+        Enemy enemy;
         int levelNum = 0;
         List<string> lvlNames = new List<string>()
         {
@@ -45,6 +46,7 @@ namespace Game
               DisplayDevice.Default, 4, 3, GraphicsContextFlags.Debug
               )
         {
+            CursorVisible = false;
             VSync = VSyncMode.On;
             GL.Enable(EnableCap.Texture2D);
             //Для учёта альфа-канала
@@ -66,14 +68,15 @@ namespace Game
         }
 
         /// <summary>
-        /// Загрузка нового уровня
+        /// Загрузка нового уровня.
         /// </summary>
         protected void LoadNewLvl()
         {
             tileset = ContentPipe.LoadTexture("FullTilesSet.png");
-            level = new Level($"Content/{lvlNames[levelNum]}");
+            level = new LevelFactory(20, 20, $"Content/{lvlNames[levelNum]}");
             player = new Player(new Vector2(level.playerStartPos.X + 0.5f,
-                level.playerStartPos.Y + 0.5f) * GRIDSIZE, new Vector2(0, 0.5f));
+                level.playerStartPos.Y + 0.5f) * GRIDSIZE, new Vector2(0, 0.5f), keys+1);
+            enemy = new Enemy(new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE);
         }
 
         /// <summary>
@@ -102,26 +105,30 @@ namespace Game
                 ForcedRespawn();
             }
 
-            //Стремный код (должен быть не тут, а в Player.cs)
-            //--------------------------
-            //if (Math.Abs(player.position.X * 4 - level.exit.X) < 100 && Math.Abs(player.position.Y * 4 - level.exit.Y) < 100)
             if(keys != player.Key)
             {
                 if (levelNum < lvlNames.Count - 1)
+                {
                     levelNum++;
+                }
                 else
                     levelNum = 0;
                 LoadNewLvl();
             }
-            //-----------------------
+            
             if (health - player.LivesCount > 1)
                 player.LivesCount = player.LivesCount + (health - player.LivesCount - 1);
 
             if (player.LivesCount <= 0)
             {
+                System.Windows.MessageBox.Show("Вы проиграли!");
+                RestartWindow restart = new RestartWindow();
+                restart.Show();
+                this.Close();
+                
                 //тут всполывающее окно "Вы проиграли" и кнопка начать заново
-                health = 10;
-                player.LivesCount = 10;
+                //health = 10;
+                //player.LivesCount = 10;
             }
 
             view.SetPosition(player.position, TweenType.QuarticOut, 15);
@@ -137,7 +144,7 @@ namespace Game
         private void ForcedRespawn()
         {
             player.position =
-                    new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE;
+                new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE;
             player.speed = Vector2.Zero;
         }
 
@@ -208,6 +215,7 @@ namespace Game
                         GRIDSIZE / TILESIZE), Color.White, Vector2.Zero, source);
                 }
             }
+            enemy.Draw();
             player.Draw();
             SwapBuffers();
         }

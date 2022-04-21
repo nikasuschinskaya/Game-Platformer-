@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace GameLogic
 {
-    internal class UpperPlatform : PlatformFactory
+    public class HorizontalEnemy : EnemyDecorator
     {
+        public HorizontalEnemy(Enemy enemy) : base(enemy)
+        {
+        }
     }
 }

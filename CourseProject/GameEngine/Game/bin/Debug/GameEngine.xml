@@ -4,6 +4,26 @@
         <name>GameEngine</name>
     </assembly>
     <members>
+        <member name="T:GameEngine.GameObject">
+            <summary>
+            Игровой объект.
+            </summary>
+        </member>
+        <member name="P:GameEngine.GameObject.LivesCount">
+            <summary>
+            Количество жизней.
+            </summary>
+        </member>
+        <member name="P:GameEngine.GameObject.Health">
+            <summary>
+            Очки здоровья для одной жизни.
+            </summary>
+        </member>
+        <member name="M:GameEngine.GameObject.#ctor">
+            <summary>
+            Инициализатор игрового объекта.
+            </summary>
+        </member>
         <member name="T:GameEngine.Input">
             <summary>
             Работа с событиями клавиатуры.

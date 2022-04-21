@@ -9,6 +9,9 @@ namespace Game
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Окно главного меню.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -17,7 +20,7 @@ namespace Game
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            MenuWindow.Close();
+            this.Hide();
 
             using (Platformer gameWindow = new Platformer())
             {
@@ -34,7 +37,7 @@ namespace Game
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void HelpButton_Click(object sender, RoutedEventArgs e)
