@@ -12,11 +12,11 @@ namespace GameLogic
     {
         protected Enemy enemy;
 
-        private Vector2 startPos;
+       // private Vector2 startPos;
 
-        protected EnemyDecorator(Enemy enemy) : base(enemy.position)
+        protected EnemyDecorator(Vector2 position, Enemy enemy) : base(enemy.position)
         {
-            enemy.position = startPos;
+            enemy.position = position;
             if (enemy == null)
             {
                 throw new ArgumentNullException();

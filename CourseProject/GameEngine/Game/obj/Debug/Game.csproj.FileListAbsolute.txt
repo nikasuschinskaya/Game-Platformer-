@@ -223,10 +223,12 @@ C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\Level.tmx
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\Level2.tmx
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\TiledLevel.tmx
-C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\tiles.png
-C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\TileSet.png
-C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\TileSetFULL.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\FullTilesSet.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\obj\Debug\RestartWindow.g.cs
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\obj\Debug\RestartWindow.baml
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\hedgehog_body.png
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\bullet.jpg
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\fly.png
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\snail_move.png
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\Level3Test1.tmx
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\Game\bin\Debug\Content\FirstLevel.tmx

@@ -9,6 +9,16 @@
             Игровой объект.
             </summary>
         </member>
+        <member name="F:GameEngine.GameObject.position">
+            <summary>
+            Позиция.
+            </summary>
+        </member>
+        <member name="F:GameEngine.GameObject.size">
+            <summary>
+            Размер.
+            </summary>
+        </member>
         <member name="P:GameEngine.GameObject.LivesCount">
             <summary>
             Количество жизней.
@@ -17,6 +27,16 @@
         <member name="P:GameEngine.GameObject.Health">
             <summary>
             Очки здоровья для одной жизни.
+            </summary>
+        </member>
+        <member name="P:GameEngine.GameObject.ColRec">
+            <summary>
+            Создание прямоугольника.
+            </summary>
+        </member>
+        <member name="P:GameEngine.GameObject.DrawRec">
+            <summary>
+            Отрисовка прямоугольника.
             </summary>
         </member>
         <member name="M:GameEngine.GameObject.#ctor">

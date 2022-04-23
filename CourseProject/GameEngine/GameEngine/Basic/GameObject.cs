@@ -1,6 +1,7 @@
 ﻿using OpenTK;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,17 @@ namespace GameEngine
     /// </summary>
     public abstract class GameObject
     {
+
+        /// <summary>
+        /// Позиция.
+        /// </summary>
+        public Vector2 position;
+
+        /// <summary>
+        /// Размер.
+        /// </summary>
+        public Vector2 size;
+
         /// <summary>
         /// Количество жизней.
         /// </summary>
@@ -28,6 +40,28 @@ namespace GameEngine
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// Создание прямоугольника.
+        /// </summary>
+        public RectangleF ColRec
+        {
+            get
+            {
+                return new RectangleF(position.X - size.X / 2.0f, position.Y - size.Y / 2.0f, size.X, size.Y);
+            }
+        }
+
+        /// <summary>
+        /// Отрисовка прямоугольника.
+        /// </summary>
+        public RectangleF DrawRec
+        {
+            get
+            {
+                return new RectangleF(ColRec.X - 5, ColRec.Y, ColRec.Width + 10, ColRec.Height);
+            }
         }
 
         /// <summary>

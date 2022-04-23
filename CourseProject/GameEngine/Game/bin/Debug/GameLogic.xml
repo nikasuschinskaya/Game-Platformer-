@@ -64,24 +64,9 @@
             Объект-дверь (игрок побеждает)
             </summary>
         </member>
-        <member name="P:GameLogic.Enemy.ColRec">
-            <summary>
-            Создание прямоугольника.
-            </summary>
-        </member>
-        <member name="P:GameLogic.Enemy.DrawRec">
-            <summary>
-            Отрисовка прямоугольника.
-            </summary>
-        </member>
         <member name="T:GameLogic.Player">
             <summary>
             Главный герой.
-            </summary>
-        </member>
-        <member name="F:GameLogic.Player.position">
-            <summary>
-            Позиция.
             </summary>
         </member>
         <member name="F:GameLogic.Player.speed">
@@ -92,16 +77,6 @@
         <member name="P:GameLogic.Player.Key">
             <summary>
             Количество ключей.
-            </summary>
-        </member>
-        <member name="P:GameLogic.Player.ColRec">
-            <summary>
-            Создание прямоугольника.
-            </summary>
-        </member>
-        <member name="P:GameLogic.Player.DrawRec">
-            <summary>
-            Отрисовка прямоугольника.
             </summary>
         </member>
         <member name="M:GameLogic.Player.#ctor(OpenTK.Vector2,OpenTK.Vector2,System.Int32)">

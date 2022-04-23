@@ -30,9 +30,9 @@ namespace Game
         int levelNum = 0;
         List<string> lvlNames = new List<string>()
         {
-            "TiledLevel.tmx",
+            "FirstLevel.tmx",
             "Level.tmx",
-            //"Level3.tmx"
+            "Level3Test1.tmx"
         };
         private int health, keys;
         private int GRIDSIZE = 32, TILESIZE = 128;
@@ -102,7 +102,7 @@ namespace Game
             
             if (health != player.LivesCount)
             {
-                ForcedRespawn();
+               // ForcedRespawn();
             }
 
             if(keys != player.Key)
@@ -121,10 +121,10 @@ namespace Game
 
             if (player.LivesCount <= 0)
             {
-                System.Windows.MessageBox.Show("Вы проиграли!");
-                RestartWindow restart = new RestartWindow();
-                restart.Show();
-                this.Close();
+                //System.Windows.MessageBox.Show("Вы проиграли!");
+                //RestartWindow restart = new RestartWindow();
+                //restart.Show();
+                //this.Close();
                 
                 //тут всполывающее окно "Вы проиграли" и кнопка начать заново
                 //health = 10;

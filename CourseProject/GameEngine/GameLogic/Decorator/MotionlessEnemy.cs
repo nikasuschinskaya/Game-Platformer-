@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenTK;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,9 @@ namespace GameLogic
 {
     public class MotionlessEnemy : EnemyDecorator
     {
-        public MotionlessEnemy(Enemy enemy) : base(enemy)
+        public MotionlessEnemy(Vector2 position, Enemy enemy) : base(position, enemy)
         {
+            
         }
     }
 }

@@ -57,7 +57,6 @@
     <Compile Include="Decorator\HorizontalEnemy.cs" />
     <Compile Include="Decorator\MotionlessEnemy.cs" />
     <Compile Include="Decorator\ShootEnemy.cs" />
-    <Compile Include="Decorator\VerticalEnemy.cs" />
     <Compile Include="Factory\LevelFactory.cs" />
     <Compile Include="Interfaces\IMovableObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +85,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\hedgehog_body.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\bullet.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\fly.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\snail_move.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

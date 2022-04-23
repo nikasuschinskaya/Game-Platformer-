@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenTK;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace GameLogic
 {
     public class HorizontalEnemy : EnemyDecorator
     {
-        public HorizontalEnemy(Enemy enemy) : base(enemy)
+        public HorizontalEnemy(Vector2 position, Enemy enemy) : base(position, enemy)
         {
         }
     }

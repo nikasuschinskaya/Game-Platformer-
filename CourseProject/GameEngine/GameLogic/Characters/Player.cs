@@ -17,17 +17,11 @@ namespace GameLogic
     {
 
         /// <summary>
-        /// Позиция.
-        /// </summary>
-        public Vector2 position;
-
-        /// <summary>
         /// Скорость.
         /// </summary>
         public Vector2 speed;
 
         private int Gridsize = 32;
-        private Vector2 size;
         private Vector2 gravity;
 
         private Texture2D sprite, spriteClimb;
@@ -40,28 +34,6 @@ namespace GameLogic
         {
             get;
             set;
-        }
-
-        /// <summary>
-        /// Создание прямоугольника.
-        /// </summary>
-        public RectangleF ColRec
-        {
-            get
-            {
-                return new RectangleF(position.X - size.X / 2.0f, position.Y - size.Y / 2.0f, size.X, size.Y);
-            }
-        }
-
-        /// <summary>
-        /// Отрисовка прямоугольника.
-        /// </summary>
-        public RectangleF DrawRec
-        {
-            get
-            {
-                return new RectangleF(ColRec.X - 5, ColRec.Y, ColRec.Width + 10, ColRec.Height);
-            }
         }
 
         /// <summary>
