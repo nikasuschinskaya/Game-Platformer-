@@ -48,12 +48,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicLogicEnums\BlockType.cs" />
+    <Compile Include="Enums\BlockType.cs" />
     <Compile Include="Characters\Enemy.cs" />
     <Compile Include="Characters\Player.cs" />
     <Compile Include="Components\Block.cs" />
     <Compile Include="Components\Level.cs" />
-    <Compile Include="Decorator\EnemyDecorator.cs" />
     <Compile Include="Decorator\HorizontalEnemy.cs" />
     <Compile Include="Decorator\MotionlessEnemy.cs" />
     <Compile Include="Decorator\ShootEnemy.cs" />

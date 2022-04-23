@@ -26,7 +26,7 @@ namespace Game
         View view;
         Level level;
         Player player;
-        Enemy enemy;
+        Enemy enemyMotionless, enemyShoot, enemyHorizontal;
         int levelNum = 0;
         List<string> lvlNames = new List<string>()
         {
@@ -34,7 +34,7 @@ namespace Game
             "Level.tmx",
             "Level3Test1.tmx"
         };
-        private int health, keys;
+        private int livesCount, health, keys;
         private int GRIDSIZE = 32, TILESIZE = 128;
 
         /// <summary>
@@ -76,7 +76,9 @@ namespace Game
             level = new LevelFactory(20, 20, $"Content/{lvlNames[levelNum]}");
             player = new Player(new Vector2(level.playerStartPos.X + 0.5f,
                 level.playerStartPos.Y + 0.5f) * GRIDSIZE, new Vector2(0, 0.5f), keys+1);
-            enemy = new Enemy(new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE);
+            enemyMotionless = new MotionlessEnemy(new Enemy(), new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE);
+            enemyShoot = new ShootEnemy(new Enemy(), new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE);
+            enemyHorizontal = new HorizontalEnemy(new Enemy(), new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE);
         }
 
         /// <summary>
@@ -96,11 +98,12 @@ namespace Game
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
             base.OnUpdateFrame(e);
-            health = player.LivesCount;
+            livesCount = player.LivesCount;
+            health = player.Health;
             keys = player.Key;
             player.Update(ref level);
             
-            if (health != player.LivesCount)
+            if (livesCount != player.LivesCount)
             {
                // ForcedRespawn();
             }
@@ -116,18 +119,18 @@ namespace Game
                 LoadNewLvl();
             }
             
-            if (health - player.LivesCount > 1)
-                player.LivesCount = player.LivesCount + (health - player.LivesCount - 1);
+            if (livesCount - player.LivesCount > 1)
+                player.LivesCount = player.LivesCount + (livesCount - player.LivesCount - 1);
 
-            if (player.LivesCount <= 0)
+            if (player.LivesCount <= 0 && player.Health <= 0)
             {
                 //System.Windows.MessageBox.Show("Вы проиграли!");
                 //RestartWindow restart = new RestartWindow();
                 //restart.Show();
                 //this.Close();
-                
+
                 //тут всполывающее окно "Вы проиграли" и кнопка начать заново
-                //health = 10;
+                //livesCount = 10;
                 //player.LivesCount = 10;
             }
 
@@ -215,7 +218,9 @@ namespace Game
                         GRIDSIZE / TILESIZE), Color.White, Vector2.Zero, source);
                 }
             }
-            enemy.Draw();
+            enemyMotionless.Draw();
+            enemyHorizontal.Draw();
+            enemyShoot.Draw();
             player.Draw();
             SwapBuffers();
         }

@@ -1,4 +1,5 @@
-﻿using OpenTK;
+﻿using GameEngine;
+using OpenTK;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +8,18 @@ using System.Threading.Tasks;
 
 namespace GameLogic
 {
-    public class ShootEnemy : EnemyDecorator
+    public class ShootEnemy : Enemy
     {
-        public ShootEnemy(Vector2 position, Enemy enemy) : base(position, enemy)
+        Enemy enemy;
+        public ShootEnemy(Enemy enemy, Vector2 startPos)
         {
+            this.position = startPos;
+            this.enemy = enemy;
+            this.sprite = ContentPipe.LoadTexture("fly.png");
+        }
+        public override void Move()
+        {
+            base.Move();
         }
     }
 }

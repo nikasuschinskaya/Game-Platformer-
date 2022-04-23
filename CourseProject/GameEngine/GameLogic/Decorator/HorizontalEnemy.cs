@@ -1,4 +1,5 @@
-﻿using OpenTK;
+﻿using GameEngine;
+using OpenTK;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +8,18 @@ using System.Threading.Tasks;
 
 namespace GameLogic
 {
-    public class HorizontalEnemy : EnemyDecorator
+    public class HorizontalEnemy : Enemy
     {
-        public HorizontalEnemy(Vector2 position, Enemy enemy) : base(position, enemy)
+        Enemy enemy;
+        public HorizontalEnemy(Enemy enemy, Vector2 startPos)
         {
+            this.position = startPos;
+            this.enemy = enemy;
+            this.sprite = ContentPipe.LoadTexture("snail_move.png");
+        }
+        public override void Move()
+        {
+            base.Move();
         }
     }
 }

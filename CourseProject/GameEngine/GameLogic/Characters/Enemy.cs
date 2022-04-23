@@ -17,19 +17,17 @@ namespace GameLogic
         private Vector2 speed;
 
         private int Gridsize = 32;
-        private Texture2D sprite;
+        public Texture2D sprite;
         private bool facingRight, grounded;
 
-        public Enemy(Vector2 startPos) : base()
+        public Enemy()
         {
             this.speed = Vector2.Zero;
             // this.speed += new Vector2(0, 0.5f);
-            this.position = startPos;
             //this.position += speed;
             this.facingRight = true;
             this.grounded = false;
             this.size = new Vector2(15, 20);
-            this.sprite = ContentPipe.LoadTexture("hedgehog_body.png");
         }
 
         public void Draw()
@@ -43,6 +41,7 @@ namespace GameLogic
             Spritebatch.Draw(sprite, rec);
         }
 
+        public virtual void Move() { }
         //public void Move()
         //{
             

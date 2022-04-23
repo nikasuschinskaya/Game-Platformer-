@@ -1,4 +1,5 @@
-﻿using OpenTK;
+﻿using GameEngine;
+using OpenTK;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,18 @@ using System.Threading.Tasks;
 
 namespace GameLogic
 {
-    public class MotionlessEnemy : EnemyDecorator
+    public class MotionlessEnemy : Enemy
     {
-        public MotionlessEnemy(Vector2 position, Enemy enemy) : base(position, enemy)
+        Enemy enemy;
+        public MotionlessEnemy(Enemy enemy, Vector2 startPos)
         {
-            
+            this.position = startPos;
+            this.enemy = enemy;
+            this.sprite = ContentPipe.LoadTexture("hedgehog_body.png");
+        }
+        public override void Move()
+        {
+            base.Move();
         }
     }
 }
