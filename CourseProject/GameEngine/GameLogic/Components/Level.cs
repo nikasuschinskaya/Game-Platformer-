@@ -31,6 +31,11 @@ namespace GameLogic
         public Point playerStartPos;
 
         /// <summary>
+        /// Начальнаяя позиция горизонтального врага.
+        /// </summary>
+        public List<Point> enemiesHorSpawn = new List<Point>();
+
+        /// <summary>
         /// Работа с блоками.
         /// </summary>
         /// <param name="x">Координата x.</param>

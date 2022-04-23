@@ -14,6 +14,7 @@ namespace GameLogic
     /// </summary>
     public class LevelFactory : Level
     {
+
         /// <summary>
         /// Фабрика по созданию уровней.
         /// </summary>
@@ -102,6 +103,10 @@ namespace GameLogic
                         {
                             case "playerStartPos":
                                 this.playerStartPos = new Point((int)(xPos / 128), (int)(yPos / 128));
+                                break;
+                            case "HorizontalEnemySpawn":
+                                Point p = new Point((int)(xPos / 128), (int)(yPos / 128));
+                                this.enemiesHorSpawn.Add(p);
                                 break;
                         }
 

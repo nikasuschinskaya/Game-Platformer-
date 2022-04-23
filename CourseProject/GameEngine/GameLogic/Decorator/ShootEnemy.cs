@@ -13,13 +13,10 @@ namespace GameLogic
         Enemy enemy;
         public ShootEnemy(Enemy enemy, Vector2 startPos)
         {
+            this.speed = Vector2.Zero;
             this.position = startPos;
             this.enemy = enemy;
             this.sprite = ContentPipe.LoadTexture("fly.png");
-        }
-        public override void Move()
-        {
-            base.Move();
         }
     }
 }

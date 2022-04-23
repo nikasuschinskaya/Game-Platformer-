@@ -198,6 +198,11 @@
             Начальная позиция игрока.
             </summary>
         </member>
+        <member name="F:GameLogic.Level.enemiesHorSpawn">
+            <summary>
+            Начальнаяя позиция горизонтального врага.
+            </summary>
+        </member>
         <member name="P:GameLogic.Level.Item(System.Int32,System.Int32)">
             <summary>
             Работа с блоками.
@@ -227,6 +232,18 @@
             </summary>
             <param name="width">Ширина.</param>
             <param name="height">Высота.</param>
+        </member>
+        <member name="M:GameLogic.HorizontalEnemy.Update(GameLogic.Level@)">
+            <summary>
+            Метод обновления уровня.
+            </summary>
+            <param name="level">Уровень.</param>
+        </member>
+        <member name="M:GameLogic.HorizontalEnemy.ResolveCollision(GameLogic.Level@)">
+            <summary>
+            Метод, обрабатывающий коллизии с игровыми объектами.
+            </summary>
+            <param name="level">Уровень.</param>
         </member>
         <member name="T:GameLogic.LevelFactory">
             <summary>

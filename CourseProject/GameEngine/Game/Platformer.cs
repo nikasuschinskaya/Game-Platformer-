@@ -26,7 +26,9 @@ namespace Game
         View view;
         Level level;
         Player player;
-        Enemy enemyMotionless, enemyShoot, enemyHorizontal;
+        List<Enemy> enemyList = new List<Enemy>();
+        Enemy enemyMotionless, enemyShoot;
+        HorizontalEnemy enemyHorizontal;
         int levelNum = 0;
         List<string> lvlNames = new List<string>()
         {
@@ -76,9 +78,12 @@ namespace Game
             level = new LevelFactory(20, 20, $"Content/{lvlNames[levelNum]}");
             player = new Player(new Vector2(level.playerStartPos.X + 0.5f,
                 level.playerStartPos.Y + 0.5f) * GRIDSIZE, new Vector2(0, 0.5f), keys+1);
-            enemyMotionless = new MotionlessEnemy(new Enemy(), new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE);
-            enemyShoot = new ShootEnemy(new Enemy(), new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE);
-            enemyHorizontal = new HorizontalEnemy(new Enemy(), new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE);
+            enemyList.Add(new MotionlessEnemy(new Enemy(), new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE));
+            enemyList.Add(new ShootEnemy(new Enemy(), new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE));
+            foreach (Point p in level.enemiesHorSpawn)
+            {
+                enemyList.Add(new HorizontalEnemy(new Enemy(), new Vector2(p.X + 0.5f, p.Y + 0.5f) * GRIDSIZE));
+            }
         }
 
         /// <summary>
@@ -88,7 +93,6 @@ namespace Game
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
-
         }
 
         /// <summary>
@@ -100,7 +104,11 @@ namespace Game
             base.OnUpdateFrame(e);
             livesCount = player.LivesCount;
             health = player.Health;
+            IsIntersectsWithEnemies();
+            IsHealthAboveZero();
             keys = player.Key;
+            foreach (Enemy he in enemyList)
+                he.Update(ref level);
             player.Update(ref level);
             
             if (livesCount != player.LivesCount)
@@ -218,13 +226,38 @@ namespace Game
                         GRIDSIZE / TILESIZE), Color.White, Vector2.Zero, source);
                 }
             }
-            enemyMotionless.Draw();
-            enemyHorizontal.Draw();
-            enemyShoot.Draw();
+            foreach (Enemy en in enemyList)
+                en.Draw();
             player.Draw();
             SwapBuffers();
         }
 
+        private void IsIntersectsWithEnemies()
+        {
+            if (enemyList.Count > 0)
+            {
+                foreach (Enemy e in enemyList)
+                {
+                    if (Math.Abs(player.position.Y - e.position.Y) < 20 && Math.Abs(player.position.X - e.position.X) < 25)
+                        player.Health -= 1;
+                    if (Math.Abs(player.position.Y - e.position.Y) < 20 && Math.Abs(player.position.X - e.position.X) < 20)
+                        player.Health -= 1;
+                    if (Math.Abs(player.position.Y - e.position.Y) < 20 && Math.Abs(player.position.X - e.position.X) < 20)
+                        player.Health -= 1;
+                }
+            }
+        }
+
+        private void IsHealthAboveZero()
+        {
+            if (player.Health <= 0)
+            {
+                player.Health = 100;
+                player.LivesCount -= 1;
+                ForcedRespawn();
+            }
+                
+        }
 
         /// <summary>
         /// Удаление загруженных ресурсов.
