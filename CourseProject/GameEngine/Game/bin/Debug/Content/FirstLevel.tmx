@@ -1610,6 +1610,12 @@
  <objectgroup id="2" name="Object Layer 1">
   <object id="1" name="playerStartPos" x="584" y="2160" width="120" height="128"/>
   <object id="9" name="HorizontalEnemySpawn" x="2072" y="2352" width="88" height="72"/>
-  <object id="9" name="HorizontalEnemySpawn" x="1400" y="2352" width="88" height="72"/>
+  <object id="9" name="HorizontalEnemySpawn" x="3728" y="1696" width="88" height="72"/>
+  <object id="9" name="ShootEnemySpawn" x="2696" y="2744" width="88" height="72"/>
+  <object id="9" name="ShootEnemySpawn" x="3976" y="1488" width="88" height="72"/>
+  <object id="9" name="ShootEnemySpawn" x="1928" y="3352" width="88" height="72"/>
+  <object id="9" name="MotionlessEnemySpawn" x="568" y="2816" width="88" height="72"/>
+  <object id="9" name="MotionlessEnemySpawn" x="4504" y="432" width="88" height="72"/>
+  <object id="9" name="MotionlessEnemySpawn" x="2200" y="1576" width="88" height="72"/>
  </objectgroup>
 </map>

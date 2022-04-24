@@ -25,7 +25,7 @@ namespace Game
             using (Platformer gameWindow = new Platformer())
             {
                 gameWindow.WindowBorder = WindowBorder.Fixed;
-                gameWindow.Run();
+                gameWindow.Run(60, 60);
             }
         }
 

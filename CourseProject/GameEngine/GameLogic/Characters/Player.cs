@@ -13,7 +13,7 @@ namespace GameLogic
     /// <summary>
     /// Главный герой.
     /// </summary>
-    public class Player : GameObject
+    public class Player : GameObject, ICollisionable
     {
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace GameLogic
         private Vector2 gravity;
 
         private Texture2D sprite, spriteClimb;
-        private bool climbing, facingRight, onLadder, grounded;
+        public bool climbing, facingRight, onLadder, grounded;
 
         /// <summary>
         /// Количество ключей.

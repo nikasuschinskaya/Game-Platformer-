@@ -93,6 +93,9 @@ namespace GameLogic
 
                     XmlNode objectGroup = doc.DocumentElement.SelectSingleNode("objectgroup[@name='Object Layer 1']");
                     XmlNodeList objects = objectGroup.SelectNodes("object");
+                    enemiesHorSpawn.Clear();
+                    enemiesShootSpawn.Clear();
+                    enemiesMotionlessSpawn.Clear();
 
                     for (int i = 0; i < objects.Count; i++)
                     {
@@ -107,6 +110,16 @@ namespace GameLogic
                             case "HorizontalEnemySpawn":
                                 Point p = new Point((int)(xPos / 128), (int)(yPos / 128));
                                 this.enemiesHorSpawn.Add(p);
+                                break;
+                            case "ShootEnemySpawn":
+                                Point p2 = new Point((int)(xPos / 128), (int)(yPos / 128));
+                                this.enemiesShootSpawn.Add(p2);
+                                break;
+                            case "MotionlessEnemySpawn":
+                                Point p3 = new Point((int)(xPos / 128), (int)(yPos / 128));
+                                this.enemiesMotionlessSpawn.Add(p3);
+                                break;
+                            default:
                                 break;
                         }
 

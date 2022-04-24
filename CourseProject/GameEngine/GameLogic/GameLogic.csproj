@@ -48,6 +48,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\Bullet.cs" />
     <Compile Include="Enums\BlockType.cs" />
     <Compile Include="Characters\Enemy.cs" />
     <Compile Include="Characters\Player.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Decorator\MotionlessEnemy.cs" />
     <Compile Include="Decorator\ShootEnemy.cs" />
     <Compile Include="Factory\LevelFactory.cs" />
+    <Compile Include="Interfaces\ICollisionable.cs" />
     <Compile Include="Interfaces\IMovableObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

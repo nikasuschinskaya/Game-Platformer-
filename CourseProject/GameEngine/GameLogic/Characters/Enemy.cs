@@ -41,7 +41,5 @@ namespace GameLogic
         }
 
         public virtual void Update(ref Level level) { }
-
-        public virtual void Move() { }
     }
 }

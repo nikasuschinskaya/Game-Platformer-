@@ -74,15 +74,27 @@ namespace Game
         /// </summary>
         protected void LoadNewLvl()
         {
+            enemyList.Clear();
             tileset = ContentPipe.LoadTexture("FullTilesSet.png");
             level = new LevelFactory(20, 20, $"Content/{lvlNames[levelNum]}");
             player = new Player(new Vector2(level.playerStartPos.X + 0.5f,
                 level.playerStartPos.Y + 0.5f) * GRIDSIZE, new Vector2(0, 0.5f), keys+1);
-            enemyList.Add(new MotionlessEnemy(new Enemy(), new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE));
-            enemyList.Add(new ShootEnemy(new Enemy(), new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE));
+            AddEnemies();
+        }
+
+        private void AddEnemies()
+        {
             foreach (Point p in level.enemiesHorSpawn)
             {
                 enemyList.Add(new HorizontalEnemy(new Enemy(), new Vector2(p.X + 0.5f, p.Y + 0.5f) * GRIDSIZE));
+            }
+            foreach (Point p in level.enemiesShootSpawn)
+            {
+                enemyList.Add(new ShootEnemy(new Enemy(), new Vector2(p.X + 0.5f, p.Y + 0.5f) * GRIDSIZE));
+            }
+            foreach (Point p in level.enemiesMotionlessSpawn)
+            {
+                enemyList.Add(new MotionlessEnemy(new Enemy(), new Vector2(p.X + 0.5f, p.Y + 0.5f) * GRIDSIZE));
             }
         }
 
@@ -102,13 +114,33 @@ namespace Game
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
             base.OnUpdateFrame(e);
+
+            keys = player.Key;
+            ImplemOfMEnemies();
+            ImplemOfFalling();
+            AreBulsIntersectWithPlayer();
+            ImplemOfShooting();
+
             livesCount = player.LivesCount;
             health = player.Health;
             IsIntersectsWithEnemies();
             IsHealthAboveZero();
-            keys = player.Key;
+            
             foreach (Enemy he in enemyList)
                 he.Update(ref level);
+            foreach (Bullet b in level.bullets)
+                b.Update(ref level);
+            int n = level.bullets.Count;
+            for (int i = 0; i < n; i++)
+            {
+                if (level.bullets[i].IsBumped)
+                {
+                    level.bullets.Remove(level.bullets[i]);
+                    n--;
+                    i--;
+                }
+            }
+
             player.Update(ref level);
             
             if (livesCount != player.LivesCount)
@@ -116,16 +148,7 @@ namespace Game
                // ForcedRespawn();
             }
 
-            if(keys != player.Key)
-            {
-                if (levelNum < lvlNames.Count - 1)
-                {
-                    levelNum++;
-                }
-                else
-                    levelNum = 0;
-                LoadNewLvl();
-            }
+            
             
             if (livesCount - player.LivesCount > 1)
                 player.LivesCount = player.LivesCount + (livesCount - player.LivesCount - 1);
@@ -142,6 +165,8 @@ namespace Game
                 //player.LivesCount = 10;
             }
 
+            ImplemOfKeys();
+
             view.SetPosition(player.position, TweenType.QuarticOut, 15);
 
             Respawn();
@@ -150,6 +175,74 @@ namespace Game
             view.Update();
 
             Title = player.ToString();
+        }
+
+        private void AreBulsIntersectWithPlayer()
+        {
+            foreach (Bullet b in level.bullets)
+            {
+                if (Math.Abs(player.position.X - b.position.X) < 20 && Math.Abs(player.position.Y - b.position.Y) < 20)
+                {
+                    player.Health -= b.damage;
+                    b.IsBumped = true;
+                }
+            }
+            
+        }
+
+        private void ImplemOfShooting()
+        {
+            level.CountShootingTime++;
+            if (level.CountShootingTime > 90)
+            {
+                foreach (Enemy e in enemyList)
+                {
+                    if (e is ShootEnemy shootEnemy)
+                    {
+                        level.bullets.Add(new Bullet(shootEnemy.position));
+                    }
+                }
+                level.CountShootingTime = 0;
+            }
+        }
+
+        private void ImplemOfFalling()
+        {
+            if (player.climbing == false && player.grounded == false && player.onLadder == false)
+            {
+                level.CountOfJumpingTime++;
+            }
+            else
+            {
+                if (level.CountOfJumpingTime > 50)
+                {
+                    player.Health -= level.CountOfJumpingTime - 40;
+                }
+                level.CountOfJumpingTime = 0;
+            }
+        }
+
+        private void ImplemOfKeys()
+        {
+            if (keys != player.Key)
+            {
+                if (levelNum < lvlNames.Count - 1)
+                {
+                    levelNum++;
+                }
+                else
+                    levelNum = 0;
+                LoadNewLvl();
+            }
+        }
+
+        private void ImplemOfMEnemies()
+        {
+            level.CountOfMEnemy++;
+            if (level.CountOfMEnemy > 360)
+            {
+                level.CountOfMEnemy = 0;
+            }
         }
 
         private void ForcedRespawn()
@@ -228,6 +321,8 @@ namespace Game
             }
             foreach (Enemy en in enemyList)
                 en.Draw();
+            foreach (Bullet b in level.bullets)
+                b.Draw();
             player.Draw();
             SwapBuffers();
         }

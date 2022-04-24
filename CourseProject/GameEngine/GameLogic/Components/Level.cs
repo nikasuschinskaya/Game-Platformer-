@@ -15,6 +15,11 @@ namespace GameLogic
     /// </summary>
     public class Level
     {
+        public int CountOfJumpingTime = 0;
+        public int CountShootingTime = 0;
+        public int CountOfMEnemy = 0;
+
+        public List<Bullet> bullets = new List<Bullet>();
         /// <summary>
         /// Координаты блоков.
         /// </summary>
@@ -34,6 +39,10 @@ namespace GameLogic
         /// Начальнаяя позиция горизонтального врага.
         /// </summary>
         public List<Point> enemiesHorSpawn = new List<Point>();
+
+        public List<Point> enemiesShootSpawn = new List<Point>();
+
+        public List<Point> enemiesMotionlessSpawn = new List<Point>();
 
         /// <summary>
         /// Работа с блоками.

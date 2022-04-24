@@ -1,40 +1,49 @@
-﻿using GameEngine;
-using OpenTK;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GameEngine;
+using OpenTK;
 
 namespace GameLogic
 {
-    public class HorizontalEnemy : Enemy, ICollisionable
+    public class Bullet : GameObject, ICollisionable
     {
+        public bool IsBumped = false;
+        public int damage = 10;
+        public Vector2 speed;
         private int Gridsize = 32;
-        Enemy enemy;
-        public HorizontalEnemy(Enemy enemy, Vector2 startPos)
+        public Texture2D sprite;
+        public bool facingRight;
+
+        public Bullet(Vector2 startPos)
         {
-            this.speed = new Vector2(0.5f, 0);
             this.position = startPos;
-            this.enemy = enemy;
-            this.sprite = ContentPipe.LoadTexture("snail_move.png");
+            this.speed += new Vector2(1.5f, 0);
+            this.facingRight = false;
+            this.size = new Vector2(10, 10);
+            this.sprite = ContentPipe.LoadTexture("bullet.jpg");
         }
 
-        /// <summary>
-        /// Метод обновления уровня.
-        /// </summary>
-        /// <param name="level">Уровень.</param>
-        public override void Update(ref Level level)
+        public void Draw()
+        {
+            RectangleF rec = DrawRec;
+            if (!facingRight)
+            {
+                rec.X += rec.Width;
+                rec.Width = -rec.Width;
+            }
+            Spritebatch.Draw(sprite, rec);
+        }
+
+        public void Update(ref Level level)
         {
             this.position += speed;
             ResolveCollision(ref level);
         }
 
-        /// <summary>
-        /// Метод, обрабатывающий коллизии с игровыми объектами.
-        /// </summary>
-        /// <param name="level">Уровень.</param>
         public void ResolveCollision(ref Level level)
         {
             int minX = (int)Math.Floor((this.position.X - size.X / 2.0f) / Gridsize);
@@ -49,19 +58,10 @@ namespace GameLogic
                     RectangleF blockRec = new RectangleF(x * Gridsize, y * Gridsize, Gridsize, Gridsize);
                     if ((level[x, y].IsLadder || level[x, y].IsSolid || level[x, y].IsPlatform || level[x, y].IsSpike) && this.ColRec.IntersectsWith(blockRec))
                     {
-                        ChangeOnIntersect();
+                        IsBumped = true;
                     }
                 }
             }
-        }
-
-        private void ChangeOnIntersect()
-        {
-            this.speed = -speed;
-            if (facingRight)
-                facingRight = false;
-            else
-                facingRight = true;
         }
     }
 }
