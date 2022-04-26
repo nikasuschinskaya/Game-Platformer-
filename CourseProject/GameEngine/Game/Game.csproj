@@ -163,11 +163,6 @@
     <Resource Include="ImageForMainMenu\menuBackground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Content\Level2.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="ImageForMainMenu\keyLeft.png" />
     <Resource Include="ImageForMainMenu\keyRight.png" />
   </ItemGroup>

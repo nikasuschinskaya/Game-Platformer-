@@ -15,15 +15,13 @@ namespace GameLogic
         public int damage;
         public Vector2 speed;
 
-        private int Gridsize = 32;
+        public int Gridsize = 32;
         public Texture2D sprite;
         public bool facingRight, grounded;
 
         public Enemy()
         {
             this.speed = Vector2.Zero;
-            // this.speed += new Vector2(0, 0.5f);
-            //this.position += speed;
             this.facingRight = false;
             this.grounded = false;
             this.size = new Vector2(20, 30);

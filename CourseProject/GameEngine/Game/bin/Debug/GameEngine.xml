@@ -14,11 +14,7 @@
             Позиция.
             </summary>
         </member>
-        <member name="F:GameEngine.GameObject.size">
-            <summary>
-            Размер.
-            </summary>
-        </member>
+        <!-- Badly formed XML comment ignored for member "F:GameEngine.GameObject.size" -->
         <member name="P:GameEngine.GameObject.LivesCount">
             <summary>
             Количество жизней.

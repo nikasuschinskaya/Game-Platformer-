@@ -25,6 +25,9 @@ namespace GameLogic
         private Vector2 gravity;
 
         private Texture2D sprite, spriteClimb;
+        /// <summary>
+        /// Ползёт ли объект, повернут ли объект вправо, на лестнице ли объект, на земле ли объект.
+        /// </summary>
         public bool climbing, facingRight, onLadder, grounded;
 
         /// <summary>
@@ -67,12 +70,6 @@ namespace GameLogic
         public void Update(ref Level level)
         {
             HandleInput();
-
-            //------------------------------
-            //Move for enemy
-            //this.speed += new Vector2(0, 0.5f);
-            //this.position += speed;
-            //------------------------------
 
             if (speed.X < -5f)
                 speed.X = -5f;

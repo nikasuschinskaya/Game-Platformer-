@@ -19,7 +19,7 @@ namespace GameEngine
         /// </summary>
         public Vector2 position;
 
-        /// <summary>
+        ///// <summary>
         /// Размер.
         /// </summary>
         public Vector2 size;
@@ -72,6 +72,5 @@ namespace GameEngine
             this.LivesCount = 1;
             this.Health = 0;
         }
-
     }
 }

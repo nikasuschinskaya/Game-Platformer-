@@ -566,8 +566,8 @@
 			<tile gid="0"/>
 			<tile gid="2"/>
 			<tile gid="2"/>
-			<tile gid="2"/>
-			<tile gid="2"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
 			<tile gid="0"/>
 			<tile gid="0"/>
 			<tile gid="0"/>
@@ -1609,6 +1609,12 @@
 	</layer>
 	<objectgroup name="Object Layer 1">
 		<object id="3" name="playerStartPos" x="499" y="513" width="68" height="64"/>
-		<object id="5" name="exit" x="675" y="3728" width="68" height="56"/>
+		<object id="9" name="HorizontalEnemySpawn" x="4144" y="3088" width="88" height="72"/>
+		<object id="9" name="HorizontalEnemySpawn" x="4108" y="1041" width="88" height="72"/>
+		<object id="9" name="ShootEnemySpawn" x="408" y="147" width="88" height="72"/>
+		<object id="9" name="ShootEnemySpawn" x="133" y="1815" width="88" height="72"/>
+		<object id="9" name="MotionlessEnemySpawn" x="3405" y="3855" width="88" height="72"/>
+		<object id="9" name="MotionlessEnemySpawn" x="900" y="3215" width="88" height="72"/>
+		<object id="9" name="MotionlessEnemySpawn" x="3714" y="2863" width="88" height="72"/>
 	</objectgroup>
 </map>
