@@ -9,12 +9,26 @@
             Игровой объект.
             </summary>
         </member>
+        <member name="F:GameEngine.GameObject.Gridsize">
+            <summary>
+            Размер сетки.
+            </summary>
+        </member>
         <member name="F:GameEngine.GameObject.position">
             <summary>
             Позиция.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "F:GameEngine.GameObject.size" -->
+        <member name="F:GameEngine.GameObject.speed">
+            <summary>
+            Скорость.
+            </summary>
+        </member>
+        <member name="F:GameEngine.GameObject.size">
+            <summary>
+            Размер.
+            </summary>
+        </member>
         <member name="P:GameEngine.GameObject.LivesCount">
             <summary>
             Количество жизней.
@@ -33,11 +47,6 @@
         <member name="P:GameEngine.GameObject.DrawRec">
             <summary>
             Отрисовка прямоугольника.
-            </summary>
-        </member>
-        <member name="M:GameEngine.GameObject.#ctor">
-            <summary>
-            Инициализатор игрового объекта.
             </summary>
         </member>
         <member name="T:GameEngine.Input">

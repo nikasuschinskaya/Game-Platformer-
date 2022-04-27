@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace GameLogic
 {
+    /// <summary>
+    /// Недвигающийся враг.
+    /// </summary>
     public class MotionlessEnemy : Enemy, ICollisionable
     {
         Enemy enemy;
@@ -44,19 +47,6 @@ namespace GameLogic
             int minY = (int)Math.Floor((this.position.Y - size.Y / 2.0f) / Gridsize);
             int maxX = (int)Math.Ceiling((this.position.X + size.X / 2.0f) / Gridsize);
             int maxY = (int)Math.Ceiling((this.position.Y + size.Y / 2.0f) / Gridsize);
-
-            //for (int x = minX; x <= maxX; x++)
-            //{
-            //    for (int y = minY; y <= maxY; y++)
-            //    {
-            //        RectangleF blockRec = new RectangleF(x * Gridsize, y * Gridsize, Gridsize, Gridsize);
-            //        if ((level[x, y].IsSolid && this.ColRec.IntersectsWith(blockRec)))
-            //        {
-            //            this.position.Y -= 0.5f;
-            //        }
-
-            //    }
-            //}
 
             for (int x = minX; x <= maxX; x++)
             {

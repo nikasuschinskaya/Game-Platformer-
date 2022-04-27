@@ -9,15 +9,35 @@ using OpenTK;
 
 namespace GameLogic
 {
+    /// <summary>
+    /// Пуля.
+    /// </summary>
     public class Bullet : GameObject, ICollisionable
     {
+        /// <summary>
+        /// Врезалась ли пуля в игрока.
+        /// </summary>
         public bool IsBumped = false;
+
+        /// <summary>
+        /// Урон.
+        /// </summary>
         public int damage = 10;
-        public Vector2 speed;
-        private int Gridsize = 32;
+
+        /// <summary>
+        /// Спрайт.
+        /// </summary>
         public Texture2D sprite;
+
+        /// <summary>
+        /// Повернут ли объект вправо.
+        /// </summary>
         public bool facingRight;
 
+        /// <summary>
+        /// Инициализация пули. 
+        /// </summary>
+        /// <param name="startPos">Начальная позиция.</param>
         public Bullet(Vector2 startPos)
         {
             this.position = startPos;
@@ -27,6 +47,9 @@ namespace GameLogic
             this.sprite = ContentPipe.LoadTexture("bullet.jpg");
         }
 
+        /// <summary>
+        /// Отрисовка.
+        /// </summary>
         public void Draw()
         {
             RectangleF rec = DrawRec;
@@ -38,12 +61,20 @@ namespace GameLogic
             Spritebatch.Draw(sprite, rec);
         }
 
+        /// <summary>
+        /// Обновление.
+        /// </summary>
+        /// <param name="level">Уровень.</param>
         public void Update(ref Level level)
         {
             this.position += speed;
             ResolveCollision(ref level);
         }
 
+        /// <summary>
+        /// Коллизии.
+        /// </summary>
+        /// <param name="level">Уровень.</param>
         public void ResolveCollision(ref Level level)
         {
             int minX = (int)Math.Floor((this.position.X - size.X / 2.0f) / Gridsize);

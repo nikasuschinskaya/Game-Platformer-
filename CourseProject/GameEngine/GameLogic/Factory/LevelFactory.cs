@@ -75,9 +75,6 @@ namespace GameLogic
                             case 10:
                                 grid[x, y] = new Block(BlockType.Key, x, y);
                                 break;
-                            case 11:
-                                grid[x, y] = new Block(BlockType.Door, x, y);
-                                break;
                             default:
                                 grid[x, y] = new Block(BlockType.Empty, x, y);
                                 break;

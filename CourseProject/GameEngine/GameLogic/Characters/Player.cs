@@ -16,15 +16,10 @@ namespace GameLogic
     public class Player : GameObject, ICollisionable
     {
 
-        /// <summary>
-        /// Скорость.
-        /// </summary>
-        public Vector2 speed;
-
-        private int Gridsize = 32;
         private Vector2 gravity;
 
         private Texture2D sprite, spriteClimb;
+
         /// <summary>
         /// Ползёт ли объект, повернут ли объект вправо, на лестнице ли объект, на земле ли объект.
         /// </summary>
@@ -45,7 +40,7 @@ namespace GameLogic
         /// <param name="startPos">Начальная позиция игрока.</param>
         /// <param name="gravity">Гравитация.</param>
         /// <param name="key">Количество ключей игрока</param>
-        public Player(Vector2 startPos, Vector2 gravity, int key) : base()
+        public Player(Vector2 startPos, Vector2 gravity, int key)
         {
             this.gravity = gravity;
             this.position = startPos;

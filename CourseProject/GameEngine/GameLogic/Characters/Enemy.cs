@@ -9,16 +9,29 @@ using System.Drawing;
 
 namespace GameLogic
 {
+    /// <summary>
+    /// Базовый класс для врагов.
+    /// </summary>
     public class Enemy : GameObject
     {
-
+        /// <summary>
+        /// Урон.
+        /// </summary>
         public int damage;
-        public Vector2 speed;
 
-        public int Gridsize = 32;
+        /// <summary>
+        /// Спрайт.
+        /// </summary>
         public Texture2D sprite;
+
+        /// <summary>
+        /// Повернут ли объект вправо, на земли ли.
+        /// </summary>
         public bool facingRight, grounded;
 
+        /// <summary>
+        /// Инициализация врагов.
+        /// </summary>
         public Enemy()
         {
             this.speed = Vector2.Zero;
@@ -27,6 +40,10 @@ namespace GameLogic
             this.size = new Vector2(20, 30);
         }
 
+
+        /// <summary>
+        /// Отрисовка.
+        /// </summary>
         public void Draw()
         {
             RectangleF rec = DrawRec;
@@ -38,6 +55,10 @@ namespace GameLogic
             Spritebatch.Draw(sprite, rec);
         }
 
+        /// <summary>
+        /// Обновление.
+        /// </summary>
+        /// <param name="level">Уровень.</param>
         public virtual void Update(ref Level level) { }
     }
 }

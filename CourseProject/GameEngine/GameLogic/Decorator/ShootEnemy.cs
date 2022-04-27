@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace GameLogic
 {
+    /// <summary>
+    /// Стреляющий враг.
+    /// </summary>
     public class ShootEnemy : Enemy
     {
-        private int Gridsize = 32;
         Enemy enemy;
         public ShootEnemy(Enemy enemy, Vector2 startPos)
         {

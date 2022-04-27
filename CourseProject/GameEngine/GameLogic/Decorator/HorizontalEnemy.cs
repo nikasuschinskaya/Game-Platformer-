@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace GameLogic
 {
+    /// <summary>
+    /// Враг, движущийся горизонтально.
+    /// </summary>
     public class HorizontalEnemy : Enemy, ICollisionable
     {
         private int Gridsize = 32;

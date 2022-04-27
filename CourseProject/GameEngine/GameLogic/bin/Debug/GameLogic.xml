@@ -4,6 +4,54 @@
         <name>GameLogic</name>
     </assembly>
     <members>
+        <member name="T:GameLogic.Bullet">
+            <summary>
+            Пуля.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Bullet.IsBumped">
+            <summary>
+            Врезалась ли пуля в игрока.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Bullet.damage">
+            <summary>
+            Урон.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Bullet.sprite">
+            <summary>
+            Спрайт.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Bullet.facingRight">
+            <summary>
+            Повернут ли объект вправо.
+            </summary>
+        </member>
+        <member name="M:GameLogic.Bullet.#ctor(OpenTK.Vector2)">
+            <summary>
+            Инициализация пули. 
+            </summary>
+            <param name="startPos">Начальная позиция.</param>
+        </member>
+        <member name="M:GameLogic.Bullet.Draw">
+            <summary>
+            Отрисовка.
+            </summary>
+        </member>
+        <member name="M:GameLogic.Bullet.Update(GameLogic.Level@)">
+            <summary>
+            Обновление.
+            </summary>
+            <param name="level">Уровень.</param>
+        </member>
+        <member name="M:GameLogic.Bullet.ResolveCollision(GameLogic.Level@)">
+            <summary>
+            Коллизии.
+            </summary>
+            <param name="level">Уровень.</param>
+        </member>
         <member name="T:GameLogic.BlockType">
             <summary>
             Тип блока.
@@ -59,19 +107,50 @@
             Объект-ключ (переход на новый уровень)
             </summary>
         </member>
-        <member name="F:GameLogic.BlockType.Door">
+        <member name="T:GameLogic.Enemy">
             <summary>
-            Объект-дверь (игрок побеждает)
+            Базовый класс для врагов.
             </summary>
+        </member>
+        <member name="F:GameLogic.Enemy.damage">
+            <summary>
+            Урон.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Enemy.sprite">
+            <summary>
+            Спрайт.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Enemy.facingRight">
+            <summary>
+            Повернут ли объект вправо, на земли ли.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Enemy.grounded">
+            <summary>
+            Повернут ли объект вправо, на земли ли.
+            </summary>
+        </member>
+        <member name="M:GameLogic.Enemy.#ctor">
+            <summary>
+            Инициализация врагов.
+            </summary>
+        </member>
+        <member name="M:GameLogic.Enemy.Draw">
+            <summary>
+            Отрисовка.
+            </summary>
+        </member>
+        <member name="M:GameLogic.Enemy.Update(GameLogic.Level@)">
+            <summary>
+            Обновление.
+            </summary>
+            <param name="level">Уровень.</param>
         </member>
         <member name="T:GameLogic.Player">
             <summary>
             Главный герой.
-            </summary>
-        </member>
-        <member name="F:GameLogic.Player.speed">
-            <summary>
-            Скорость.
             </summary>
         </member>
         <member name="F:GameLogic.Player.climbing">
@@ -253,6 +332,11 @@
             <param name="width">Ширина.</param>
             <param name="height">Высота.</param>
         </member>
+        <member name="T:GameLogic.HorizontalEnemy">
+            <summary>
+            Враг, движущийся горизонтально.
+            </summary>
+        </member>
         <member name="M:GameLogic.HorizontalEnemy.Update(GameLogic.Level@)">
             <summary>
             Метод обновления уровня.
@@ -265,11 +349,21 @@
             </summary>
             <param name="level">Уровень.</param>
         </member>
+        <member name="T:GameLogic.MotionlessEnemy">
+            <summary>
+            Недвигающийся враг.
+            </summary>
+        </member>
         <member name="M:GameLogic.MotionlessEnemy.ResolveCollision(GameLogic.Level@)">
             <summary>
             Метод, обрабатывающий коллизии с игровыми объектами.
             </summary>
             <param name="level">Уровень.</param>
+        </member>
+        <member name="T:GameLogic.ShootEnemy">
+            <summary>
+            Стреляющий враг.
+            </summary>
         </member>
         <member name="T:GameLogic.LevelFactory">
             <summary>

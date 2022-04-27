@@ -144,9 +144,6 @@ namespace GameLogic
                 case BlockType.Key:
                     this.key = true;
                     break;
-                case BlockType.Door:
-                    this.door = true;
-                    break;
             }
         }
     }

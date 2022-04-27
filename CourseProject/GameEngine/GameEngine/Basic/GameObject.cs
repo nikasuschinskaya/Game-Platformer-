@@ -13,13 +13,22 @@ namespace GameEngine
     /// </summary>
     public abstract class GameObject
     {
+        /// <summary>
+        /// Размер сетки.
+        /// </summary>
+        public int Gridsize = 32;
 
         /// <summary>
         /// Позиция.
         /// </summary>
         public Vector2 position;
 
-        ///// <summary>
+        /// <summary>
+        /// Скорость.
+        /// </summary>
+        public Vector2 speed;
+
+        /// <summary>
         /// Размер.
         /// </summary>
         public Vector2 size;
@@ -64,13 +73,13 @@ namespace GameEngine
             }
         }
 
-        /// <summary>
-        /// Инициализатор игрового объекта.
-        /// </summary>
-        public GameObject()
-        {
-            this.LivesCount = 1;
-            this.Health = 0;
-        }
+        ///// <summary>
+        ///// Инициализатор игрового объекта.
+        ///// </summary>
+        //public GameObject()
+        //{
+        //    this.LivesCount = 1;
+        //    this.Health = 0;
+        //}
     }
 }

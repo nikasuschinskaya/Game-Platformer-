@@ -50,10 +50,6 @@ namespace GameLogic
         /// <summary>
         /// Объект-ключ (переход на новый уровень)
         /// </summary>
-        Key,
-        /// <summary>
-        /// Объект-дверь (игрок побеждает)
-        /// </summary>
-        Door
+        Key
     }
 }

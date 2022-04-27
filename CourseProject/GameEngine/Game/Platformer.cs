@@ -27,8 +27,8 @@ namespace Game
         Level level;
         Player player;
         List<Enemy> enemyList = new List<Enemy>();
-        Enemy enemyMotionless, enemyShoot;
-        HorizontalEnemy enemyHorizontal;
+        //Enemy enemyMotionless, enemyShoot;
+        //HorizontalEnemy enemyHorizontal;
         int levelNum = 0;
         List<string> lvlNames = new List<string>()
         {
@@ -146,6 +146,7 @@ namespace Game
             if (livesCount != player.LivesCount)
             {
                 ForcedRespawn();
+                player.Health = 100;
             }
 
             if (livesCount - player.LivesCount > 1)
@@ -308,9 +309,6 @@ namespace Game
                             break;
                         case BlockType.Key:
                             source = new RectangleF(1 * TILESIZE, 2 * TILESIZE, TILESIZE, TILESIZE);
-                            break;
-                        case BlockType.Door:
-                            source = new RectangleF(2 * TILESIZE, 2 * TILESIZE, TILESIZE, TILESIZE);
                             break;
                     }
                     Spritebatch.Draw(tileset, new Vector2(x * GRIDSIZE, y * GRIDSIZE), new Vector2((float)
