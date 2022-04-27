@@ -27,8 +27,6 @@ namespace Game
         Level level;
         Player player;
         List<Enemy> enemyList = new List<Enemy>();
-        //Enemy enemyMotionless, enemyShoot;
-        //HorizontalEnemy enemyHorizontal;
         int levelNum = 0;
         List<string> lvlNames = new List<string>()
         {
