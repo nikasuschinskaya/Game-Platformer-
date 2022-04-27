@@ -1612,7 +1612,5 @@
 	 <object id="9" name="HorizontalEnemySpawn" x="3200" y="1664" width="88" height="72"/>
 	 <object id="9" name="HorizontalEnemySpawn" x="3968" y="136" width="88" height="72"/>
 	 <object id="9" name="ShootEnemySpawn" x="2160" y="0" width="88" height="72"/>
-	 <object id="9" name="MotionlessEnemySpawn" x="1024" y="2304" width="88" height="72"/>
-	 <object id="9" name="MotionlessEnemySpawn" x="1408" y="2688" width="88" height="72"/>
  </objectgroup>
 </map>

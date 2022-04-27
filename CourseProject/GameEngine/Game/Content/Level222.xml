@@ -566,8 +566,8 @@
    <tile/>
    <tile gid="2"/>
    <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
    <tile/>
    <tile/>
    <tile/>
@@ -1611,7 +1611,7 @@
   <object id="3" name="playerStartPos" x="499" y="513" width="68" height="64"/>
   <object id="7" name="HorizontalEnemySpawn" x="4144.13" y="3088.75" width="70.3587" height="98.5021"/>
   <object id="8" name="HorizontalEnemySpawn" x="4108.95" y="1041.31" width="105.538" height="98.5021"/>
-  <object id="10" name="ShootEnemySpawn" x="140.717" y="1934.86" width="70.3587" height="84.4304"/>
+  <object id="10" name="ShootEnemySpawn" x="133.681" y="1815.25" width="91.4663" height="84.4304"/>
   <object id="11" name="ShootEnemySpawn" x="408.08" y="147.753" width="105.538" height="105.538"/>
   <object id="12" name="MotionlessEnemySpawn" x="900.591" y="3215.39" width="112.574" height="105.538"/>
   <object id="13" name="MotionlessEnemySpawn" x="3714.94" y="2863.6" width="77.3945" height="63.3228"/>

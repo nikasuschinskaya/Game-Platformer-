@@ -145,24 +145,22 @@ namespace Game
             
             if (livesCount != player.LivesCount)
             {
-               // ForcedRespawn();
+                ForcedRespawn();
             }
 
-            
-            
             if (livesCount - player.LivesCount > 1)
                 player.LivesCount = player.LivesCount + (livesCount - player.LivesCount - 1);
 
-            if (player.LivesCount <= 0 && player.Health <= 0)
+            if (player.LivesCount <= 0)
             {
-                //System.Windows.MessageBox.Show("Вы проиграли!");
-                //RestartWindow restart = new RestartWindow();
-                //restart.Show();
-                //this.Close();
+                System.Windows.MessageBox.Show("Вы проиграли!");
+                RestartWindow restart = new RestartWindow();
+                restart.Show();
+                this.Close();
 
                 //тут всполывающее окно "Вы проиграли" и кнопка начать заново
                 //livesCount = 10;
-                //player.LivesCount = 10;
+                player.LivesCount = 10;
             }
 
             ImplemOfKeys();
