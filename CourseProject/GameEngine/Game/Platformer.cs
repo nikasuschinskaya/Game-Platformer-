@@ -150,6 +150,7 @@ namespace Game
             {
                 ForcedRespawn();
                 player.Health = 100;
+                
             }
 
             if (livesCount - player.LivesCount > 1)
@@ -166,6 +167,12 @@ namespace Game
                 //тут всполывающее окно "Вы проиграли" и кнопка начать заново
                 //livesCount = 10;
                 player.LivesCount = 10;
+            }
+
+            if(player.Key == 4)
+            {
+                System.Windows.MessageBox.Show("Поздравляем!", "Вы победили!");
+                this.Close();
             }
 
             ImplemOfKeys();
