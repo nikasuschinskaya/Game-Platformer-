@@ -13,7 +13,6 @@ using OpenTK.Input;
 using GameEngine;
 using GameLogic;
 
-
 namespace Game
 {
     /// <summary>
@@ -37,14 +36,20 @@ namespace Game
         private int livesCount, health, keys;
         private int GRIDSIZE = 32, TILESIZE = 128;
 
+
+        //, new OpenTK.Graphics.GraphicsMode(32, 24, 0, 8), "Platformer", 
+        //  GameWindowFlags.FixedWindow,
+        //  DisplayDevice.Default, 4, 3, GraphicsContextFlags.Debug
+
         /// <summary>
         /// Конструктор с параметрами окна.
         /// </summary>
         public Platformer() : base(
               640, 480, new OpenTK.Graphics.GraphicsMode(32, 24, 0, 8), "Platformer", 
               GameWindowFlags.FixedWindow,
-              DisplayDevice.Default, 4, 3, GraphicsContextFlags.Debug
+              DisplayDevice.Default
               )
+
         {
             CursorVisible = false;
             VSync = VSyncMode.On;
@@ -152,10 +157,11 @@ namespace Game
 
             if (player.LivesCount <= 0)
             {
-                System.Windows.MessageBox.Show("Вы проиграли!");
-                RestartWindow restart = new RestartWindow();
-                restart.Show();
-                this.Close();
+                Defeat();
+
+                //RestartWindow restart = new RestartWindow();
+                //restart.Show();
+                //this.Close();
 
                 //тут всполывающее окно "Вы проиграли" и кнопка начать заново
                 //livesCount = 10;
@@ -174,6 +180,24 @@ namespace Game
             Title = player.ToString();
         }
 
+        private void Defeat()
+        {
+            System.Windows.Forms.DialogResult result = 
+                (System.Windows.Forms.DialogResult)System.Windows.MessageBox.Show("Начать заново?", "Вы проиграли!",
+                 System.Windows.MessageBoxButton.YesNo);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+                Platformer platformer = new Platformer();
+                platformer.Run(60, 60);
+                //levelNum = 0;
+                //LoadNewLvl();
+            }
+            if (result == System.Windows.Forms.DialogResult.No)
+            {
+                this.Close();
+            }
+        }
         private void AreBulsIntersectWithPlayer()
         {
             foreach (Bullet b in level.bullets)

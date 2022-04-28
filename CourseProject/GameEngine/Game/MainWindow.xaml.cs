@@ -20,7 +20,8 @@ namespace Game
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            this.Close();
+            //this.Hide();
 
             using (Platformer gameWindow = new Platformer())
             {
