@@ -148,6 +148,7 @@ namespace Game
             
             if (livesCount != player.LivesCount)
             {
+                level.CountOfJumpingTime = 0;
                 ForcedRespawn();
                 player.Health = 100;
                 
@@ -358,11 +359,24 @@ namespace Game
             {
                 foreach (Enemy e in enemyList)
                 {
-                    if (Math.Abs(player.position.Y - e.position.Y) < 20 && Math.Abs(player.position.X - e.position.X) < 25)
+                    if (e is HorizontalEnemy he && Math.Abs(player.position.Y - he.position.Y) < 20 && Math.Abs(player.position.X - he.position.X) < 25)
                         player.Health -= 1;
-                    if (Math.Abs(player.position.Y - e.position.Y) < 20 && Math.Abs(player.position.X - e.position.X) < 20)
-                        player.Health -= 1;
-                    if (Math.Abs(player.position.Y - e.position.Y) < 20 && Math.Abs(player.position.X - e.position.X) < 20)
+
+                    if (e is MotionlessEnemy me)
+                    {
+                        if (level.CountOfMEnemy > 180)
+                        {
+                            if (Math.Abs(player.position.Y - me.position.Y) < 60 && Math.Abs(player.position.X - me.position.X) < 60)
+                                player.Health -= 1;
+                        }
+                        else
+                        {
+                            if (Math.Abs(player.position.Y - me.position.Y) < 20 && Math.Abs(player.position.X - me.position.X) < 20)
+                                player.Health -= 1;
+                        }
+                    }
+                    
+                    if (e is ShootEnemy se && Math.Abs(player.position.Y - se.position.Y) < 20 && Math.Abs(player.position.X - se.position.X) < 20)
                         player.Health -= 1;
                 }
             }

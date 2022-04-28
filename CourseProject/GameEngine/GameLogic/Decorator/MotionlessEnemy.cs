@@ -27,7 +27,6 @@ namespace GameLogic
            
             if (level.CountOfMEnemy > 180)
             {
-                
                 this.size = new Vector2(60, 70);
             }
             else
