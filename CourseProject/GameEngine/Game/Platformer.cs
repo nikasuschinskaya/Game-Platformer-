@@ -36,11 +36,6 @@ namespace Game
         private int livesCount, health, keys;
         private int GRIDSIZE = 32, TILESIZE = 128;
 
-
-        //, new OpenTK.Graphics.GraphicsMode(32, 24, 0, 8), "Platformer", 
-        //  GameWindowFlags.FixedWindow,
-        //  DisplayDevice.Default, 4, 3, GraphicsContextFlags.Debug
-
         /// <summary>
         /// Конструктор с параметрами окна.
         /// </summary>
@@ -72,10 +67,7 @@ namespace Game
             LoadNewLvl();
         }
 
-        /// <summary>
-        /// Загрузка нового уровня.
-        /// </summary>
-        protected void LoadNewLvl()
+        private void LoadNewLvl()
         {
             enemyList.Clear();
             tileset = ContentPipe.LoadTexture("FullTilesSet.png");
@@ -117,18 +109,26 @@ namespace Game
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
             base.OnUpdateFrame(e);
-
-            keys = player.Key;
             ImplemOfMEnemies();
             ImplemOfFalling();
-            AreBulsIntersectWithPlayer();
+            IfBulsIntersectWithPlayer();
             ImplemOfShooting();
-
-            livesCount = player.LivesCount;
-            health = player.Health;
+            RememberLastUpdate();
             IsIntersectsWithEnemies();
             IsHealthAboveZero();
-            
+            UpdatePlayerEnemiesBullets();
+            IfPlayerDead();
+            IfCollectedAllKeys();
+            ImplemOfKeys();
+            view.SetPosition(player.position, TweenType.QuarticOut, 15);
+            IfRespawnButPressed();
+            Input.Update();
+            view.Update();
+            Title = player.ToString();
+        }
+
+        private void UpdatePlayerEnemiesBullets()
+        {
             foreach (Enemy he in enemyList)
                 he.Update(ref level);
             foreach (Bullet b in level.bullets)
@@ -143,15 +143,25 @@ namespace Game
                     i--;
                 }
             }
-
             player.Update(ref level);
-            
+        }
+
+        private void IfCollectedAllKeys()
+        {
+            if (player.Key == 1 + lvlNames.Count)
+            {
+                System.Windows.MessageBox.Show("Поздравляем!", "Вы победили!");
+                this.Close();
+            }
+        }
+
+        private void IfPlayerDead()
+        {
             if (livesCount != player.LivesCount)
             {
                 level.CountOfJumpingTime = 0;
                 ForcedRespawn();
                 player.Health = 100;
-                
             }
 
             if (livesCount - player.LivesCount > 1)
@@ -160,32 +170,15 @@ namespace Game
             if (player.LivesCount <= 0)
             {
                 Defeat();
-
-                //RestartWindow restart = new RestartWindow();
-                //restart.Show();
-                //this.Close();
-
-                //тут всполывающее окно "Вы проиграли" и кнопка начать заново
-                //livesCount = 10;
                 player.LivesCount = 10;
             }
+        }
 
-            if(player.Key == 4)
-            {
-                System.Windows.MessageBox.Show("Поздравляем!", "Вы победили!");
-                this.Close();
-            }
-
-            ImplemOfKeys();
-
-            view.SetPosition(player.position, TweenType.QuarticOut, 15);
-
-            Respawn();
-
-            Input.Update();
-            view.Update();
-
-            Title = player.ToString();
+        private void RememberLastUpdate()
+        {
+            keys = player.Key;
+            livesCount = player.LivesCount;
+            health = player.Health;
         }
 
         private void Defeat()
@@ -206,7 +199,7 @@ namespace Game
                 this.Close();
             }
         }
-        private void AreBulsIntersectWithPlayer()
+        private void IfBulsIntersectWithPlayer()
         {
             foreach (Bullet b in level.bullets)
             {
@@ -278,16 +271,16 @@ namespace Game
         {
             player.position =
                 new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE;
-            player.speed = Vector2.Zero;
+            player.Speed = Vector2.Zero;
         }
 
-        private void Respawn()
+        private void IfRespawnButPressed()
         {
             if (Input.KeyPress(OpenTK.Input.Key.R))
             {
                 player.position =
                     new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE;
-                player.speed = Vector2.Zero;
+                player.Speed = Vector2.Zero;
             }
         }
 
@@ -366,7 +359,7 @@ namespace Game
                     {
                         if (level.CountOfMEnemy > 180)
                         {
-                            if (Math.Abs(player.position.Y - me.position.Y) < 60 && Math.Abs(player.position.X - me.position.X) < 60)
+                            if (Math.Abs(player.position.Y - me.position.Y) < 50 && Math.Abs(player.position.X - me.position.X) < 50)
                                 player.Health -= 1;
                         }
                         else
@@ -390,7 +383,6 @@ namespace Game
                 player.LivesCount -= 1;
                 ForcedRespawn();
             }
-                
         }
 
         /// <summary>

@@ -12,13 +12,15 @@ namespace GameLogic
     /// <summary>
     /// Враг, движущийся горизонтально.
     /// </summary>
-    public class HorizontalEnemy : Enemy, ICollisionable
+    public class HorizontalEnemy : Enemy, ICollisionable, IMovable
     {
-        private int Gridsize = 32;
         Enemy enemy;
+
+        public Vector2 Speed { get; private set; }
+
         public HorizontalEnemy(Enemy enemy, Vector2 startPos)
         {
-            this.speed = new Vector2(0.5f, 0);
+            this.Speed = new Vector2(0.5f, 0);
             this.position = startPos;
             this.enemy = enemy;
             this.sprite = ContentPipe.LoadTexture("snail_move.png");
@@ -30,7 +32,7 @@ namespace GameLogic
         /// <param name="level">Уровень.</param>
         public override void Update(ref Level level)
         {
-            this.position += speed;
+            Move();
             ResolveCollision(ref level);
         }
 
@@ -60,11 +62,16 @@ namespace GameLogic
 
         private void ChangeOnIntersect()
         {
-            this.speed = -speed;
+            this.Speed = -Speed;
             if (facingRight)
                 facingRight = false;
             else
                 facingRight = true;
+        }
+
+        public void Move()
+        {
+            this.position += Speed;
         }
     }
 }

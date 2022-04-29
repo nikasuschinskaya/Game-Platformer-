@@ -192,7 +192,7 @@
             </summary>
             <param name="level">Уровень.</param>
         </member>
-        <member name="M:GameLogic.Player.HandleInput">
+        <member name="M:GameLogic.Player.Move">
             <summary>
             Метод, отвечающий за управление персонажем.
             </summary>
@@ -257,11 +257,6 @@
         <member name="P:GameLogic.Block.IsKey">
             <summary>
             Является ли объект ключом.
-            </summary>
-        </member>
-        <member name="P:GameLogic.Block.IsDoor">
-            <summary>
-            Является ли объект дверью.
             </summary>
         </member>
         <member name="M:GameLogic.Block.#ctor(GameLogic.BlockType,System.Int32,System.Int32)">

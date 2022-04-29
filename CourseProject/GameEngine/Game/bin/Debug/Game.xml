@@ -92,11 +92,6 @@
             </summary>
             <param name="e"></param>
         </member>
-        <member name="M:Game.Platformer.LoadNewLvl">
-            <summary>
-            Загрузка нового уровня.
-            </summary>
-        </member>
         <member name="M:Game.Platformer.OnResize(System.EventArgs)">
             <summary>
             Проверка изменений расширений экрана.

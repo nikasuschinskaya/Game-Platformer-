@@ -15,6 +15,7 @@ namespace GameLogic
     public class MotionlessEnemy : Enemy, ICollisionable
     {
         Enemy enemy;
+        private Vector2 speed;
         public MotionlessEnemy(Enemy enemy, Vector2 startPos)
         {
             this.speed = Vector2.Zero;
@@ -100,13 +101,6 @@ namespace GameLogic
                         if (minDirection != Vector2.Zero)
                         {
                             this.position += minDirection * min;
-                            if (this.speed.X * minDirection.X < 0)
-                                this.speed.X = 0;
-                            if (this.speed.Y * minDirection.Y < 0)
-                                this.speed.Y = 0;
-
-                            if (minDirection == new Vector2(0, -1))
-                                grounded = true;
                         }
                         #endregion
                     }

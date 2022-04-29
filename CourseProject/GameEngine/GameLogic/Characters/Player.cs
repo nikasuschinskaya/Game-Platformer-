@@ -13,11 +13,11 @@ namespace GameLogic
     /// <summary>
     /// Главный герой.
     /// </summary>
-    public class Player : GameObject, ICollisionable
+    public class Player : GameObject, ICollisionable, IMovable
     {
 
         private Vector2 gravity;
-
+        private Vector2 speed;
         private Texture2D sprite, spriteClimb;
 
         /// <summary>
@@ -32,6 +32,18 @@ namespace GameLogic
         {
             get;
             set;
+        }
+
+        public Vector2 Speed 
+        {
+            get
+            {
+                return speed;
+            }
+            set
+            {
+                speed = value;
+            }
         }
 
         /// <summary>
@@ -64,7 +76,7 @@ namespace GameLogic
         /// <param name="level">Уровень.</param>
         public void Update(ref Level level)
         {
-            HandleInput();
+            Move();
 
             if (speed.X < -5f)
                 speed.X = -5f;
@@ -80,7 +92,7 @@ namespace GameLogic
         /// <summary>
         /// Метод, отвечающий за управление персонажем.
         /// </summary>
-        public void HandleInput()
+        public void Move()
         {
             if (!onLadder)
                 climbing = false;

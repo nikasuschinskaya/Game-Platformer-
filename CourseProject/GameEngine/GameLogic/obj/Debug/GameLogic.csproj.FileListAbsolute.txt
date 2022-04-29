@@ -79,3 +79,6 @@ C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\fly.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\snail_move.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\ladybug_move.png
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\player1.png
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\playerClimb1.png
+C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\player2.png

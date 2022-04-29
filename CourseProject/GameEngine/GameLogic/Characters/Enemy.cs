@@ -34,7 +34,6 @@ namespace GameLogic
         /// </summary>
         public Enemy()
         {
-            this.speed = Vector2.Zero;
             this.facingRight = false;
             this.grounded = false;
             this.size = new Vector2(20, 30);

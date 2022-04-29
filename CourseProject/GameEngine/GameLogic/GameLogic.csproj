@@ -59,6 +59,7 @@
     <Compile Include="Decorator\ShootEnemy.cs" />
     <Compile Include="Factory\LevelFactory.cs" />
     <Compile Include="Interfaces\ICollisionable.cs" />
+    <Compile Include="Interfaces\IMovable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +102,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\ladybug_move.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\player1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\playerClimb1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\player2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

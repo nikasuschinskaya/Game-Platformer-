@@ -12,7 +12,7 @@ namespace GameLogic
     /// <summary>
     /// Пуля.
     /// </summary>
-    public class Bullet : GameObject, ICollisionable
+    public class Bullet : GameObject, ICollisionable, IMovable
     {
         /// <summary>
         /// Врезалась ли пуля в игрока.
@@ -34,6 +34,8 @@ namespace GameLogic
         /// </summary>
         public bool facingRight;
 
+        public Vector2 Speed { get; private set; }
+
         /// <summary>
         /// Инициализация пули. 
         /// </summary>
@@ -41,7 +43,7 @@ namespace GameLogic
         public Bullet(Vector2 startPos)
         {
             this.position = startPos;
-            this.speed += new Vector2(1.5f, 0);
+            this.Speed += new Vector2(1.5f, 0);
             this.facingRight = false;
             this.size = new Vector2(10, 10);
             this.sprite = ContentPipe.LoadTexture("bullet.jpg");
@@ -67,7 +69,7 @@ namespace GameLogic
         /// <param name="level">Уровень.</param>
         public void Update(ref Level level)
         {
-            this.position += speed;
+            Move();
             ResolveCollision(ref level);
         }
 
@@ -93,6 +95,11 @@ namespace GameLogic
                     }
                 }
             }
+        }
+
+        public void Move()
+        {
+            this.position += Speed;
         }
     }
 }

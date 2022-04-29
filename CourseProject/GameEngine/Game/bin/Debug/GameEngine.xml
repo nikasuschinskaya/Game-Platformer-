@@ -19,11 +19,6 @@
             Позиция.
             </summary>
         </member>
-        <member name="F:GameEngine.GameObject.speed">
-            <summary>
-            Скорость.
-            </summary>
-        </member>
         <member name="F:GameEngine.GameObject.size">
             <summary>
             Размер.
@@ -41,7 +36,7 @@
         </member>
         <member name="P:GameEngine.GameObject.ColRec">
             <summary>
-            Создание прямоугольника.
+            Прямоугольник сталкновения.
             </summary>
         </member>
         <member name="P:GameEngine.GameObject.DrawRec">

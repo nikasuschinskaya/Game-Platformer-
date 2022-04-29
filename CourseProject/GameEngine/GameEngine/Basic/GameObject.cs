@@ -16,7 +16,7 @@ namespace GameEngine
         /// <summary>
         /// Размер сетки.
         /// </summary>
-        public int Gridsize = 32;
+        public static readonly int Gridsize = 32;
 
         /// <summary>
         /// Позиция.
@@ -26,7 +26,7 @@ namespace GameEngine
         /// <summary>
         /// Скорость.
         /// </summary>
-        public Vector2 speed;
+        //public Vector2 speed;
 
         /// <summary>
         /// Размер.
@@ -52,7 +52,7 @@ namespace GameEngine
         }
 
         /// <summary>
-        /// Создание прямоугольника.
+        /// Прямоугольник сталкновения.
         /// </summary>
         public RectangleF ColRec
         {
@@ -73,9 +73,9 @@ namespace GameEngine
             }
         }
 
-        ///// <summary>
-        ///// Инициализатор игрового объекта.
-        ///// </summary>
+        /// <summary>
+        /// Инициализатор игрового объекта.
+        /// </summary>
         //public GameObject()
         //{
         //    this.LivesCount = 1;

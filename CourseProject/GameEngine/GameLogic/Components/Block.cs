@@ -13,7 +13,7 @@ namespace GameLogic
     {
         private BlockType type;
         private int posX, posY;
-        private bool solid, platform, ladder, spike, key, door;
+        private bool solid, platform, ladder, spike, key;
 
         /// <summary>
         /// Тип блока.
@@ -80,14 +80,6 @@ namespace GameLogic
         }
 
         /// <summary>
-        /// Является ли объект дверью.
-        /// </summary>
-        public bool IsDoor
-        {
-            get { return door; }
-        }
-
-        /// <summary>
         /// Конструктор блоков.
         /// </summary>
         /// <param name="type">Тип блока.</param>
@@ -104,7 +96,6 @@ namespace GameLogic
             this.platform = false;
             this.spike = false;
             this.key = false;
-            this.door = false;
 
             GetBlockType();
         }
