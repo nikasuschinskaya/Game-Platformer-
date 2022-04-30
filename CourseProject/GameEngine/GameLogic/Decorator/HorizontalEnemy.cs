@@ -16,8 +16,16 @@ namespace GameLogic
     {
         Enemy enemy;
 
+        /// <summary>
+        /// Скорость.
+        /// </summary>
         public Vector2 Speed { get; private set; }
 
+        /// <summary>
+        /// Инициализация врага,д= движущегося горизонтально.
+        /// </summary>
+        /// <param name="enemy">Враг.</param>
+        /// <param name="startPos">Начальная позиция.</param>
         public HorizontalEnemy(Enemy enemy, Vector2 startPos)
         {
             this.Speed = new Vector2(0.5f, 0);
@@ -37,7 +45,7 @@ namespace GameLogic
         }
 
         /// <summary>
-        /// Метод, обрабатывающий коллизии с игровыми объектами.
+        /// Метод, обрабатывающий коллизии.
         /// </summary>
         /// <param name="level">Уровень.</param>
         public void ResolveCollision(ref Level level)
@@ -69,6 +77,9 @@ namespace GameLogic
                 facingRight = true;
         }
 
+        /// <summary>
+        /// Метод движения.
+        /// </summary>
         public void Move()
         {
             this.position += Speed;

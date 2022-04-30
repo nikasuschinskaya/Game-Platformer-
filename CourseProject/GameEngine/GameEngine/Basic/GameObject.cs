@@ -24,32 +24,9 @@ namespace GameEngine
         public Vector2 position;
 
         /// <summary>
-        /// Скорость.
-        /// </summary>
-        //public Vector2 speed;
-
-        /// <summary>
         /// Размер.
         /// </summary>
         public Vector2 size;
-
-        /// <summary>
-        /// Количество жизней.
-        /// </summary>
-        public int LivesCount
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Очки здоровья для одной жизни.
-        /// </summary>
-        public int Health
-        {
-            get;
-            set;
-        }
 
         /// <summary>
         /// Прямоугольник сталкновения.

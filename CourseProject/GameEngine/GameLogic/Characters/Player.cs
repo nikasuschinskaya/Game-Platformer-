@@ -26,6 +26,25 @@ namespace GameLogic
         public bool climbing, facingRight, onLadder, grounded;
 
         /// <summary>
+        /// Количество жизней.
+        /// </summary>
+        public int LivesCount
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Очки здоровья для одной жизни.
+        /// </summary>
+        public int Health
+        {
+            get;
+            set;
+        }
+
+
+        /// <summary>
         /// Количество ключей.
         /// </summary>
         public int Key
@@ -34,6 +53,9 @@ namespace GameLogic
             set;
         }
 
+        /// <summary>
+        /// Скорость.
+        /// </summary>
         public Vector2 Speed 
         {
             get
@@ -90,7 +112,7 @@ namespace GameLogic
         }
 
         /// <summary>
-        /// Метод, отвечающий за управление персонажем.
+        /// Метод движения, управления персонажем.
         /// </summary>
         public void Move()
         {

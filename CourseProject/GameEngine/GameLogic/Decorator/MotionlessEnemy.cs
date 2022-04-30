@@ -16,6 +16,11 @@ namespace GameLogic
     {
         Enemy enemy;
         private Vector2 speed;
+        /// <summary>
+        /// Инициализация недвигающегося врага.
+        /// </summary>
+        /// <param name="enemy">Враг.</param>
+        /// <param name="startPos">Начальная позиция.</param>
         public MotionlessEnemy(Enemy enemy, Vector2 startPos)
         {
             this.speed = Vector2.Zero;
@@ -23,6 +28,10 @@ namespace GameLogic
             this.enemy = enemy;
             this.sprite = ContentPipe.LoadTexture("ladybug_move.png");
         }
+        /// <summary>
+        /// Метод обновления.
+        /// </summary>
+        /// <param name="level">Уровень.</param>
         public override void Update(ref Level level)
         {
            
@@ -37,8 +46,9 @@ namespace GameLogic
             }
             ResolveCollision(ref level);
         }
+
         /// <summary>
-        /// Метод, обрабатывающий коллизии с игровыми объектами.
+        /// Метод, обрабатывающий коллизии.
         /// </summary>
         /// <param name="level">Уровень.</param>
         public void ResolveCollision(ref Level level)
@@ -107,9 +117,6 @@ namespace GameLogic
 
                 }
             }
-
-          
-
         }
     }
 }

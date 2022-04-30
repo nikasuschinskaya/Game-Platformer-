@@ -34,6 +34,9 @@ namespace GameLogic
         /// </summary>
         public bool facingRight;
 
+        /// <summary>
+        /// Скорость.
+        /// </summary>
         public Vector2 Speed { get; private set; }
 
         /// <summary>
@@ -97,6 +100,9 @@ namespace GameLogic
             }
         }
 
+        /// <summary>
+        /// Меетод движения.
+        /// </summary>
         public void Move()
         {
             this.position += Speed;
