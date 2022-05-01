@@ -53,7 +53,7 @@
     <Compile Include="Characters\Enemy.cs" />
     <Compile Include="Characters\Player.cs" />
     <Compile Include="Components\Block.cs" />
-    <Compile Include="Components\Level.cs" />
+    <Compile Include="Factory\Level.cs" />
     <Compile Include="Decorator\HorizontalEnemy.cs" />
     <Compile Include="Decorator\MotionlessEnemy.cs" />
     <Compile Include="Decorator\ShootEnemy.cs" />
@@ -74,10 +74,7 @@
       <Name>GameEngine</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Basic\" />
-    <Folder Include="Others\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Content\player.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

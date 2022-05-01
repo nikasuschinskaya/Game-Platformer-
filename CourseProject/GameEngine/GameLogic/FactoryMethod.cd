@@ -4,7 +4,7 @@
     <Position X="4.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABABIIAAAAACAAAAEAAQCAACAACAAAgAABACAA=</HashCode>
-      <FileName>Components\Level.cs</FileName>
+      <FileName>Factory\Level.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameLogic.LevelFactory">
