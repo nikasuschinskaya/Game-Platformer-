@@ -8,26 +8,41 @@
     </TypeIdentifier>
   </Class>
   <Class Name="GameLogic.HorizontalEnemy" Collapsed="true">
-    <Position X="1.5" Y="2.5" Width="1.5" />
+    <Position X="1.25" Y="3.5" Width="1.5" />
+    <InheritanceLine Type="GameLogic.EnemyDecorator" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="2.441" />
+        <Point X="5.25" Y="3.125" />
+        <Point X="2.312" Y="3.125" />
+        <Point X="2.312" Y="3.5" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAIAAAAAAAAAAAAABAAAAAAAABAgAAAAAAAI=</HashCode>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAAAABAAAAAAAABAgAAAAAAAA=</HashCode>
       <FileName>Decorator\HorizontalEnemy.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Orientation="Left" Position="0.1" />
+    <Lollipop Position="0.1" />
   </Class>
   <Class Name="GameLogic.MotionlessEnemy" Collapsed="true">
-    <Position X="4.5" Y="2.5" Width="1.5" />
+    <Position X="4.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAQAABAAAAAAAAAI=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAQAABAAAAAAAAAA=</HashCode>
       <FileName>Decorator\MotionlessEnemy.cs</FileName>
     </TypeIdentifier>
     <Lollipop Orientation="Left" Position="0.1" />
   </Class>
   <Class Name="GameLogic.ShootEnemy" Collapsed="true">
-    <Position X="8" Y="2.5" Width="1.5" />
+    <Position X="7.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Decorator\ShootEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.EnemyDecorator" Collapsed="true">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Decorator\EnemyDecorator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

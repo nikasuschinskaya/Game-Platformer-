@@ -32,13 +32,13 @@ namespace GameLogic
         /// <summary>
         /// Инициализация врагов.
         /// </summary>
-        public Enemy()
+        public Enemy(Vector2 startPos)
         {
+            this.position = startPos;
             this.facingRight = false;
             this.grounded = false;
             this.size = new Vector2(20, 30);
         }
-
 
         /// <summary>
         /// Отрисовка.

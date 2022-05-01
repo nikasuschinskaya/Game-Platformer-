@@ -12,16 +12,15 @@ namespace GameLogic
     /// <summary>
     /// Недвигающийся враг.
     /// </summary>
-    public class MotionlessEnemy : Enemy, ICollisionable
+    public class MotionlessEnemy : EnemyDecorator, ICollisionable
     {
-        Enemy enemy;
         private Vector2 speed;
         /// <summary>
         /// Инициализация недвигающегося врага.
         /// </summary>
         /// <param name="enemy">Враг.</param>
         /// <param name="startPos">Начальная позиция.</param>
-        public MotionlessEnemy(Enemy enemy, Vector2 startPos)
+        public MotionlessEnemy(Enemy enemy, Vector2 startPos) : base(enemy, startPos)
         {
             this.speed = Vector2.Zero;
             this.position = startPos;

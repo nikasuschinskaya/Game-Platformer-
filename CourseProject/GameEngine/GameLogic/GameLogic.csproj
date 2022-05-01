@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\Bullet.cs" />
+    <Compile Include="Decorator\EnemyDecorator.cs" />
     <Compile Include="Enums\BlockType.cs" />
     <Compile Include="Characters\Enemy.cs" />
     <Compile Include="Characters\Player.cs" />

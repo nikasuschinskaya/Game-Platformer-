@@ -79,17 +79,19 @@ namespace Game
 
         private void AddEnemies()
         {
+            Enemy enemy = new Enemy(Vector2.Zero);
+
             foreach (Point p in level.enemiesHorSpawn)
             {
-                enemyList.Add(new HorizontalEnemy(new Enemy(), new Vector2(p.X + 0.5f, p.Y + 0.5f) * GRIDSIZE));
+                enemyList.Add(new HorizontalEnemy(enemy, new Vector2(p.X + 0.5f, p.Y + 0.5f) * GRIDSIZE));
             }
             foreach (Point p in level.enemiesShootSpawn)
             {
-                enemyList.Add(new ShootEnemy(new Enemy(), new Vector2(p.X + 0.5f, p.Y + 0.5f) * GRIDSIZE));
+                enemyList.Add(new ShootEnemy(enemy, new Vector2(p.X + 0.5f, p.Y + 0.5f) * GRIDSIZE));
             }
             foreach (Point p in level.enemiesMotionlessSpawn)
             {
-                enemyList.Add(new MotionlessEnemy(new Enemy(), new Vector2(p.X + 0.5f, p.Y + 0.5f) * GRIDSIZE));
+                enemyList.Add(new MotionlessEnemy(enemy, new Vector2(p.X + 0.5f, p.Y + 0.5f) * GRIDSIZE));
             }
         }
 

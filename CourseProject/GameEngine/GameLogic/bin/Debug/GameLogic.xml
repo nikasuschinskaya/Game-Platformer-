@@ -62,6 +62,23 @@
             Меетод движения.
             </summary>
         </member>
+        <member name="T:GameLogic.EnemyDecorator">
+            <summary>
+            Декоратор врагов.
+            </summary>
+        </member>
+        <member name="F:GameLogic.EnemyDecorator.enemy">
+            <summary>
+            Враг.
+            </summary>
+        </member>
+        <member name="M:GameLogic.EnemyDecorator.#ctor(GameLogic.Enemy,OpenTK.Vector2)">
+            <summary>
+            Инициализатор.
+            </summary>
+            <param name="enemy">Враг.</param>
+            <param name="startPos">Начальная позиция.</param>
+        </member>
         <member name="T:GameLogic.BlockType">
             <summary>
             Тип блока.
@@ -142,7 +159,7 @@
             Повернут ли объект вправо, на земли ли.
             </summary>
         </member>
-        <member name="M:GameLogic.Enemy.#ctor">
+        <member name="M:GameLogic.Enemy.#ctor(OpenTK.Vector2)">
             <summary>
             Инициализация врагов.
             </summary>

@@ -12,9 +12,8 @@ namespace GameLogic
     /// <summary>
     /// Враг, движущийся горизонтально.
     /// </summary>
-    public class HorizontalEnemy : Enemy, ICollisionable, IMovable
+    public class HorizontalEnemy : EnemyDecorator, ICollisionable, IMovable
     {
-        Enemy enemy;
 
         /// <summary>
         /// Скорость.
@@ -26,7 +25,7 @@ namespace GameLogic
         /// </summary>
         /// <param name="enemy">Враг.</param>
         /// <param name="startPos">Начальная позиция.</param>
-        public HorizontalEnemy(Enemy enemy, Vector2 startPos)
+        public HorizontalEnemy(Enemy enemy, Vector2 startPos) : base(enemy, startPos)
         {
             this.Speed = new Vector2(0.5f, 0);
             this.position = startPos;

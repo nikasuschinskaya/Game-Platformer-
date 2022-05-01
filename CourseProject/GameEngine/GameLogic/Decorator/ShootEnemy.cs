@@ -11,16 +11,14 @@ namespace GameLogic
     /// <summary>
     /// Стреляющий враг.
     /// </summary>
-    public class ShootEnemy : Enemy
+    public class ShootEnemy : EnemyDecorator
     {
-        Enemy enemy;
-
         /// <summary>
         /// Инициализация стреляющего врага.
         /// </summary>
         /// <param name="enemy">Враг.</param>
         /// <param name="startPos">Начальная позиция.</param>
-        public ShootEnemy(Enemy enemy, Vector2 startPos)
+        public ShootEnemy(Enemy enemy, Vector2 startPos) : base(enemy, startPos)
         {
             this.position = startPos;
             this.enemy = enemy;

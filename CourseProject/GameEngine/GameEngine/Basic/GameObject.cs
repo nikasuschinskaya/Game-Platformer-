@@ -50,9 +50,9 @@ namespace GameEngine
             }
         }
 
-        /// <summary>
-        /// Инициализатор игрового объекта.
-        /// </summary>
+        ///// <summary>
+        ///// Инициализатор игрового объекта.
+        ///// </summary>
         //public GameObject()
         //{
         //    this.LivesCount = 1;
