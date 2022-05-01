@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameEngine.GameObject" Collapsed="true">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAIAAIAIAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Basic\GameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEngine.Input" Collapsed="true">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAAAAAQgQAAAAAAAAAAAQAAAAQAAAAAEAAAQAA=</HashCode>
+      <FileName>InputManager\Input.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEngine.ContentPipe" Collapsed="true">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Render\ContentPipe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEngine.Texture2D" Collapsed="true">
+    <Position X="4.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAgAQAQAAAAEAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Render\Texture2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEngine.View" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEACACCAAQIEgACCBIBAAAAIAAgAAAAAAAAAAABA=</HashCode>
+      <FileName>Render\View.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEngine.Spritebatch" Collapsed="true">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Render\Spritebatch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEngine.GameComponent" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Basic\GameComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

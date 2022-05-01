@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameLogic.Enemy" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAACAAggAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Characters\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.HorizontalEnemy" Collapsed="true">
+    <Position X="1.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAAAABAAAAAAAABAgAAAAAAAI=</HashCode>
+      <FileName>Decorator\HorizontalEnemy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameLogic.MotionlessEnemy" Collapsed="true">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAQAABAAAAAAAAAI=</HashCode>
+      <FileName>Decorator\MotionlessEnemy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameLogic.ShootEnemy" Collapsed="true">
+    <Position X="8" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Decorator\ShootEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

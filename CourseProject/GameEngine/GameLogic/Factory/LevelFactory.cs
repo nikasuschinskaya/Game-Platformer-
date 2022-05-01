@@ -46,39 +46,7 @@ namespace GameLogic
                     {
                         int gid = int.Parse(tiles[i].Attributes["gid"].Value);
 
-                        switch (gid)
-                        {
-                            case 2:
-                                grid[x, y] = new Block(BlockType.Solid, x, y);
-                                break;
-                            case 3:
-                                grid[x, y] = new Block(BlockType.Ladder, x, y);
-                                break;
-                            case 4:
-                                grid[x, y] = new Block(BlockType.LadderPlatform, x, y);
-                                break;
-                            case 5:
-                                grid[x, y] = new Block(BlockType.Platform, x, y);
-                                break;
-                            case 6:
-                                grid[x, y] = new Block(BlockType.SpikeUp, x, y);
-                                break;
-                            case 7:
-                                grid[x, y] = new Block(BlockType.SpikeRight, x, y);
-                                break;
-                            case 8:
-                                grid[x, y] = new Block(BlockType.SpikeDown, x, y);
-                                break;
-                            case 9:
-                                grid[x, y] = new Block(BlockType.SpikeLeft, x, y);
-                                break;
-                            case 10:
-                                grid[x, y] = new Block(BlockType.Key, x, y);
-                                break;
-                            default:
-                                grid[x, y] = new Block(BlockType.Empty, x, y);
-                                break;
-                        }
+                        Blocks(gid, x, y);
 
                         x++;
                         if (x >= width)
@@ -129,5 +97,43 @@ namespace GameLogic
                     e.Message);
             }
         }
+
+        private void Blocks(int gid, int x, int y)
+        {
+            switch (gid)
+            {
+                case 2:
+                    grid[x, y] = new Block(BlockType.Solid, x, y);
+                    break;
+                case 3:
+                    grid[x, y] = new Block(BlockType.Ladder, x, y);
+                    break;
+                case 4:
+                    grid[x, y] = new Block(BlockType.LadderPlatform, x, y);
+                    break;
+                case 5:
+                    grid[x, y] = new Block(BlockType.Platform, x, y);
+                    break;
+                case 6:
+                    grid[x, y] = new Block(BlockType.SpikeUp, x, y);
+                    break;
+                case 7:
+                    grid[x, y] = new Block(BlockType.SpikeRight, x, y);
+                    break;
+                case 8:
+                    grid[x, y] = new Block(BlockType.SpikeDown, x, y);
+                    break;
+                case 9:
+                    grid[x, y] = new Block(BlockType.SpikeLeft, x, y);
+                    break;
+                case 10:
+                    grid[x, y] = new Block(BlockType.Key, x, y);
+                    break;
+                default:
+                    grid[x, y] = new Block(BlockType.Empty, x, y);
+                    break;
+            }
+        }
+
     }
 }

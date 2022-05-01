@@ -29,6 +29,11 @@
             Повернут ли объект вправо.
             </summary>
         </member>
+        <member name="P:GameLogic.Bullet.Speed">
+            <summary>
+            Скорость.
+            </summary>
+        </member>
         <member name="M:GameLogic.Bullet.#ctor(OpenTK.Vector2)">
             <summary>
             Инициализация пули. 
@@ -51,6 +56,11 @@
             Коллизии.
             </summary>
             <param name="level">Уровень.</param>
+        </member>
+        <member name="M:GameLogic.Bullet.Move">
+            <summary>
+            Меетод движения.
+            </summary>
         </member>
         <member name="T:GameLogic.BlockType">
             <summary>
@@ -173,9 +183,24 @@
             Ползёт ли объект, повернут ли объект вправо, на лестнице ли объект, на земле ли объект.
             </summary>
         </member>
+        <member name="P:GameLogic.Player.LivesCount">
+            <summary>
+            Количество жизней.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Player.Health">
+            <summary>
+            Очки здоровья для одной жизни.
+            </summary>
+        </member>
         <member name="P:GameLogic.Player.Key">
             <summary>
             Количество ключей.
+            </summary>
+        </member>
+        <member name="P:GameLogic.Player.Speed">
+            <summary>
+            Скорость.
             </summary>
         </member>
         <member name="M:GameLogic.Player.#ctor(OpenTK.Vector2,OpenTK.Vector2,System.Int32)">
@@ -194,7 +219,7 @@
         </member>
         <member name="M:GameLogic.Player.Move">
             <summary>
-            Метод, отвечающий за управление персонажем.
+            Метод движения, управления персонажем.
             </summary>
         </member>
         <member name="M:GameLogic.Player.ResolveCollision(GameLogic.Level@)">
@@ -222,16 +247,6 @@
         <member name="P:GameLogic.Block.Type">
             <summary>
             Тип блока.
-            </summary>
-        </member>
-        <member name="P:GameLogic.Block.X">
-            <summary>
-            Позиция X.
-            </summary>
-        </member>
-        <member name="P:GameLogic.Block.Y">
-            <summary>
-            Позиция Y.
             </summary>
         </member>
         <member name="P:GameLogic.Block.IsSolid">
@@ -277,6 +292,26 @@
             Работа с уровнями.
             </summary>
         </member>
+        <member name="F:GameLogic.Level.CountOfJumpingTime">
+            <summary>
+            Счетчик времени прыжка.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Level.CountShootingTime">
+            <summary>
+            Счетчик времени стрельбы.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Level.CountOfMEnemy">
+            <summary>
+            Счетчик времени увеличения размеров недвигающегося врага.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Level.bullets">
+            <summary>
+            Пули.
+            </summary>
+        </member>
         <member name="F:GameLogic.Level.grid">
             <summary>
             Координаты блоков.
@@ -294,7 +329,17 @@
         </member>
         <member name="F:GameLogic.Level.enemiesHorSpawn">
             <summary>
-            Начальнаяя позиция горизонтального врага.
+            Начальная позиция горизонтального врага.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Level.enemiesShootSpawn">
+            <summary>
+            Начальная позиция стреляющего врага.
+            </summary>
+        </member>
+        <member name="F:GameLogic.Level.enemiesMotionlessSpawn">
+            <summary>
+            Начальная позиция недвигающегося врага.
             </summary>
         </member>
         <member name="P:GameLogic.Level.Item(System.Int32,System.Int32)">
@@ -332,6 +377,18 @@
             Враг, движущийся горизонтально.
             </summary>
         </member>
+        <member name="P:GameLogic.HorizontalEnemy.Speed">
+            <summary>
+            Скорость.
+            </summary>
+        </member>
+        <member name="M:GameLogic.HorizontalEnemy.#ctor(GameLogic.Enemy,OpenTK.Vector2)">
+            <summary>
+            Инициализация врага,д= движущегося горизонтально.
+            </summary>
+            <param name="enemy">Враг.</param>
+            <param name="startPos">Начальная позиция.</param>
+        </member>
         <member name="M:GameLogic.HorizontalEnemy.Update(GameLogic.Level@)">
             <summary>
             Метод обновления уровня.
@@ -340,18 +397,36 @@
         </member>
         <member name="M:GameLogic.HorizontalEnemy.ResolveCollision(GameLogic.Level@)">
             <summary>
-            Метод, обрабатывающий коллизии с игровыми объектами.
+            Метод, обрабатывающий коллизии.
             </summary>
             <param name="level">Уровень.</param>
+        </member>
+        <member name="M:GameLogic.HorizontalEnemy.Move">
+            <summary>
+            Метод движения.
+            </summary>
         </member>
         <member name="T:GameLogic.MotionlessEnemy">
             <summary>
             Недвигающийся враг.
             </summary>
         </member>
+        <member name="M:GameLogic.MotionlessEnemy.#ctor(GameLogic.Enemy,OpenTK.Vector2)">
+            <summary>
+            Инициализация недвигающегося врага.
+            </summary>
+            <param name="enemy">Враг.</param>
+            <param name="startPos">Начальная позиция.</param>
+        </member>
+        <member name="M:GameLogic.MotionlessEnemy.Update(GameLogic.Level@)">
+            <summary>
+            Метод обновления.
+            </summary>
+            <param name="level">Уровень.</param>
+        </member>
         <member name="M:GameLogic.MotionlessEnemy.ResolveCollision(GameLogic.Level@)">
             <summary>
-            Метод, обрабатывающий коллизии с игровыми объектами.
+            Метод, обрабатывающий коллизии.
             </summary>
             <param name="level">Уровень.</param>
         </member>
@@ -359,6 +434,19 @@
             <summary>
             Стреляющий враг.
             </summary>
+        </member>
+        <member name="M:GameLogic.ShootEnemy.#ctor(GameLogic.Enemy,OpenTK.Vector2)">
+            <summary>
+            Инициализация стреляющего врага.
+            </summary>
+            <param name="enemy">Враг.</param>
+            <param name="startPos">Начальная позиция.</param>
+        </member>
+        <member name="M:GameLogic.ShootEnemy.Update(GameLogic.Level@)">
+            <summary>
+            Метод обновления.
+            </summary>
+            <param name="level">Уровень.</param>
         </member>
         <member name="T:GameLogic.LevelFactory">
             <summary>

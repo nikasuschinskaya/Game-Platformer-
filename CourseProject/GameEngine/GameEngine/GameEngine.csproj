@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basic\GameComponent.cs" />
     <Compile Include="Basic\GameObject.cs" />
     <Compile Include="InputManager\Input.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Render\View.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
   </ItemGroup>

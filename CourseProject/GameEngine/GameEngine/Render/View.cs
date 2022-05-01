@@ -12,7 +12,7 @@ namespace GameEngine
     /// <summary>
     /// Работа с камерой.
     /// </summary>
-    public class View
+    public class View : GameComponent
     {
         /// <summary>
         /// Позиция.

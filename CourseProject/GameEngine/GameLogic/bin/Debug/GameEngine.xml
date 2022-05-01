@@ -24,16 +24,6 @@
             Размер.
             </summary>
         </member>
-        <member name="P:GameEngine.GameObject.LivesCount">
-            <summary>
-            Количество жизней.
-            </summary>
-        </member>
-        <member name="P:GameEngine.GameObject.Health">
-            <summary>
-            Очки здоровья для одной жизни.
-            </summary>
-        </member>
         <member name="P:GameEngine.GameObject.ColRec">
             <summary>
             Прямоугольник сталкновения.

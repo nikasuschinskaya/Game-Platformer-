@@ -4,24 +4,6 @@
         <name>Game</name>
     </assembly>
     <members>
-        <member name="T:Game.RestartWindow">
-            <summary>
-            Логика взаимодействия для RestartWindow.xaml
-            </summary>
-            <summary>
-            RestartWindow
-            </summary>
-        </member>
-        <member name="M:Game.RestartWindow.#ctor">
-            <summary>
-            Окно для повторного прохождения игры.
-            </summary>
-        </member>
-        <member name="M:Game.RestartWindow.InitializeComponent">
-            <summary>
-            InitializeComponent
-            </summary>
-        </member>
         <member name="T:Game.App">
             <summary>
             Логика взаимодействия для App.xaml

@@ -13,7 +13,7 @@ namespace GameEngine
     /// <summary>
     /// Работа с текстурой, отрисовка.
     /// </summary>
-    public class Spritebatch
+    public class Spritebatch : GameComponent
     {
         /// <summary>
         /// Отрисовка текстуры.

@@ -9,7 +9,7 @@ namespace GameEngine
     /// <summary>
     /// Свойства текстуры.
     /// </summary>
-    public class Texture2D
+    public class Texture2D : GameComponent
     {
         private int id;
         private int width;

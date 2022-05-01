@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GameEngine;
 
 namespace GameLogic
 {
     /// <summary>
     /// Работа с блоками.
     /// </summary>
-    public class Block
+    public class Block : GameObject
     {
         private BlockType type;
-        private int posX, posY;
         private bool solid, platform, ladder, spike, key;
 
         /// <summary>
@@ -21,22 +21,6 @@ namespace GameLogic
         public BlockType Type
         {
             get { return type; }
-        }
-
-        /// <summary>
-        /// Позиция X.
-        /// </summary>
-        public int X
-        {
-            get { return posX; }
-        }
-
-        /// <summary>
-        /// Позиция Y.
-        /// </summary>
-        public int Y
-        {
-            get { return posY; }
         }
 
         /// <summary>
@@ -87,8 +71,8 @@ namespace GameLogic
         /// <param name="y">Координата y.</param>
         public Block(BlockType type, int x, int y)
         {
-            this.posX = x;
-            this.posY = y;
+            this.position.X = x;
+            this.position.Y = y;
             this.type = type;
 
             this.ladder = false;
