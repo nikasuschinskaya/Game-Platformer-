@@ -4,6 +4,11 @@
         <name>GameEngine</name>
     </assembly>
     <members>
+        <member name="T:GameEngine.GameComponent">
+            <summary>
+            Тип компонентов игрового объекта.
+            </summary>
+        </member>
         <member name="T:GameEngine.GameObject">
             <summary>
             Игровой объект.

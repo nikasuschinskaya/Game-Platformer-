@@ -13,7 +13,7 @@
       <HashCode>AAQAAAAAAIAAAAAAAAAAAAABAAAAAAAABAgAAAAAAAI=</HashCode>
       <FileName>Decorator\HorizontalEnemy.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Orientation="Left" Position="0.1" />
   </Class>
   <Class Name="GameLogic.MotionlessEnemy" Collapsed="true">
     <Position X="4.5" Y="2.5" Width="1.5" />
@@ -21,7 +21,7 @@
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAQAABAAAAAAAAAI=</HashCode>
       <FileName>Decorator\MotionlessEnemy.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Orientation="Left" Position="0.1" />
   </Class>
   <Class Name="GameLogic.ShootEnemy" Collapsed="true">
     <Position X="8" Y="2.5" Width="1.5" />
