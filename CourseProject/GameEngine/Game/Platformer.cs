@@ -186,8 +186,6 @@ namespace Game
                 this.Close();
                 Platformer platformer = new Platformer();
                 platformer.Run(60, 60);
-                //levelNum = 0;
-                //LoadNewLvl();
             }
             if (result == System.Windows.Forms.DialogResult.No)
             {
