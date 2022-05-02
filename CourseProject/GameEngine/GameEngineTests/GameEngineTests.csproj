@@ -73,6 +73,10 @@
       <Project>{48F4346C-17C5-438F-ACBE-08A1740763E2}</Project>
       <Name>GameEngine</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GameLogic\GameLogic.csproj">
+      <Project>{A7BD9DC4-5A7A-4D01-8CE8-8008590B9514}</Project>
+      <Name>GameLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

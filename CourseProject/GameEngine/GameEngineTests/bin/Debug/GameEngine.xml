@@ -158,6 +158,12 @@
             <param name="obj">Объект для сравнения.</param>
             <returns>Да, если равны, в противном случае - нет.</returns>
         </member>
+        <member name="M:GameEngine.Texture2D.GetHashCode">
+            <summary>
+            Получение хэш-кода.
+            </summary>
+            <returns>Хэш-код.</returns>
+        </member>
         <member name="T:GameEngine.TweenType">
             <summary>
             Анимация движения.
