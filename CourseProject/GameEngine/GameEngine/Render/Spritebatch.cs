@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenTK;
+﻿using OpenTK;
 using OpenTK.Graphics.OpenGL;
-using System.Drawing.Imaging;
 using System.Drawing;
 
 namespace GameEngine
@@ -48,9 +42,9 @@ namespace GameEngine
             GL.Begin(PrimitiveType.Quads);
 
             GL.Color3(color);
-            for ( int i = 0; i < vertices.Length; i++)
+            for (int i = 0; i < vertices.Length; i++)
             {
-                if(sourceRec == null)
+                if (sourceRec == null)
                     GL.TexCoord2(vertices[i]);
                 else
                 {

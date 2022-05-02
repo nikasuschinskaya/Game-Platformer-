@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenTK;
+﻿using OpenTK;
 using OpenTK.Graphics.OpenGL;
-using System.Drawing;
+using System;
 
 namespace GameEngine
 {
@@ -34,7 +29,7 @@ namespace GameEngine
         private Vector2 positionGoto, positionFrom;
         private TweenType tweenType;
         private int currentStep, tweenSteps;
-        
+
         /// <summary>
         /// Свойство позиции.
         /// </summary>
@@ -81,9 +76,9 @@ namespace GameEngine
         /// </summary>
         public void Update()
         {
-            if(currentStep < tweenSteps)
+            if (currentStep < tweenSteps)
             {
-               currentStep++;
+                currentStep++;
 
                 switch (tweenType)
                 {

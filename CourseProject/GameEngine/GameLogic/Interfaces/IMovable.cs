@@ -4,7 +4,7 @@ namespace GameLogic
 {
     interface IMovable
     {
-        Vector2 Speed { get;}
+        Vector2 Speed { get; }
         void Move();
     }
 }

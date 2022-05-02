@@ -1,6 +1,5 @@
-﻿using System.Windows;
-using OpenTK;
-using GameEngine;
+﻿using OpenTK;
+using System.Windows;
 
 namespace Game
 {

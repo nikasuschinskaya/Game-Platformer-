@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenTK;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Xml;
 
 namespace GameLogic
 {
@@ -134,9 +127,9 @@ namespace GameLogic
             filename = "none";
             playerStartPos = new Point(1, 1);
 
-            for(int x = 0; x < width; x++)
+            for (int x = 0; x < width; x++)
             {
-                for(int y = 0; y < height; y++)
+                for (int y = 0; y < height; y++)
                 {
                     if (x == 0 || y == 0 || x == width - 1 || y == height - 1)
                     {

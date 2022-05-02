@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 
 namespace GameLogic
@@ -29,7 +25,7 @@ namespace GameLogic
                 {
                     XmlDocument doc = new XmlDocument();
                     doc.Load(stream);
-  
+
                     width = int.Parse(doc.DocumentElement.GetAttribute("width"));
                     height = int.Parse(doc.DocumentElement.GetAttribute("height"));
 

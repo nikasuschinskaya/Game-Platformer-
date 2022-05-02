@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenTK;
+﻿using OpenTK;
 using OpenTK.Input;
+using System.Collections.Generic;
 
 namespace GameEngine
 {
@@ -15,7 +11,7 @@ namespace GameEngine
     {
         private static List<Key> keysDown;
         private static List<Key> keysDownLast;
-  
+
         /// <summary>
         /// Инициализация.
         /// </summary>

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using GameEngine;
 using OpenTK;
-using OpenTK.Input;
-using GameEngine;
+using System;
+using System.Drawing;
 
 namespace GameLogic
 {
@@ -56,7 +51,7 @@ namespace GameLogic
         /// <summary>
         /// Скорость.
         /// </summary>
-        public Vector2 Speed 
+        public Vector2 Speed
         {
             get
             {
@@ -89,7 +84,7 @@ namespace GameLogic
             this.size = new Vector2(20, 40);
             this.sprite = ContentPipe.LoadTexture("player.png");
             this.spriteClimb = ContentPipe.LoadTexture("playerClimb.png");
-          
+
         }
 
         /// <summary>
@@ -199,9 +194,9 @@ namespace GameLogic
             this.grounded = false;
             this.onLadder = false;
 
-            for (int x = minX; x<= maxX; x++)
+            for (int x = minX; x <= maxX; x++)
             {
-                for(int y = minY; y<= maxY; y++)
+                for (int y = minY; y <= maxY; y++)
                 {
                     RectangleF blockRec = new RectangleF(x * Gridsize, y * Gridsize, Gridsize, Gridsize);
                     if (level[x, y].IsSolid && this.ColRec.IntersectsWith(blockRec))
@@ -275,11 +270,11 @@ namespace GameLogic
                     {
                         this.onLadder = true;
                     }
-                    if(level[x, y].IsSpike && this.ColRec.IntersectsWith(blockRec))
+                    if (level[x, y].IsSpike && this.ColRec.IntersectsWith(blockRec))
                     {
                         LivesCount -= 1;
                     }
-                    if(level[x, y].IsKey && this.ColRec.IntersectsWith(blockRec))
+                    if (level[x, y].IsKey && this.ColRec.IntersectsWith(blockRec))
                     {
                         Key += 1;
                     }
@@ -320,7 +315,7 @@ namespace GameLogic
         /// <returns>Строка.</returns>
         public override string ToString()
         {
-            return $"Количество жизней: {LivesCount.ToString()}, Очки здоровья: {Health.ToString()} ,Ключи: {(Key-1).ToString()}";
+            return $"Количество жизней: {LivesCount.ToString()}, Очки здоровья: {Health.ToString()} ,Ключи: {(Key - 1).ToString()}";
         }
     }
 }

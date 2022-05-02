@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenTK;
-using OpenTK.Graphics;
-using OpenTK.Graphics.OpenGL;
-using OpenTK.Input;
-using GameEngine;
+﻿using GameEngine;
 using GameLogic;
+using OpenTK;
+using OpenTK.Graphics.OpenGL;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
 
 namespace Game
 {
@@ -40,7 +33,7 @@ namespace Game
         /// Конструктор с параметрами окна.
         /// </summary>
         public Platformer() : base(
-              640, 480, new OpenTK.Graphics.GraphicsMode(32, 24, 0, 8), "Platformer", 
+              640, 480, new OpenTK.Graphics.GraphicsMode(32, 24, 0, 8), "Platformer",
               GameWindowFlags.FixedWindow,
               DisplayDevice.Default
               )
@@ -73,7 +66,7 @@ namespace Game
             tileset = ContentPipe.LoadTexture("FullTilesSet.png");
             level = new LevelFactory(20, 20, $"Content/{lvlNames[levelNum]}");
             player = new Player(new Vector2(level.playerStartPos.X + 0.5f,
-                level.playerStartPos.Y + 0.5f) * GRIDSIZE, new Vector2(0, 0.5f), keys+1);
+                level.playerStartPos.Y + 0.5f) * GRIDSIZE, new Vector2(0, 0.5f), keys + 1);
             AddEnemies();
         }
 
@@ -185,7 +178,7 @@ namespace Game
 
         private void Defeat()
         {
-            System.Windows.Forms.DialogResult result = 
+            System.Windows.Forms.DialogResult result =
                 (System.Windows.Forms.DialogResult)System.Windows.MessageBox.Show("Начать заново?", "Вы проиграли!",
                  System.Windows.MessageBoxButton.YesNo);
             if (result == System.Windows.Forms.DialogResult.Yes)
@@ -211,7 +204,7 @@ namespace Game
                     b.IsBumped = true;
                 }
             }
-            
+
         }
 
         private void ImplemOfShooting()
@@ -300,13 +293,13 @@ namespace Game
             Spritebatch.Begin(this.Width, this.Height);
             view.ApplyTransform();
 
-            for(int x = 0; x < level.Width; x++)
+            for (int x = 0; x < level.Width; x++)
             {
-                for(int y = 0; y < level.Height; y++)
+                for (int y = 0; y < level.Height; y++)
                 {
                     RectangleF source = new RectangleF(0, 0, 0, 0);
 
-                    switch(level[x, y].Type)
+                    switch (level[x, y].Type)
                     {
                         case BlockType.Ladder:
                             source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
@@ -370,7 +363,7 @@ namespace Game
                                 player.Health -= 1;
                         }
                     }
-                    
+
                     if (e is ShootEnemy se && Math.Abs(player.position.Y - se.position.Y) < 20 && Math.Abs(player.position.X - se.position.X) < 20)
                         player.Health -= 1;
                 }
@@ -397,4 +390,4 @@ namespace Game
         }
     }
 }
-         
+

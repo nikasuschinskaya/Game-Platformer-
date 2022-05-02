@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GameEngine
+﻿namespace GameEngine
 {
     /// <summary>
     /// Свойства текстуры.
@@ -18,8 +12,8 @@ namespace GameEngine
         /// <summary>
         /// Номер текстуры.
         /// </summary>
-        public int ID 
-        { 
+        public int ID
+        {
             get { return id; }
         }
 
@@ -50,6 +44,19 @@ namespace GameEngine
             this.id = id;
             this.width = width;
             this.height = height;
+        }
+
+        /// <summary>
+        /// Метод, сравнивающий текущий объект с переданным в параметр (нужен для тестов).
+        /// </summary>
+        /// <param name="obj">Объект для сравнения.</param>
+        /// <returns>Да, если равны, в противном случае - нет.</returns>
+        public override bool Equals(object obj)
+        {
+            return obj is Texture2D d &&
+                   ID == d.ID &&
+                   Width == d.Width &&
+                   Height == d.Height;
         }
     }
 }
