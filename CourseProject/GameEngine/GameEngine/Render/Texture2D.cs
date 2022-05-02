@@ -58,5 +58,18 @@
                    Width == d.Width &&
                    Height == d.Height;
         }
+
+        /// <summary>
+        /// Получение хэш-кода.
+        /// </summary>
+        /// <returns>Хэш-код.</returns>
+        public override int GetHashCode()
+        {
+            int hashCode = 1463928665;
+            hashCode = hashCode * -1521134295 + ID.GetHashCode();
+            hashCode = hashCode * -1521134295 + Width.GetHashCode();
+            hashCode = hashCode * -1521134295 + Height.GetHashCode();
+            return hashCode;
+        }
     }
 }
