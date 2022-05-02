@@ -49,5 +49,12 @@
       <FileName>Basic\GameComponent.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Enum Name="GameEngine.TweenType" Collapsed="true">
+    <Position X="6.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAABAAAAAAAAAEAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Enums\TweenType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

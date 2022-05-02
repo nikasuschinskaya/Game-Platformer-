@@ -58,7 +58,7 @@
     <Compile Include="Render\View.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <None Include="GameEngine.cd" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
   </ItemGroup>

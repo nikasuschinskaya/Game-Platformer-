@@ -153,7 +153,7 @@
         </member>
         <member name="T:GameEngine.TweenType">
             <summary>
-            Перечисление TweenType.
+            Анимация движения.
             </summary>
         </member>
         <member name="F:GameEngine.TweenType.Instant">

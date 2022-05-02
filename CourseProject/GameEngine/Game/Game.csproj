@@ -108,7 +108,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ClassDiagram.cd" />
     <None Include="Content\FirstLevel.tmx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

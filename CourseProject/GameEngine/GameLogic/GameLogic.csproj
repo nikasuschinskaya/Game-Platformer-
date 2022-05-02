@@ -66,6 +66,7 @@
   <ItemGroup>
     <None Include="Decorator.cd" />
     <None Include="FactoryMethod.cd" />
+    <None Include="GameLogic.cd" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
   </ItemGroup>
