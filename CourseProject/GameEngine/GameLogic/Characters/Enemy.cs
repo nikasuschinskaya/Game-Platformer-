@@ -32,6 +32,7 @@ namespace GameLogic
         /// <summary>
         /// Инициализация врагов.
         /// </summary>
+        /// <param name="startPos">Начальная позиция.</param>
         public Enemy(Vector2 startPos)
         {
             this.position = startPos;

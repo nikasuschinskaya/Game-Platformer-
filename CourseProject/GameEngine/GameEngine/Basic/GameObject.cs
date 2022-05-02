@@ -50,13 +50,13 @@ namespace GameEngine
             }
         }
 
-        ///// <summary>
-        ///// Инициализатор игрового объекта.
-        ///// </summary>
-        //public GameObject()
-        //{
-        //    this.LivesCount = 1;
-        //    this.Health = 0;
-        //}
+        /// <summary>
+        /// Инициализатор игрового объекта.
+        /// </summary>
+        public GameObject()
+        {
+            this.position = Vector2.Zero;
+            this.size = Vector2.Zero;
+        }
     }
 }

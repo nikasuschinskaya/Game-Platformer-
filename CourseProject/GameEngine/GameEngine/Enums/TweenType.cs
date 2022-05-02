@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GameEngine
 {
     /// <summary>
-    /// Перечисление TweenType.
+    /// Анимация движения.
     /// </summary>
     public enum TweenType
     {

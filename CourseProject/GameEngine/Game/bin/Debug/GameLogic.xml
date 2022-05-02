@@ -163,6 +163,7 @@
             <summary>
             Инициализация врагов.
             </summary>
+            <param name="startPos">Начальная позиция.</param>
         </member>
         <member name="M:GameLogic.Enemy.Draw">
             <summary>
