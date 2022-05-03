@@ -315,7 +315,7 @@ namespace GameLogic
         /// <returns>Строка.</returns>
         public override string ToString()
         {
-            return $"Количество жизней: {LivesCount.ToString()}, Очки здоровья: {Health.ToString()} ,Ключи: {(Key - 1).ToString()}";
+            return $"Количество жизней: {LivesCount.ToString()}, Очки здоровья: {Health.ToString()}, Ключи: {(Key - 1).ToString()}";
         }
     }
 }
