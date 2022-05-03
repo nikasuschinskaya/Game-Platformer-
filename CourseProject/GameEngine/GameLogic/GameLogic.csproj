@@ -86,11 +86,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\hedgehog_body.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Content\bullet.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -107,15 +102,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\player1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Content\playerClimb1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Content\player2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
