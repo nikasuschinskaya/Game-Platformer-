@@ -24,7 +24,7 @@ namespace GameEngine
         public Vector2 size;
 
         /// <summary>
-        /// Прямоугольник сталкновения.
+        /// Прямоугольник столкновения.
         /// </summary>
         public RectangleF ColRec
         {

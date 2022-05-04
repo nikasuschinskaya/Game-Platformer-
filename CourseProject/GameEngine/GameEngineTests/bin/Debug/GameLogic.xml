@@ -424,19 +424,6 @@
             Метод движения.
             </summary>
         </member>
-        <member name="M:GameLogic.HorizontalEnemy.Equals(System.Object)">
-            <summary>
-            Метод, сравнивающий текущий объект с переданным в параметр (нужен для тестов).
-            </summary>
-            <param name="obj">Объект для сравнения.</param>
-            <returns>Да, если равны, в противном случае - нет.</returns>
-        </member>
-        <member name="M:GameLogic.HorizontalEnemy.GetHashCode">
-            <summary>
-            Получение хэш-кода.
-            </summary>
-            <returns>Хэш-код.</returns>
-        </member>
         <member name="T:GameLogic.MotionlessEnemy">
             <summary>
             Недвигающийся враг.
@@ -461,19 +448,6 @@
             </summary>
             <param name="level">Уровень.</param>
         </member>
-        <member name="M:GameLogic.MotionlessEnemy.Equals(System.Object)">
-            <summary>
-            Метод, сравнивающий текущий объект с переданным в параметр (нужен для тестов).
-            </summary>
-            <param name="obj">Объект для сравнения.</param>
-            <returns>Да, если равны, в противном случае - нет.</returns>
-        </member>
-        <member name="M:GameLogic.MotionlessEnemy.GetHashCode">
-            <summary>
-            Получение хэш-кода.
-            </summary>
-            <returns>Хэш-код.</returns>
-        </member>
         <member name="T:GameLogic.ShootEnemy">
             <summary>
             Стреляющий враг.
@@ -485,19 +459,6 @@
             </summary>
             <param name="enemy">Враг.</param>
             <param name="startPos">Начальная позиция.</param>
-        </member>
-        <member name="M:GameLogic.ShootEnemy.Equals(System.Object)">
-            <summary>
-            Метод, сравнивающий текущий объект с переданным в параметр (нужен для тестов).
-            </summary>
-            <param name="obj">Объект для сравнения.</param>
-            <returns>Да, если равны, в противном случае - нет.</returns>
-        </member>
-        <member name="M:GameLogic.ShootEnemy.GetHashCode">
-            <summary>
-            Получение хэш-кода.
-            </summary>
-            <returns>Хэш-код.</returns>
         </member>
         <member name="M:GameLogic.ShootEnemy.Update(GameLogic.Level@)">
             <summary>
@@ -517,6 +478,14 @@
             <param name="width">Ширина блока.</param>
             <param name="height">Высота блока.</param>
             <param name="filePath">Имя файла.</param>
+        </member>
+        <member name="M:GameLogic.LevelFactory.Blocks(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Создание блоков.
+            </summary>
+            <param name="gid">id</param>
+            <param name="x">x</param>
+            <param name="y">y</param>
         </member>
     </members>
 </doc>

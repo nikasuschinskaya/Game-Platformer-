@@ -20,8 +20,7 @@ namespace Game
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            //this.Hide();
-
+          
             using (Platformer gameWindow = new Platformer())
             {
                 gameWindow.WindowBorder = WindowBorder.Fixed;

@@ -23,8 +23,8 @@ namespace Game
         List<string> lvlNames = new List<string>()
         {
             "FirstLevel.tmx",
-            "Level.tmx",
-            "Level3Test1.tmx"
+            "SecondLevel.tmx",
+            "ThirdLevel.tmx"
         };
         private int livesCount, health, keys;
         private int GRIDSIZE = 32, TILESIZE = 128;
@@ -42,6 +42,7 @@ namespace Game
             CursorVisible = false;
             VSync = VSyncMode.On;
             GL.Enable(EnableCap.Texture2D);
+
             //Для учёта альфа-канала
             GL.Enable(EnableCap.Blend);
             GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);

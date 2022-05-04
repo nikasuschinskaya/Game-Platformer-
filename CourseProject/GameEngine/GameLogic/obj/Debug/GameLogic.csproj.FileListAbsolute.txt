@@ -55,9 +55,6 @@ C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEng
 C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.csproj.CopyComplete
 C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.dll
 C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.pdb
-C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\TiledLevel.tmx
-C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\TiledLevel1.tmx
-C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Sprites\tiles.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.xml
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.dll
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\GameLogic.pdb
@@ -74,11 +71,8 @@ C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\obj\Debug\GameLogic.pdb
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\player.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\playerClimb.png
-C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\hedgehog_body.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\bullet.jpg
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\fly.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\snail_move.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\ladybug_move.png
-C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\player1.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\playerClimb1.png
-C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameLogic\bin\Debug\Content\player2.png

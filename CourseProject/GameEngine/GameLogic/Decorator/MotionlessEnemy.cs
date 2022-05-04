@@ -11,7 +11,6 @@ namespace GameLogic
     /// </summary>
     public class MotionlessEnemy : EnemyDecorator, ICollisionable
     {
-        private Vector2 speed;
         /// <summary>
         /// Инициализация недвигающегося врага.
         /// </summary>
@@ -19,7 +18,6 @@ namespace GameLogic
         /// <param name="startPos">Начальная позиция.</param>
         public MotionlessEnemy(Enemy enemy, Vector2 startPos) : base(enemy, startPos)
         {
-            this.speed = Vector2.Zero;
             this.position = startPos;
             this.enemy = enemy;
             this.sprite = ContentPipe.LoadTexture("ladybug_move.png");

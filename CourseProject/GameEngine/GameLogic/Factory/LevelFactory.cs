@@ -10,7 +10,13 @@ namespace GameLogic
     /// </summary>
     public class LevelFactory : Level
     {
-
+        /// <summary>
+        /// Инициализатор. Нужен только для тестирования.
+        /// </summary>
+        public LevelFactory() : base(0, 0)
+        {
+            grid = new Block[1, 1];
+        }
         /// <summary>
         /// Фабрика по созданию уровней.
         /// </summary>
@@ -94,7 +100,13 @@ namespace GameLogic
             }
         }
 
-        private void Blocks(int gid, int x, int y)
+        /// <summary>
+        /// Создание блоков (метод сделан публичным для тестов).
+        /// </summary>
+        /// <param name="gid">id</param>
+        /// <param name="x">x</param>
+        /// <param name="y">y</param>
+        public void Blocks(int gid, int x, int y)
         {
             switch (gid)
             {
@@ -130,6 +142,5 @@ namespace GameLogic
                     break;
             }
         }
-
     }
 }

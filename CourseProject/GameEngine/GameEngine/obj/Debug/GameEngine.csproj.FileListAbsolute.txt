@@ -86,9 +86,6 @@ C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEng
 C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.CopyComplete
 C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.dll
 C:\Users\Shiro\Downloads\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\obj\Debug\GameEngine.pdb
-C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Sprites\TiledLevel.tmx
-C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Sprites\TiledLevel1.tmx
-C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\Sprites\tiles.png
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.xml
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.dll
 C:\Users\NIKA\source\Game-Platformer-\Game-Platformer-\CourseProject\GameEngine\GameEngine\bin\Debug\GameEngine.pdb

@@ -3,9 +3,15 @@ using OpenTK;
 
 namespace GameEngine
 {
+    /// <summary>
+    /// Тестирование камеры.
+    /// </summary>
     [TestClass()]
     public class ViewTests
     {
+        /// <summary>
+        /// Тестирование линейной функции.
+        /// </summary>
         [TestMethod()]
         public void GetLinearTest()
         {
@@ -17,6 +23,9 @@ namespace GameEngine
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Тестирование квадратичной функции.
+        /// </summary>
         [TestMethod()]
         public void GetQuadraticInOutTest()
         {
@@ -28,6 +37,9 @@ namespace GameEngine
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Тестирование кубической функции.
+        /// </summary>
         [TestMethod()]
         public void GetCubicInOutTest()
         {
@@ -39,6 +51,9 @@ namespace GameEngine
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Тестирование суперкубической функции.
+        /// </summary>
         [TestMethod()]
         public void GetQuarticOutTest()
         {

@@ -479,5 +479,13 @@
             <param name="height">Высота блока.</param>
             <param name="filePath">Имя файла.</param>
         </member>
+        <member name="M:GameLogic.LevelFactory.Blocks(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Создание блоков.
+            </summary>
+            <param name="gid">id</param>
+            <param name="x">x</param>
+            <param name="y">y</param>
+        </member>
     </members>
 </doc>

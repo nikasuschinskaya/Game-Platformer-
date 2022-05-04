@@ -2,9 +2,15 @@
 
 namespace GameEngine.Tests
 {
+    /// <summary>
+    /// Тестирование создания текстур.
+    /// </summary>
     [TestClass()]
     public class Texture2DTests
     {
+        /// <summary>
+        /// Тестовый метод для создания текстур. 
+        /// </summary>
         [TestMethod()]
         public void EqualsTest()
         {
