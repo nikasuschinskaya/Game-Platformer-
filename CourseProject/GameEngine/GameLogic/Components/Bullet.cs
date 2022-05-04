@@ -88,7 +88,8 @@ namespace GameLogic
                 for (int y = minY; y <= maxY; y++)
                 {
                     RectangleF blockRec = new RectangleF(x * Gridsize, y * Gridsize, Gridsize, Gridsize);
-                    if ((level[x, y].IsLadder || level[x, y].IsSolid || level[x, y].IsPlatform || level[x, y].IsSpike) && this.ColRec.IntersectsWith(blockRec))
+                    if ((level[x, y].IsLadder || level[x, y].IsSolid || level[x, y].IsPlatform || level[x, y].IsSpike) && 
+                        this.ColRec.IntersectsWith(blockRec))
                     {
                         IsBumped = true;
                     }
@@ -97,7 +98,7 @@ namespace GameLogic
         }
 
         /// <summary>
-        /// Меетод движения.
+        /// Метод движения.
         /// </summary>
         public void Move()
         {

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameEngineTests</name>
+    </assembly>
+    <members>
+        <member name="T:GameLogic.LevelFactoryTests">
+            <summary>
+            Тестирование фабрики.
+            </summary>
+        </member>
+        <member name="M:GameLogic.LevelFactoryTests.BlocksTest">
+            <summary>
+            Тестирование создания блоков.
+            </summary>
+        </member>
+        <member name="T:GameEngine.Tests.Texture2DTests">
+            <summary>
+            Тестирование создания текстур.
+            </summary>
+        </member>
+        <member name="M:GameEngine.Tests.Texture2DTests.EqualsTest">
+            <summary>
+            Тестовый метод для создания текстур. 
+            </summary>
+        </member>
+        <member name="T:GameEngine.ViewTests">
+            <summary>
+            Тестирование камеры.
+            </summary>
+        </member>
+        <member name="M:GameEngine.ViewTests.GetLinearTest">
+            <summary>
+            Тестирование линейной функции.
+            </summary>
+        </member>
+        <member name="M:GameEngine.ViewTests.GetQuadraticInOutTest">
+            <summary>
+            Тестирование квадратичной функции.
+            </summary>
+        </member>
+        <member name="M:GameEngine.ViewTests.GetCubicInOutTest">
+            <summary>
+            Тестирование кубической функции.
+            </summary>
+        </member>
+        <member name="M:GameEngine.ViewTests.GetQuarticOutTest">
+            <summary>
+            Тестирование суперкубической функции.
+            </summary>
+        </member>
+    </members>
+</doc>

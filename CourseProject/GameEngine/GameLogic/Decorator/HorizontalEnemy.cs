@@ -1,7 +1,6 @@
 ﻿using GameEngine;
 using OpenTK;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 
 namespace GameLogic
@@ -18,7 +17,7 @@ namespace GameLogic
         public Vector2 Speed { get; private set; }
 
         /// <summary>
-        /// Инициализация врага,д= движущегося горизонтально.
+        /// Инициализация врага, движущегося горизонтально.
         /// </summary>
         /// <param name="enemy">Враг.</param>
         /// <param name="startPos">Начальная позиция.</param>

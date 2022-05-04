@@ -471,6 +471,11 @@
             Фабрика уровней.
             </summary>
         </member>
+        <member name="M:GameLogic.LevelFactory.#ctor">
+            <summary>
+            Инициализатор. Нужен только для тестирования.
+            </summary>
+        </member>
         <member name="M:GameLogic.LevelFactory.#ctor(System.Int32,System.Int32,System.String)">
             <summary>
             Фабрика по созданию уровней.
@@ -481,7 +486,7 @@
         </member>
         <member name="M:GameLogic.LevelFactory.Blocks(System.Int32,System.Int32,System.Int32)">
             <summary>
-            Создание блоков.
+            Создание блоков (метод сделан публичным для тестов).
             </summary>
             <param name="gid">id</param>
             <param name="x">x</param>
