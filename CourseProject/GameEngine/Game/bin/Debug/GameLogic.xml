@@ -59,7 +59,7 @@
         </member>
         <member name="M:GameLogic.Bullet.Move">
             <summary>
-            Меетод движения.
+            Метод движения.
             </summary>
         </member>
         <member name="T:GameLogic.EnemyDecorator">
@@ -402,7 +402,7 @@
         </member>
         <member name="M:GameLogic.HorizontalEnemy.#ctor(GameLogic.Enemy,OpenTK.Vector2)">
             <summary>
-            Инициализация врага,д= движущегося горизонтально.
+            Инициализация врага, движущегося горизонтально.
             </summary>
             <param name="enemy">Враг.</param>
             <param name="startPos">Начальная позиция.</param>
