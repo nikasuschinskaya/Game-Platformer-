@@ -22,12 +22,12 @@ namespace GameEngine
         /// Отрисовка текстуры.
         /// </summary>
         /// <param name="texture"> Текстура. </param>
-        /// <param name="position"> Позиция. </param>
+        /// <param name="Position"> Позиция. </param>
         /// <param name="scale"> Масштаб. </param>
         /// <param name="color"> Цвет. </param>
         /// <param name="origin"> Начало. </param>
         /// <param name="sourceRec">Источник.</param>
-        public static void Draw(Texture2D texture, Vector2 position, Vector2 scale, Color color, Vector2 origin, RectangleF? sourceRec = null)
+        public static void Draw(Texture2D texture, Vector2 Position, Vector2 scale, Color color, Vector2 origin, RectangleF? sourceRec = null)
         {
             Vector2[] vertices = new Vector2[4]
             {
@@ -56,7 +56,7 @@ namespace GameEngine
                 vertices[i].Y *= (sourceRec == null) ? texture.Height : sourceRec.Value.Height;
                 vertices[i] -= origin;
                 vertices[i] *= scale;
-                vertices[i] += position;
+                vertices[i] += Position;
 
                 GL.Vertex2(vertices[i]);
             }

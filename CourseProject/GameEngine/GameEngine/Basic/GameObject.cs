@@ -16,7 +16,7 @@ namespace GameEngine
         /// <summary>
         /// Позиция.
         /// </summary>
-        public Vector2 position;
+        public Vector2 Position { get; set; }
 
         /// <summary>
         /// Размер.
@@ -30,7 +30,7 @@ namespace GameEngine
         {
             get
             {
-                return new RectangleF(position.X - size.X / 2.0f, position.Y - size.Y / 2.0f, size.X, size.Y);
+                return new RectangleF(Position.X - size.X / 2.0f, Position.Y - size.Y / 2.0f, size.X, size.Y);
             }
         }
 
@@ -50,7 +50,7 @@ namespace GameEngine
         /// </summary>
         public GameObject()
         {
-            this.position = Vector2.Zero;
+            this.Position = Vector2.Zero;
             this.size = Vector2.Zero;
         }
     }

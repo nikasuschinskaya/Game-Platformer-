@@ -11,7 +11,7 @@
         </member>
         <member name="F:GameLogic.Bullet.IsBumped">
             <summary>
-            Врезалась ли пуля в игрока.
+            Врезалась ли пуля.
             </summary>
         </member>
         <member name="F:GameLogic.Bullet.damage">
@@ -305,6 +305,26 @@
             Метод получения типа блока.
             </summary>
         </member>
+        <member name="T:GameLogic.EnemyType">
+            <summary>
+            Представляет типы врагов.
+            </summary>
+        </member>
+        <member name="F:GameLogic.EnemyType.Horizontal">
+            <summary>
+            Вертикально передвигающийся тип врага.
+            </summary>
+        </member>
+        <member name="F:GameLogic.EnemyType.Motionless">
+            <summary>
+            Недвижущийся тип врага.
+            </summary>
+        </member>
+        <member name="F:GameLogic.EnemyType.Shoot">
+            <summary>
+            Стреляющий тип врага.
+            </summary>
+        </member>
         <member name="T:GameLogic.Level">
             <summary>
             Работа с уровнями.
@@ -345,19 +365,14 @@
             Начальная позиция игрока.
             </summary>
         </member>
-        <member name="F:GameLogic.Level.enemiesHorSpawn">
+        <member name="F:GameLogic.Level.enemiesTypes">
             <summary>
-            Начальная позиция горизонтального врага.
+            
             </summary>
         </member>
-        <member name="F:GameLogic.Level.enemiesShootSpawn">
+        <member name="F:GameLogic.Level.enemiesStartPosition">
             <summary>
-            Начальная позиция стреляющего врага.
-            </summary>
-        </member>
-        <member name="F:GameLogic.Level.enemiesMotionlessSpawn">
-            <summary>
-            Начальная позиция недвигающегося врага.
+            
             </summary>
         </member>
         <member name="P:GameLogic.Level.Item(System.Int32,System.Int32)">

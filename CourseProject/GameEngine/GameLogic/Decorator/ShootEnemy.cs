@@ -15,7 +15,7 @@ namespace GameLogic
         /// <param name="startPos">Начальная позиция.</param>
         public ShootEnemy(Enemy enemy, Vector2 startPos) : base(enemy, startPos)
         {
-            this.position = startPos;
+            this.Position = startPos;
             this.enemy = enemy;
             this.sprite = ContentPipe.LoadTexture("fly.png");
         }

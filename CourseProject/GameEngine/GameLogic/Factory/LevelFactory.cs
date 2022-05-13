@@ -60,9 +60,7 @@ namespace GameLogic
 
                     XmlNode objectGroup = doc.DocumentElement.SelectSingleNode("objectgroup[@name='Object Layer 1']");
                     XmlNodeList objects = objectGroup.SelectNodes("object");
-                    enemiesHorSpawn.Clear();
-                    enemiesShootSpawn.Clear();
-                    enemiesMotionlessSpawn.Clear();
+                    enemiesStartPosition.Clear();
 
                     for (int i = 0; i < objects.Count; i++)
                     {
@@ -75,16 +73,19 @@ namespace GameLogic
                                 this.playerStartPos = new Point((int)(xPos / 128), (int)(yPos / 128));
                                 break;
                             case "HorizontalEnemySpawn":
+                                enemiesTypes.Add(EnemyType.Horizontal);
                                 Point p = new Point((int)(xPos / 128), (int)(yPos / 128));
-                                this.enemiesHorSpawn.Add(p);
+                                this.enemiesStartPosition.Add(p);
                                 break;
                             case "ShootEnemySpawn":
+                                enemiesTypes.Add(EnemyType.Shoot);
                                 Point p2 = new Point((int)(xPos / 128), (int)(yPos / 128));
-                                this.enemiesShootSpawn.Add(p2);
+                                this.enemiesStartPosition.Add(p2);
                                 break;
                             case "MotionlessEnemySpawn":
+                                enemiesTypes.Add(EnemyType.Motionless);
                                 Point p3 = new Point((int)(xPos / 128), (int)(yPos / 128));
-                                this.enemiesMotionlessSpawn.Add(p3);
+                                this.enemiesStartPosition.Add(p3);
                                 break;
                             default:
                                 break;

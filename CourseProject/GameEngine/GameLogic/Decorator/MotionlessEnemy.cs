@@ -17,7 +17,7 @@ namespace GameLogic
         /// <param name="startPos">Начальная позиция.</param>
         public MotionlessEnemy(Enemy enemy, Vector2 startPos) : base(enemy, startPos)
         {
-            this.position = startPos;
+            this.Position = startPos;
             this.enemy = enemy;
             this.sprite = ContentPipe.LoadTexture("ladybug_move.png");
         }
@@ -34,7 +34,7 @@ namespace GameLogic
             }
             else
             {
-                this.position = new Vector2(this.position.X, this.position.Y + 15.0f);
+                this.Position = new Vector2(this.Position.X, this.Position.Y + 15.0f);
                 this.size = new Vector2(20, 30);
             }
             ResolveCollision(ref level);
@@ -46,10 +46,10 @@ namespace GameLogic
         /// <param name="level">Уровень.</param>
         public void ResolveCollision(ref Level level)
         {
-            int minX = (int)Math.Floor((this.position.X - size.X / 2.0f) / Gridsize);
-            int minY = (int)Math.Floor((this.position.Y - size.Y / 2.0f) / Gridsize);
-            int maxX = (int)Math.Ceiling((this.position.X + size.X / 2.0f) / Gridsize);
-            int maxY = (int)Math.Ceiling((this.position.Y + size.Y / 2.0f) / Gridsize);
+            int minX = (int)Math.Floor((this.Position.X - size.X / 2.0f) / Gridsize);
+            int minY = (int)Math.Floor((this.Position.Y - size.Y / 2.0f) / Gridsize);
+            int maxX = (int)Math.Ceiling((this.Position.X + size.X / 2.0f) / Gridsize);
+            int maxY = (int)Math.Ceiling((this.Position.Y + size.Y / 2.0f) / Gridsize);
 
             for (int x = minX; x <= maxX; x++)
             {
@@ -103,7 +103,7 @@ namespace GameLogic
 
                         if (minDirection != Vector2.Zero)
                         {
-                            this.position += minDirection * min;
+                            this.Position += minDirection * min;
                         }
                         #endregion
                     }

@@ -1,4 +1,5 @@
 ﻿using GameEngine;
+using OpenTK;
 
 namespace GameLogic
 {
@@ -66,10 +67,9 @@ namespace GameLogic
         /// <param name="y">Координата y.</param>
         public Block(BlockType type, int x, int y)
         {
-            this.position.X = x;
-            this.position.Y = y;
+            Vector2 pos = new Vector2(x, y);
+            this.Position = pos;
             this.type = type;
-
             this.ladder = false;
             this.solid = false;
             this.platform = false;

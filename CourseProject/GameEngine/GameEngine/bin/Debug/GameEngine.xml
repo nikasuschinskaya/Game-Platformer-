@@ -19,7 +19,7 @@
             Размер сетки.
             </summary>
         </member>
-        <member name="F:GameEngine.GameObject.position">
+        <member name="P:GameEngine.GameObject.Position">
             <summary>
             Позиция.
             </summary>
@@ -110,7 +110,7 @@
             Отрисовка текстуры.
             </summary>
             <param name="texture"> Текстура. </param>
-            <param name="position"> Позиция. </param>
+            <param name="Position"> Позиция. </param>
             <param name="scale"> Масштаб. </param>
             <param name="color"> Цвет. </param>
             <param name="origin"> Начало. </param>
@@ -199,23 +199,6 @@
             Работа с камерой.
             </summary>
         </member>
-        <member name="F:GameEngine.View.position">
-            <summary>
-            Позиция.
-            </summary>
-        </member>
-        <member name="F:GameEngine.View.rotation">
-            <summary>
-            Вращение (в радианах, по часовой стрелке).
-            </summary>
-        </member>
-        <member name="F:GameEngine.View.zoom">
-            <summary>
-            Масштаб
-            1 - no zoom
-            2 - 2x zoom
-            </summary>
-        </member>
         <member name="P:GameEngine.View.Position">
             <summary>
             Свойство позиции.
@@ -226,13 +209,6 @@
             Свойство позиции перехода.
             </summary>
         </member>
-        <member name="M:GameEngine.View.ToWorld(OpenTK.Vector2)">
-            <summary>
-            Метод движения по игровому миру.
-            </summary>
-            <param name="input">Входной параметр.</param>
-            <returns></returns>
-        </member>
         <member name="M:GameEngine.View.#ctor(OpenTK.Vector2,System.Double,System.Double)">
             <summary>
             Конструктор камеры.
@@ -240,6 +216,13 @@
             <param name="startPosition">Начальная позиция.</param>
             <param name="startRotation">Начальное значение поворота.</param>
             <param name="startZoom">Начальное увеличение.</param>
+        </member>
+        <member name="M:GameEngine.View.ToWorld(OpenTK.Vector2)">
+            <summary>
+            Метод движения по игровому миру.
+            </summary>
+            <param name="input">Входной параметр.</param>
+            <returns></returns>
         </member>
         <member name="M:GameEngine.View.Update">
             <summary>

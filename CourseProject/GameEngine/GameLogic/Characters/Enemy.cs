@@ -30,7 +30,7 @@ namespace GameLogic
         /// <param name="startPos">Начальная позиция.</param>
         public Enemy(Vector2 startPos)
         {
-            this.position = startPos;
+            this.Position = startPos;
             this.facingRight = false;
             this.grounded = false;
             this.size = new Vector2(20, 30);

@@ -54,6 +54,7 @@
     <Compile Include="Characters\Enemy.cs" />
     <Compile Include="Characters\Player.cs" />
     <Compile Include="Components\Block.cs" />
+    <Compile Include="Enums\EnemyType.cs" />
     <Compile Include="Factory\Level.cs" />
     <Compile Include="Decorator\HorizontalEnemy.cs" />
     <Compile Include="Decorator\MotionlessEnemy.cs" />

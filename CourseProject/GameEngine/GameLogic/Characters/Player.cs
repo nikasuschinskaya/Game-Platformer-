@@ -72,7 +72,7 @@ namespace GameLogic
         public Player(Vector2 startPos, Vector2 gravity, int key)
         {
             this.gravity = gravity;
-            this.position = startPos;
+            this.Position = startPos;
             this.speed = Vector2.Zero;
             this.LivesCount = 10;
             this.Health = 100;
@@ -102,7 +102,7 @@ namespace GameLogic
 
             if (!climbing)
                 this.speed += gravity;
-            this.position += speed;
+            this.Position += speed;
             ResolveCollision(ref level);
         }
 
@@ -186,10 +186,10 @@ namespace GameLogic
         /// <param name="level">Уровень.</param>
         public void ResolveCollision(ref Level level)
         {
-            int minX = (int)Math.Floor((this.position.X - size.X / 2.0f) / Gridsize);
-            int minY = (int)Math.Floor((this.position.Y - size.Y / 2.0f) / Gridsize);
-            int maxX = (int)Math.Ceiling((this.position.X + size.X / 2.0f) / Gridsize);
-            int maxY = (int)Math.Ceiling((this.position.Y + size.Y / 2.0f) / Gridsize);
+            int minX = (int)Math.Floor((this.Position.X - size.X / 2.0f) / Gridsize);
+            int minY = (int)Math.Floor((this.Position.Y - size.Y / 2.0f) / Gridsize);
+            int maxX = (int)Math.Ceiling((this.Position.X + size.X / 2.0f) / Gridsize);
+            int maxY = (int)Math.Ceiling((this.Position.Y + size.Y / 2.0f) / Gridsize);
 
             this.grounded = false;
             this.onLadder = false;
@@ -246,7 +246,7 @@ namespace GameLogic
 
                         if (minDirection != Vector2.Zero)
                         {
-                            this.position += minDirection * min;
+                            this.Position += minDirection * min;
                             if (this.speed.X * minDirection.X < 0)
                                 this.speed.X = 0;
                             if (this.speed.Y * minDirection.Y < 0)
@@ -259,10 +259,11 @@ namespace GameLogic
                     }
                     if (this.speed.Y > 0 && !Input.KeyDown(OpenTK.Input.Key.Down) && level[x, y].IsPlatform && this.ColRec.IntersectsWith(blockRec))
                     {
-                        if (this.position.Y - this.speed.Y + this.size.Y / 2f <= blockRec.Top) //if we were above last frame
+                        if (this.Position.Y - this.speed.Y + this.size.Y / 2f <= blockRec.Top) //if we were above last frame
                         {
                             this.speed.Y = 0;
-                            this.position.Y = blockRec.Top - this.size.Y / 2f;
+                            Vector2 pos = new Vector2(Position.X, blockRec.Top - this.size.Y / 2f);
+                            this.Position = pos;
                             grounded = true;
                         }
                     }

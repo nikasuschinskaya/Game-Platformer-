@@ -24,7 +24,7 @@ namespace GameLogic
         public HorizontalEnemy(Enemy enemy, Vector2 startPos) : base(enemy, startPos)
         {
             this.Speed = new Vector2(0.5f, 0);
-            this.position = startPos;
+            this.Position = startPos;
             this.enemy = enemy;
             this.sprite = ContentPipe.LoadTexture("snail_move.png");
         }
@@ -45,10 +45,10 @@ namespace GameLogic
         /// <param name="level">Уровень.</param>
         public void ResolveCollision(ref Level level)
         {
-            int minX = (int)Math.Floor((this.position.X - size.X / 2.0f) / Gridsize);
-            int minY = (int)Math.Floor((this.position.Y - size.Y / 2.0f) / Gridsize);
-            int maxX = (int)Math.Ceiling((this.position.X + size.X / 2.0f) / Gridsize);
-            int maxY = (int)Math.Ceiling((this.position.Y + size.Y / 2.0f) / Gridsize);
+            int minX = (int)Math.Floor((this.Position.X - size.X / 2.0f) / Gridsize);
+            int minY = (int)Math.Floor((this.Position.Y - size.Y / 2.0f) / Gridsize);
+            int maxX = (int)Math.Ceiling((this.Position.X + size.X / 2.0f) / Gridsize);
+            int maxY = (int)Math.Ceiling((this.Position.Y + size.Y / 2.0f) / Gridsize);
 
             for (int x = minX; x <= maxX; x++)
             {
@@ -77,7 +77,7 @@ namespace GameLogic
         /// </summary>
         public void Move()
         {
-            this.position += Speed;
+            this.Position += Speed;
         }
     }
 }

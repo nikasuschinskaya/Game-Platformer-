@@ -44,19 +44,14 @@ namespace GameLogic
         public Point playerStartPos;
 
         /// <summary>
-        /// Начальная позиция горизонтального врага.
+        /// 
         /// </summary>
-        public List<Point> enemiesHorSpawn = new List<Point>();
+        public List<EnemyType> enemiesTypes = new List<EnemyType>();
 
         /// <summary>
-        /// Начальная позиция стреляющего врага.
+        /// 
         /// </summary>
-        public List<Point> enemiesShootSpawn = new List<Point>();
-
-        /// <summary>
-        /// Начальная позиция недвигающегося врага.
-        /// </summary>
-        public List<Point> enemiesMotionlessSpawn = new List<Point>();
+        public List<Point> enemiesStartPosition = new List<Point>();
 
         /// <summary>
         /// Работа с блоками.
@@ -122,7 +117,7 @@ namespace GameLogic
         /// <param name="width">Ширина.</param>
         /// <param name="height">Высота.</param>
         public Level(int width, int height)
-        {
+        {     
             grid = new Block[width, height];
             filename = "none";
             playerStartPos = new Point(1, 1);

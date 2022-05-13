@@ -13,14 +13,13 @@ namespace Game
     /// </summary>
     public class Platformer : GameWindow
     {
-
-        Texture2D tileset;
-        View view;
-        Level level;
-        Player player;
-        List<Enemy> enemyList = new List<Enemy>();
-        int levelNum = 0;
-        List<string> lvlNames = new List<string>()
+        private Texture2D tileset;
+        private View view;
+        private Level level;
+        private Player player;
+        private List<Enemy> enemyList = new List<Enemy>();
+        private int levelNum = 0;
+        private List<string> lvlNames = new List<string>()
         {
             "FirstLevel.tmx",
             "SecondLevel.tmx",
@@ -75,17 +74,20 @@ namespace Game
         {
             Enemy enemy = new Enemy(Vector2.Zero);
 
-            foreach (Point p in level.enemiesHorSpawn)
+            for (int i = 0; i < level.enemiesStartPosition.Count; i++)
             {
-                enemyList.Add(new HorizontalEnemy(enemy, new Vector2(p.X + 0.5f, p.Y + 0.5f) * GRIDSIZE));
-            }
-            foreach (Point p in level.enemiesShootSpawn)
-            {
-                enemyList.Add(new ShootEnemy(enemy, new Vector2(p.X + 0.5f, p.Y + 0.5f) * GRIDSIZE));
-            }
-            foreach (Point p in level.enemiesMotionlessSpawn)
-            {
-                enemyList.Add(new MotionlessEnemy(enemy, new Vector2(p.X + 0.5f, p.Y + 0.5f) * GRIDSIZE));
+                switch (level.enemiesTypes[i])
+                {
+                    case EnemyType.Horizontal:
+                        enemyList.Add(new HorizontalEnemy(enemy, new Vector2(level.enemiesStartPosition[i].X + 0.5f, level.enemiesStartPosition[i].Y + 0.5f) * GRIDSIZE));
+                        break;
+                    case EnemyType.Shoot:
+                        enemyList.Add(new ShootEnemy(enemy, new Vector2(level.enemiesStartPosition[i].X + 0.5f, level.enemiesStartPosition[i].Y + 0.5f) * GRIDSIZE));
+                        break;
+                    case EnemyType.Motionless:
+                        enemyList.Add(new MotionlessEnemy(enemy, new Vector2(level.enemiesStartPosition[i].X + 0.5f, level.enemiesStartPosition[i].Y + 0.5f) * GRIDSIZE));
+                        break;
+                }
             }
         }
 
@@ -116,7 +118,7 @@ namespace Game
             IfPlayerDead();
             IfCollectedAllKeys();
             ImplemOfKeys();
-            view.SetPosition(player.position, TweenType.QuarticOut, 15);
+            view.SetPosition(player.Position, TweenType.QuarticOut, 15);
             IfRespawnButPressed();
             Input.Update();
             view.Update();
@@ -197,7 +199,7 @@ namespace Game
         {
             foreach (Bullet b in level.bullets)
             {
-                if (Math.Abs(player.position.X - b.position.X) < 20 && Math.Abs(player.position.Y - b.position.Y) < 20)
+                if (Math.Abs(player.Position.X - b.Position.X) < 20 && Math.Abs(player.Position.Y - b.Position.Y) < 20)
                 {
                     player.Health -= b.damage;
                     b.IsBumped = true;
@@ -215,7 +217,7 @@ namespace Game
                 {
                     if (e is ShootEnemy shootEnemy)
                     {
-                        level.bullets.Add(new Bullet(shootEnemy.position));
+                        level.bullets.Add(new Bullet(shootEnemy.Position));
                     }
                 }
                 level.CountShootingTime = 0;
@@ -263,7 +265,7 @@ namespace Game
 
         private void ForcedRespawn()
         {
-            player.position =
+            player.Position =
                 new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE;
             player.Speed = Vector2.Zero;
         }
@@ -272,7 +274,7 @@ namespace Game
         {
             if (Input.KeyPress(OpenTK.Input.Key.R))
             {
-                player.position =
+                player.Position =
                     new Vector2(level.playerStartPos.X + 0.5f, level.playerStartPos.Y + 0.5f) * GRIDSIZE;
                 player.Speed = Vector2.Zero;
             }
@@ -346,24 +348,24 @@ namespace Game
             {
                 foreach (Enemy e in enemyList)
                 {
-                    if (e is HorizontalEnemy he && Math.Abs(player.position.Y - he.position.Y) < 20 && Math.Abs(player.position.X - he.position.X) < 25)
+                    if (e is HorizontalEnemy he && Math.Abs(player.Position.Y - he.Position.Y) < 20 && Math.Abs(player.Position.X - he.Position.X) < 25)
                         player.Health -= 1;
 
                     if (e is MotionlessEnemy me)
                     {
                         if (level.CountOfMEnemy > 180)
                         {
-                            if (Math.Abs(player.position.Y - me.position.Y) < 50 && Math.Abs(player.position.X - me.position.X) < 50)
+                            if (Math.Abs(player.Position.Y - me.Position.Y) < 50 && Math.Abs(player.Position.X - me.Position.X) < 50)
                                 player.Health -= 1;
                         }
                         else
                         {
-                            if (Math.Abs(player.position.Y - me.position.Y) < 20 && Math.Abs(player.position.X - me.position.X) < 20)
+                            if (Math.Abs(player.Position.Y - me.Position.Y) < 20 && Math.Abs(player.Position.X - me.Position.X) < 20)
                                 player.Health -= 1;
                         }
                     }
 
-                    if (e is ShootEnemy se && Math.Abs(player.position.Y - se.position.Y) < 20 && Math.Abs(player.position.X - se.position.X) < 20)
+                    if (e is ShootEnemy se && Math.Abs(player.Position.Y - se.Position.Y) < 20 && Math.Abs(player.Position.X - se.Position.X) < 20)
                         player.Health -= 1;
                 }
             }

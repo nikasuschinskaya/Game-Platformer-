@@ -9,23 +9,9 @@ namespace GameEngine
     /// </summary>
     public class View : GameComponent
     {
-        /// <summary>
-        /// Позиция.
-        /// </summary>
         private Vector2 position;
-
-        /// <summary>
-        /// Вращение (в радианах, по часовой стрелке).
-        /// </summary>
-        public double rotation;
-
-        /// <summary>
-        /// Масштаб
-        /// 1 - no zoom
-        /// 2 - 2x zoom
-        /// </summary>
-        public double zoom;
-
+        private double rotation;
+        private double zoom;
         private Vector2 positionGoto, positionFrom;
         private TweenType tweenType;
         private int currentStep, tweenSteps;
@@ -47,19 +33,6 @@ namespace GameEngine
         }
 
         /// <summary>
-        /// Метод движения по игровому миру.
-        /// </summary>
-        /// <param name="input">Входной параметр.</param>
-        /// <returns></returns>
-        public Vector2 ToWorld(Vector2 input)
-        {
-            input /= (float)zoom;
-            Vector2 dX = new Vector2((float)Math.Cos(rotation), (float)Math.Sin(rotation));
-            Vector2 dY = new Vector2((float)Math.Cos(rotation + MathHelper.PiOver2), (float)Math.Sin(rotation + MathHelper.PiOver2));
-
-            return (this.position + dX * input.X + dY * input.Y);
-        }
-        /// <summary>
         /// Конструктор камеры.
         /// </summary>
         /// <param name="startPosition">Начальная позиция.</param>
@@ -71,6 +44,21 @@ namespace GameEngine
             this.rotation = startRotation;
             this.zoom = startZoom;
         }
+
+        /// <summary>
+        /// Метод движения по игровому миру.
+        /// </summary>
+        /// <param name="input">Входной параметр.</param>
+        /// <returns></returns>
+        public Vector2 ToWorld(Vector2 input)
+        {
+            input /= (float)zoom;
+            Vector2 dX = new Vector2((float)Math.Cos(rotation), (float)Math.Sin(rotation));
+            Vector2 dY = new Vector2((float)Math.Cos(rotation + MathHelper.PiOver2), (float)Math.Sin(rotation + MathHelper.PiOver2));
+
+            return (this.Position + dX * input.X + dY * input.Y);
+        }
+
         /// <summary>
         /// Метод обновления.
         /// </summary>
@@ -124,7 +112,7 @@ namespace GameEngine
         /// <param name="numSteps">Номер шага.</param>
         public void SetPosition(Vector2 newPosition, TweenType type, int numSteps)
         {
-            this.positionFrom = position;
+            this.positionFrom = Position;
             this.position = newPosition;
             this.positionGoto = newPosition;
             tweenType = type;
@@ -174,7 +162,7 @@ namespace GameEngine
         {
             Matrix4 transform = Matrix4.Identity;
 
-            transform = Matrix4.Mult(transform, Matrix4.CreateTranslation(-position.X, -position.Y, 0));
+            transform = Matrix4.Mult(transform, Matrix4.CreateTranslation(-Position.X, -Position.Y, 0));
             transform = Matrix4.Mult(transform, Matrix4.CreateRotationZ(-(float)rotation));
             transform = Matrix4.Mult(transform, Matrix4.CreateScale((float)zoom, (float)zoom, 1.0f));
 
