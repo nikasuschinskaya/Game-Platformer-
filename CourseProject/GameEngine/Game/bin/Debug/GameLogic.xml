@@ -345,11 +345,6 @@
             Счетчик времени увеличения размеров недвигающегося врага.
             </summary>
         </member>
-        <member name="F:GameLogic.Level.bullets">
-            <summary>
-            Пули.
-            </summary>
-        </member>
         <member name="F:GameLogic.Level.grid">
             <summary>
             Координаты блоков.
@@ -367,12 +362,12 @@
         </member>
         <member name="F:GameLogic.Level.enemiesTypes">
             <summary>
-            
+            Типы врагов.
             </summary>
         </member>
         <member name="F:GameLogic.Level.enemiesStartPosition">
             <summary>
-            
+            Стартовые позиции для всех врагов.
             </summary>
         </member>
         <member name="P:GameLogic.Level.Item(System.Int32,System.Int32)">

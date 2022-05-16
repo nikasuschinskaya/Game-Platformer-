@@ -17,8 +17,9 @@ namespace Game
         private View view;
         private Level level;
         private Player player;
-        private List<Enemy> enemyList = new List<Enemy>();
         private int levelNum = 0;
+        private List<Bullet> bullets = new List<Bullet>();
+        private List<Enemy> enemyList = new List<Enemy>();
         private List<string> lvlNames = new List<string>()
         {
             "FirstLevel.tmx",
@@ -129,14 +130,14 @@ namespace Game
         {
             foreach (Enemy he in enemyList)
                 he.Update(ref level);
-            foreach (Bullet b in level.bullets)
+            foreach (Bullet b in bullets)
                 b.Update(ref level);
-            int n = level.bullets.Count;
+            int n = bullets.Count;
             for (int i = 0; i < n; i++)
             {
-                if (level.bullets[i].IsBumped)
+                if (bullets[i].IsBumped)
                 {
-                    level.bullets.Remove(level.bullets[i]);
+                    bullets.Remove(bullets[i]);
                     n--;
                     i--;
                 }
@@ -197,7 +198,7 @@ namespace Game
         }
         private void IfBulsIntersectWithPlayer()
         {
-            foreach (Bullet b in level.bullets)
+            foreach (Bullet b in bullets)
             {
                 if (Math.Abs(player.Position.X - b.Position.X) < 20 && Math.Abs(player.Position.Y - b.Position.Y) < 20)
                 {
@@ -217,7 +218,7 @@ namespace Game
                 {
                     if (e is ShootEnemy shootEnemy)
                     {
-                        level.bullets.Add(new Bullet(shootEnemy.Position));
+                        bullets.Add(new Bullet(shootEnemy.Position));
                     }
                 }
                 level.CountShootingTime = 0;
@@ -336,7 +337,7 @@ namespace Game
             }
             foreach (Enemy en in enemyList)
                 en.Draw();
-            foreach (Bullet b in level.bullets)
+            foreach (Bullet b in bullets)
                 b.Draw();
             player.Draw();
             SwapBuffers();
@@ -391,4 +392,3 @@ namespace Game
         }
     }
 }
-

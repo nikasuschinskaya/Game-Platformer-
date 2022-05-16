@@ -23,10 +23,10 @@ namespace GameLogic
         /// </summary>
         public int CountOfMEnemy = 0;
 
-        /// <summary>
-        /// Пули.
-        /// </summary>
-        public List<Bullet> bullets = new List<Bullet>();
+        ///// <summary>
+        ///// Пули.
+        ///// </summary>
+        //public List<Bullet> bullets = new List<Bullet>();
 
         /// <summary>
         /// Координаты блоков.
@@ -44,12 +44,12 @@ namespace GameLogic
         public Point playerStartPos;
 
         /// <summary>
-        /// 
+        /// Типы врагов.
         /// </summary>
         public List<EnemyType> enemiesTypes = new List<EnemyType>();
 
         /// <summary>
-        /// 
+        /// Стартовые позиции для всех врагов.
         /// </summary>
         public List<Point> enemiesStartPosition = new List<Point>();
 

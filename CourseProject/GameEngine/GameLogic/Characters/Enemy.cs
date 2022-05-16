@@ -20,7 +20,7 @@ namespace GameLogic
         public Texture2D sprite;
 
         /// <summary>
-        /// Повернут ли объект вправо, на земли ли.
+        /// Повернут ли объект вправо, на земле ли.
         /// </summary>
         public bool facingRight, grounded;
 
