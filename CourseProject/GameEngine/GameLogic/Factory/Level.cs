@@ -23,11 +23,6 @@ namespace GameLogic
         /// </summary>
         public int CountOfMEnemy = 0;
 
-        ///// <summary>
-        ///// Пули.
-        ///// </summary>
-        //public List<Bullet> bullets = new List<Bullet>();
-
         /// <summary>
         /// Координаты блоков.
         /// </summary>

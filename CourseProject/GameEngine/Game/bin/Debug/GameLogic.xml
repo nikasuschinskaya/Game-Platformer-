@@ -151,12 +151,12 @@
         </member>
         <member name="F:GameLogic.Enemy.facingRight">
             <summary>
-            Повернут ли объект вправо, на земли ли.
+            Повернут ли объект вправо, на земле ли.
             </summary>
         </member>
         <member name="F:GameLogic.Enemy.grounded">
             <summary>
-            Повернут ли объект вправо, на земли ли.
+            Повернут ли объект вправо, на земле ли.
             </summary>
         </member>
         <member name="M:GameLogic.Enemy.#ctor(OpenTK.Vector2)">
