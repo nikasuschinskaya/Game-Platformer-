@@ -64,6 +64,7 @@ namespace Game
         private void LoadNewLvl()
         {
             enemyList.Clear();
+            bullets.Clear();
             tileset = ContentPipe.LoadTexture("FullTilesSet.png");
             level = new LevelFactory(20, 20, $"Content/{lvlNames[levelNum]}");
             player = new Player(new Vector2(level.playerStartPos.X + 0.5f,

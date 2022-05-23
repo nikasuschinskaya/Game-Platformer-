@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/fulltilesset.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("content/xmlfile1.xml")]
 
 
