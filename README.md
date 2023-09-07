@@ -67,6 +67,13 @@ Upon successful completion of all levels and obtaining the last key, the player 
 
 When you click on the "OK" button, the program will end.
 
+## Testing
+
+The Platformer Game Tests project for unit tests contains tests for important and complex functional classes.
+This project allows you to check whether the developed classes and their methods and properties work correctly.
+
+![image](https://github.com/nikasuschinskaya/Game-Platformer-/assets/92970744/b6020bfc-c1d0-4070-8ff5-d6971720fbfa)
+
 
 
 
